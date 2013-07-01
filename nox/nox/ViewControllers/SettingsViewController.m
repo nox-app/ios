@@ -8,6 +8,9 @@
 
 #import "SettingsViewController.h"
 
+#import "KeychainItemWrapper.h"
+#import "LoginViewController.h"
+
 @interface SettingsViewController ()
 
 @end
@@ -26,13 +29,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - IBActions
+
+- (IBAction)logoutPressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    KeychainItemWrapper * keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"NoxLogin" accessGroup:nil];
+    [keychainItem resetKeychainItem];
+    
+    //@todo(jdiprete): Reset everything... 
+    
+    LoginViewController * loginViewController = [[LoginViewController alloc] init];
+    [self.navigationController presentViewController:loginViewController animated:NO completion:nil];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 @end

@@ -44,6 +44,10 @@
 		330E24D1177FD53D00AA1913 /* splash1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 330E24CE177FD53D00AA1913 /* splash1136.png */; };
 		330E24D3177FD55300AA1913 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 330E24D2177FD55300AA1913 /* Default-Portrait@2x~ipad.png */; };
 		330E24D5177FD58E00AA1913 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 330E24D4177FD58E00AA1913 /* icon114.png */; };
+		330E24E417801B0700AA1913 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24E317801B0700AA1913 /* Profile.m */; };
+		330E24EB17813AB100AA1913 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E24EA17813AB100AA1913 /* Security.framework */; };
+		330E24EF17813EFB00AA1913 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */; };
+		330E24F1178155ED00AA1913 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 330E24F0178155ED00AA1913 /* 19-gear.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +107,12 @@
 		330E24CE177FD53D00AA1913 /* splash1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash1136.png; path = Resources/splash1136.png; sourceTree = "<group>"; };
 		330E24D2177FD55300AA1913 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		330E24D4177FD58E00AA1913 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
+		330E24E217801B0700AA1913 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Models/Profile.h; sourceTree = "<group>"; };
+		330E24E317801B0700AA1913 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Models/Profile.m; sourceTree = "<group>"; };
+		330E24EA17813AB100AA1913 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		330E24ED17813EFB00AA1913 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = Util/KeychainItemWrapper.h; sourceTree = "<group>"; };
+		330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = Util/KeychainItemWrapper.m; sourceTree = "<group>"; };
+		330E24F0178155ED00AA1913 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear.png"; path = "Resources/19-gear.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330E24EB17813AB100AA1913 /* Security.framework in Frameworks */,
 				330E245F177FB0C900AA1913 /* UIKit.framework in Frameworks */,
 				330E2461177FB0C900AA1913 /* Foundation.framework in Frameworks */,
 				330E2463177FB0C900AA1913 /* CoreGraphics.framework in Frameworks */,
@@ -122,6 +133,7 @@
 		330E244F177FB0C900AA1913 = {
 			isa = PBXGroup;
 			children = (
+				330E24EA17813AB100AA1913 /* Security.framework */,
 				330E24D4177FD58E00AA1913 /* icon114.png */,
 				330E24D2177FD55300AA1913 /* Default-Portrait@2x~ipad.png */,
 				330E2464177FB0C900AA1913 /* nox */,
@@ -151,6 +163,7 @@
 		330E2464177FB0C900AA1913 /* nox */ = {
 			isa = PBXGroup;
 			children = (
+				330E24EC17813ECB00AA1913 /* Util */,
 				330E24CB177FD52D00AA1913 /* Resources */,
 				330E24B0177FCBC700AA1913 /* Interfaces */,
 				330E247C177FC83300AA1913 /* Models */,
@@ -216,6 +229,8 @@
 				330E248D177FCA8D00AA1913 /* TextPost.m */,
 				330E248F177FCB0A00AA1913 /* PlacePost.h */,
 				330E2490177FCB0A00AA1913 /* PlacePost.m */,
+				330E24E217801B0700AA1913 /* Profile.h */,
+				330E24E317801B0700AA1913 /* Profile.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -238,11 +253,21 @@
 		330E24CB177FD52D00AA1913 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				330E24F0178155ED00AA1913 /* 19-gear.png */,
 				330E24CC177FD53D00AA1913 /* icon114.png */,
 				330E24CD177FD53D00AA1913 /* logo.png */,
 				330E24CE177FD53D00AA1913 /* splash1136.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		330E24EC17813ECB00AA1913 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				330E24ED17813EFB00AA1913 /* KeychainItemWrapper.h */,
+				330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +338,7 @@
 				330E24D1177FD53D00AA1913 /* splash1136.png in Resources */,
 				330E24D3177FD55300AA1913 /* Default-Portrait@2x~ipad.png in Resources */,
 				330E24D5177FD58E00AA1913 /* icon114.png in Resources */,
+				330E24F1178155ED00AA1913 /* 19-gear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +366,8 @@
 				330E24AE177FCBBA00AA1913 /* SettingsViewController.m in Sources */,
 				330E24B4177FCBFE00AA1913 /* FriendsViewController.m in Sources */,
 				330E24B9177FCC1400AA1913 /* AddFriendsViewController.m in Sources */,
+				330E24E417801B0700AA1913 /* Profile.m in Sources */,
+				330E24EF17813EFB00AA1913 /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +478,7 @@
 				330E247A177FB0C900AA1913 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

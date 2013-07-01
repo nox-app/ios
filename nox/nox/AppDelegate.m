@@ -8,14 +8,38 @@
 
 #import "AppDelegate.h"
 
+#import "EventsViewController.h"
+#import "KeychainItemWrapper.h"
+#import "LoginViewController.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    EventsViewController * eventsViewController = [[EventsViewController alloc] init];
+    
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:eventsViewController];
+    [self.window setRootViewController:navigationController];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    KeychainItemWrapper * keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"NoxLogin" accessGroup:nil];
+    NSString * password = [keychainItem objectForKey:(__bridge id)kSecValueData];
+    NSString * email = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
+    
+    NSLog(@"Logged in with email: %@ and password: %@", email, password);
+    //@todo(jdiprete): Send username and password to server to verify that password is still correct
+    
+    if([email isEqualToString:@""])
+    {
+        LoginViewController * loginViewController = [[LoginViewController alloc] init];
+        [navigationController presentViewController:loginViewController animated:NO completion:nil];
+    }
+    
     return YES;
 }
 

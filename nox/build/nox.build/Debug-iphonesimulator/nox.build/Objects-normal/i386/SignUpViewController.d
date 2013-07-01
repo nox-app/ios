@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/jdiprete/Nox/ios/nox/nox/ViewControllers/SignUpViewController.m \
-  /Users/jdiprete/Nox/ios/nox/nox/ViewControllers/SignUpViewController.h
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SignUpViewController.m \
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SignUpViewController.h

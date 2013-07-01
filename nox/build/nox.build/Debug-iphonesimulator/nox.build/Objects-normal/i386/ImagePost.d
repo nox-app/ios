@@ -1,3 +1,3 @@
-dependencies: /Users/jdiprete/Nox/ios/nox/nox/Models/ImagePost.m \
-  /Users/jdiprete/Nox/ios/nox/nox/Models/ImagePost.h \
-  /Users/jdiprete/Nox/ios/nox/nox/Models/Post.h
+dependencies: /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.m \
+  /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/Post.h

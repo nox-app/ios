@@ -1,2 +1,2 @@
-dependencies: /Users/jdiprete/Nox/ios/nox/nox/Models/Event.m \
-  /Users/jdiprete/Nox/ios/nox/nox/Models/Event.h
+dependencies: /Users/jdiprete/nox/ios/nox/nox/Models/Event.m \
+  /Users/jdiprete/nox/ios/nox/nox/Models/Event.h

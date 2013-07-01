@@ -10,4 +10,6 @@
 
 @interface SettingsViewController : UIViewController
 
+- (IBAction)logoutPressed:(id)sender;
+
 @end

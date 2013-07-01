@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/jdiprete/Nox/ios/nox/nox/ViewControllers/AddFriendsViewController.m \
-  /Users/jdiprete/Nox/ios/nox/nox/ViewControllers/AddFriendsViewController.h
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/AddFriendsViewController.m \
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/AddFriendsViewController.h

@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 
+#import "KeychainItemWrapper.h"
+
 @interface LoginViewController ()
 
 @end
@@ -26,13 +28,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - IBActions
+
+- (IBAction)loginPressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString * email = [m_emailTextField text];
+    NSString * password = [m_passwordTextField text];
+    
+    //@todo(jdiprete): send email and password to server to verify
+    
+    KeychainItemWrapper * keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"NoxLogin" accessGroup:nil];
+    [keychainItem setObject:password forKey:(__bridge id)kSecValueData];
+    [keychainItem setObject:email forKey:(__bridge id)kSecAttrAccount];
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end

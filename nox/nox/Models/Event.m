@@ -10,4 +10,11 @@
 
 @implementation Event
 
+@synthesize id = m_id;
+@synthesize name = m_name;
+@synthesize startedAt = m_startedAt;
+@synthesize endedAt = m_endedAt;
+@synthesize updatedAt = m_updatedAt;
+@synthesize assetDir = m_assetDir;
+
 @end

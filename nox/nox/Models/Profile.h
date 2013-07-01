@@ -1,16 +1,18 @@
 //
-//  Post.h
+//  Profile.h
 //  nox
 //
-//  Created by Justine DiPrete on 6/29/13.
+//  Created by Justine DiPrete on 6/30/13.
 //  Copyright (c) 2013 Justine DiPrete. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Post : NSObject
+@class User;
+
+@interface Profile : NSObject
 {
-    NSInteger m_id;
+    User * m_user;
 }
 
 @end

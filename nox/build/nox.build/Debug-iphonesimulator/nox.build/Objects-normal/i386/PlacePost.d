@@ -1,3 +1,3 @@
-dependencies: /Users/jdiprete/Nox/ios/nox/nox/Models/PlacePost.m \
-  /Users/jdiprete/Nox/ios/nox/nox/Models/PlacePost.h \
-  /Users/jdiprete/Nox/ios/nox/nox/Models/Post.h
+dependencies: /Users/jdiprete/nox/ios/nox/nox/Models/PlacePost.m \
+  /Users/jdiprete/nox/ios/nox/nox/Models/PlacePost.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/Post.h

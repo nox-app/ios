@@ -1,2 +1,2 @@
-dependencies: /Users/jdiprete/Nox/ios/nox/nox/Models/User.m \
-  /Users/jdiprete/Nox/ios/nox/nox/Models/User.h
+dependencies: /Users/jdiprete/nox/ios/nox/nox/Models/User.m \
+  /Users/jdiprete/nox/ios/nox/nox/Models/User.h

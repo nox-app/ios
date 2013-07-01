@@ -10,4 +10,13 @@
 
 @implementation User
 
+@synthesize id = m_id;
+@synthesize firstName = m_firstName;
+@synthesize lastName = m_lastName;
+@synthesize email = m_email;
+@synthesize phoneNumber = m_phoneNumber;
+@synthesize createdAt = m_createdAt;
+@synthesize hasIcon = m_hasIcon;
+@synthesize icon = m_icon;
+
 @end

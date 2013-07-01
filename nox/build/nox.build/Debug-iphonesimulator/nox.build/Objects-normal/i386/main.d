@@ -1,2 +1,2 @@
-dependencies: /Users/jdiprete/Nox/ios/nox/nox/main.m \
-  /Users/jdiprete/Nox/ios/nox/nox/AppDelegate.h
+dependencies: /Users/jdiprete/nox/ios/nox/nox/main.m \
+  /Users/jdiprete/nox/ios/nox/nox/AppDelegate.h

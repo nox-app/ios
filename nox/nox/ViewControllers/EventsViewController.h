@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EventsViewController : UIViewController
+{
+    IBOutlet UIToolbar * m_toolbar;
+}
 
 @end

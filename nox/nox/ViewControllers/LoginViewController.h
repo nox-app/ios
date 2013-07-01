@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
+{
+    IBOutlet UITextField * m_emailTextField;
+    IBOutlet UITextField * m_passwordTextField;
+}
+
+- (IBAction)loginPressed:(id)sender;
 
 @end
