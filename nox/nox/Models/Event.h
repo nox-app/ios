@@ -20,11 +20,11 @@
     NSArray * m_postsArray;
 }
 
-@property (readonly) NSInteger id;
-@property (readonly) NSString * name;
-@property (readonly) NSDate * startedAt;
-@property (readonly) NSDate * endedAt;
-@property (readonly) NSDate * updatedAt;
-@property (readonly) NSString * assetDir;
+@property NSInteger id;
+@property NSString * name;
+@property NSDate * startedAt;
+@property NSDate * endedAt;
+@property NSDate * updatedAt;
+@property NSString * assetDir;
 
 @end

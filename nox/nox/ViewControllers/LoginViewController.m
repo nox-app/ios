@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 
 #import "KeychainItemWrapper.h"
+#import "Profile.h"
+#import "User.h"
 
 @interface LoginViewController ()
 
@@ -29,12 +31,11 @@
 {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view from its nib.
+    UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
-#pragma mark - IBActions
-
-- (IBAction)loginPressed:(id)sender
+- (void)login
 {
     NSString * email = [m_emailTextField text];
     NSString * password = [m_passwordTextField text];
@@ -45,7 +46,49 @@
     [keychainItem setObject:password forKey:(__bridge id)kSecValueData];
     [keychainItem setObject:email forKey:(__bridge id)kSecAttrAccount];
     
+    User * user = [[User alloc] init];
+    //@todo(jdiprete): get user info back from server before continuing
+    
+    [[Profile sharedProfile] setUser:user];
+    
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+#pragma mark - IBActions
+
+- (IBAction)loginPressed:(id)sender
+{
+    [self login];
+}
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if([textField isEqual:m_passwordTextField])
+    {
+        [self login];
+    }
+    [textField resignFirstResponder];
+    return NO;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)dismissKeyboard
+{
+    if([m_passwordTextField isFirstResponder])
+    {
+        [m_passwordTextField resignFirstResponder];
+    }
+    else if([m_emailTextField isFirstResponder])
+    {
+        [m_emailTextField resignFirstResponder];
+    }
 }
 
 @end

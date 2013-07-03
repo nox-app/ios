@@ -1,7 +1,13 @@
-ffffffffffffffffffffffffffffffff 5e69b82dd39d86e1aed9d1948c51e282 ffffffffffffffffffffffffffffffff 748 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app
+ffffffffffffffffffffffffffffffff a1a6e0be2705fdcbfb0591eaebe3b933 ffffffffffffffffffffffffffffffff 2694 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/EventsViewController.nib
+0000000051d12ec80000000000002348 74e0b3430c50edd73a10fd11ae0bbe43 ffffffffffffffffffffffffffffffff 4038 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/LoginViewController.nib
 ffffffffffffffffffffffffffffffff c29da787ac9aad517f5d61815ccd9151 ffffffffffffffffffffffffffffffff 102 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM
 ffffffffffffffffffffffffffffffff e485a9157ecd015dedb219a89c349228 ffffffffffffffffffffffffffffffff 56988 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox
-34c3ad00ebaf5ceac5a230202eabc13e f2d3de698b3910d4a585c83e10185297 ffffffffffffffffffffffffffffffff 70880 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SettingsViewController.o
+34c3ad00eb45ed72c5a230202eab964d 5fd5a2c8821f0c0a02b61efcb3d791c9 ffffffffffffffffffffffffffffffff 0 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o
+34c3ad00ba6013d8c5a230202eabc009 de2fa615f8efe85d9d97586bf3cbb0bd ffffffffffffffffffffffffffffffff 92580 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o
+34c3ad00ba7e67d3c5a230202eabcd4a 29755a5a79e3fd7ff04ee07dd2f3ee6d ffffffffffffffffffffffffffffffff 73748 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o
+34c3ad00ebaf7a21c5a230202eabcc78 a3cdbe79da8633e897cad7ed8295bae8 ffffffffffffffffffffffffffffffff 68636 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o
+34c3ad00eb0ba259c5a230202eabcec4 3d5eaa15b62f1c19455a94e2aee0d990 ffffffffffffffffffffffffffffffff 0 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o
+ffffffffffffffffffffffffffffffff 5e69b82dd39d86e1aed9d1948c51e282 ffffffffffffffffffffffffffffffff 748 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app
 00000000000000000000000000000000 b1d7c889ec3c9f9acce5d51ca4404916 ffffffffffffffffffffffffffffffff 3255 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/19-gear.png
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 107356 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/Default-Portrait@2x~ipad.png
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 107356 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/splash1136.png
@@ -9,10 +15,8 @@ ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffff
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 18627 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/icon114.png
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 822 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/SignUpViewController.nib
 0000000051d125a100000000000030fa 73ab80de2f9cced7d3abb6a940ee8596 ffffffffffffffffffffffffffffffff 1947 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/SettingsViewController.nib
-0000000051d12650000000000000a042 74e0b3430c50edd73a10fd11ae0bbe43 ffffffffffffffffffffffffffffffff 4038 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/LoginViewController.nib
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 822 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/FriendsViewController.nib
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 822 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/EventViewController.nib
-0000000051d120990000000000003bbc a1a6e0be2705fdcbfb0591eaebe3b933 ffffffffffffffffffffffffffffffff 1922 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/EventsViewController.nib
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 822 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/CreateEventViewController.nib
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 822 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/AddFriendsViewController.nib
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 18594 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/Default-568h@2x.png
@@ -23,9 +27,8 @@ ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffff
 34c3ad00ebb1b22ec5a230202eabcddf b642d57c748041ebe97add76f4d1ea49 ffffffffffffffffffffffffffffffff 4560 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Profile.o
 ffffffffffffffffffffffffffffffff 9b640666dd6b0fe030bd23cb9c697369 ffffffffffffffffffffffffffffffff 68736 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AddFriendsViewController.o
 ffffffffffffffffffffffffffffffff b25b67caa0cb314d0cd3e3b8dca31694 ffffffffffffffffffffffffffffffff 68676 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/FriendsViewController.o
+34c3ad00ebaf5ceac5a230202eabc13e f2d3de698b3910d4a585c83e10185297 ffffffffffffffffffffffffffffffff 71104 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SettingsViewController.o
 ffffffffffffffffffffffffffffffff 9c5486c926cae2281f59fd2fcf2c990d ffffffffffffffffffffffffffffffff 68756 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/CreateEventViewController.o
-ffffffffffffffffffffffffffffffff a3cdbe79da8633e897cad7ed8295bae8 ffffffffffffffffffffffffffffffff 68636 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o
-34c3ad00ba7e6dbec5a230202eabcd79 29755a5a79e3fd7ff04ee07dd2f3ee6d ffffffffffffffffffffffffffffffff 73748 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o
 ffffffffffffffffffffffffffffffff 67616f4450f68570cde95fafe28381f8 ffffffffffffffffffffffffffffffff 68656 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SignUpViewController.o
 34c3ad00ebaf4710c5a230202eabcc08 97a5f49532c33320c40a891a4dae975d ffffffffffffffffffffffffffffffff 71412 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/LoginViewController.o
 ffffffffffffffffffffffffffffffff b98d417e0c1664fbc1f7413cd3f66751 ffffffffffffffffffffffffffffffff 2672 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/PlacePost.o
@@ -35,7 +38,6 @@ ffffffffffffffffffffffffffffffff d46af6457ee1932a74c72ce271ae2864 ffffffffffffff
 ffffffffffffffffffffffffffffffff 94ca6613be76377046e8c2f1c2a97fe1 ffffffffffffffffffffffffffffffff 2960 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Post.o
 ffffffffffffffffffffffffffffffff fb961abbf0971e889be75fd51f37da39 ffffffffffffffffffffffffffffffff 9384 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Event.o
 ffffffffffffffffffffffffffffffff 3a3994b12046baeeef00915aef634905 ffffffffffffffffffffffffffffffff 13332 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/User.o
-34c3ad00ba6019b5c5a230202eabc03a de2fa615f8efe85d9d97586bf3cbb0bd ffffffffffffffffffffffffffffffff 92580 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o
 ffffffffffffffffffffffffffffffff d0b905c07f4e7ec42ae7e6a37a3e00c2 ffffffffffffffffffffffffffffffff 3256 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/main.o
 000000000174a83e000000000000011b 34c3ad00ba7e51a8c5a230202eabcd64 ffffffffffffffffffffffffffffffff 4840240 /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch.pth
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 8 /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/PkgInfo

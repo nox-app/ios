@@ -13,6 +13,12 @@
 @interface Profile : NSObject
 {
     User * m_user;
+    NSMutableArray * m_events;
 }
+
+@property (readonly) NSMutableArray * events;
+@property (nonatomic) User * user;
+
++ (Profile *)sharedProfile;
 
 @end

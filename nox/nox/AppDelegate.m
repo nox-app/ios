@@ -9,8 +9,12 @@
 #import "AppDelegate.h"
 
 #import "EventsViewController.h"
+#import "FriendsMenuTableViewController.h"
 #import "KeychainItemWrapper.h"
 #import "LoginViewController.h"
+#import "MFSideMenu.h"
+#import "Profile.h"
+#import "User.h"
 
 @implementation AppDelegate
 
@@ -22,6 +26,12 @@
     EventsViewController * eventsViewController = [[EventsViewController alloc] init];
     
     UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:eventsViewController];
+    
+    FriendsMenuTableViewController * friendsMenuTableViewController = [[FriendsMenuTableViewController alloc] init];
+    
+    MFSideMenu * sideMenu = [MFSideMenu menuWithNavigationController:navigationController leftSideMenuController:nil rightSideMenuController:friendsMenuTableViewController];
+    [friendsMenuTableViewController setSideMenu:sideMenu];
+    
     [self.window setRootViewController:navigationController];
     
     self.window.backgroundColor = [UIColor whiteColor];
@@ -32,7 +42,10 @@
     NSString * email = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
     
     NSLog(@"Logged in with email: %@ and password: %@", email, password);
-    //@todo(jdiprete): Send username and password to server to verify that password is still correct
+    //@todo(jdiprete): Send username and password to server to verify that password is still correct before continuing
+    
+    User * user = [[User alloc] init];
+    [[Profile sharedProfile] setUser:user];
     
     if([email isEqualToString:@""])
     {

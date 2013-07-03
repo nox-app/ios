@@ -16,17 +16,17 @@
     NSString * m_email;
     NSString * m_phoneNumber;
     NSDate * m_createdAt;
-    bool m_hasIcon;
+    BOOL m_hasIcon;
     UIImage * m_icon;
 }
 
-@property (readonly) NSInteger id;
-@property (readonly) NSString * firstName;
-@property (readonly) NSString * lastName;
-@property (readonly) NSString * email;
-@property (readonly) NSString * phoneNumber;
-@property (readonly) NSDate * createdAt;
-@property (readonly) bool hasIcon;
-@property (readonly) UIImage * icon;
+@property NSInteger id;
+@property NSString * firstName;
+@property NSString * lastName;
+@property NSString * email;
+@property NSString * phoneNumber;
+@property NSDate * createdAt;
+@property BOOL hasIcon;
+@property UIImage * icon;
 
 @end

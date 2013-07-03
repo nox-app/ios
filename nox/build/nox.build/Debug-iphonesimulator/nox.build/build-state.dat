@@ -4,46 +4,47 @@ r1
 cCheck dependencies
 cProcessInfoPlistFile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/Info.plist nox/nox-Info.plist
 cProcessPCH /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch.pth nox/nox-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o /Users/jdiprete/nox/ios/nox/nox/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/User.o /Users/jdiprete/nox/ios/nox/nox/Models/User.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Event.o /Users/jdiprete/nox/ios/nox/nox/Models/Event.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ImagePost.o /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Comment.o /Users/jdiprete/nox/ios/nox/nox/Models/Comment.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/FriendsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/FriendsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPost.o /Users/jdiprete/nox/ios/nox/nox/Models/TextPost.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Profile.o /Users/jdiprete/nox/ios/nox/nox/Models/Profile.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Post.o /Users/jdiprete/nox/ios/nox/nox/Models/Post.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/main.o /Users/jdiprete/nox/ios/nox/nox/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o /Users/jdiprete/nox/ios/nox/nox/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/PlacePost.o /Users/jdiprete/nox/ios/nox/nox/Models/PlacePost.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/LoginViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SignUpViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SignUpViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/CreateEventViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/CreateEventViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SettingsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SettingsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SignUpViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SignUpViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/FriendsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/FriendsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Post.o /Users/jdiprete/nox/ios/nox/nox/Models/Post.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/main.o /Users/jdiprete/nox/ios/nox/nox/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Comment.o /Users/jdiprete/nox/ios/nox/nox/Models/Comment.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ImagePost.o /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPost.o /Users/jdiprete/nox/ios/nox/nox/Models/TextPost.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/CreateEventViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/CreateEventViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AddFriendsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/AddFriendsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SettingsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SettingsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Profile.o /Users/jdiprete/nox/ios/nox/nox/Models/Profile.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/KeychainItemWrapper.o /Users/jdiprete/nox/ios/nox/nox/Util/KeychainItemWrapper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox normal i386
 cGenerateDSYMFile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox
 cCopyStringsFile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/en.lproj/InfoPlist.strings nox/en.lproj/InfoPlist.strings
-cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/AddFriendsViewController.xib
 cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/CreateEventViewController.xib
+cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/AddFriendsViewController.xib
 cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventViewController.xib
 cCpResource nox/Default.png build/Debug-iphonesimulator/nox.app/Default.png
-cCpResource nox/Default-568h@2x.png build/Debug-iphonesimulator/nox.app/Default-568h@2x.png
-cCpResource nox/Default@2x.png build/Debug-iphonesimulator/nox.app/Default@2x.png
 cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib
+cCpResource nox/Default@2x.png build/Debug-iphonesimulator/nox.app/Default@2x.png
+cCpResource nox/Default-568h@2x.png build/Debug-iphonesimulator/nox.app/Default-568h@2x.png
 cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/FriendsViewController.xib
-cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/SignUpViewController.xib
 cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib
+cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/SignUpViewController.xib
 cCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/SettingsViewController.xib
 cCpResource nox/Resources/icon114.png build/Debug-iphonesimulator/nox.app/icon114.png
-cCpResource nox/Resources/logo.png build/Debug-iphonesimulator/nox.app/logo.png
 cCpResource icon114.png build/Debug-iphonesimulator/nox.app/icon114.png
+cCpResource nox/Resources/logo.png build/Debug-iphonesimulator/nox.app/logo.png
 cCpResource nox/Resources/splash1136.png build/Debug-iphonesimulator/nox.app/splash1136.png
-cCpResource Default-Portrait@2x~ipad.png build/Debug-iphonesimulator/nox.app/Default-Portrait@2x~ipad.png
 cCpResource nox/Resources/19-gear.png build/Debug-iphonesimulator/nox.app/19-gear.png
-cTouch /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app
+cCpResource Default-Portrait@2x~ipad.png build/Debug-iphonesimulator/nox.app/Default-Portrait@2x~ipad.png
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
 c00000000504916AD0000000000000110
@@ -961,11 +962,11 @@ t1372560052
 s107356
 
 N/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app
-t1372661332
+t1372662162
 s748
 
 N/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM
-t1372661290
+t1372661472
 s102
 
 N/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/19-gear.png
@@ -1001,8 +1002,8 @@ t1372560915
 s822
 
 N/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/EventsViewController.nib
-t1372659867
-s1922
+t1372662162
+s2694
 
 N/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/FriendsViewController.nib
 t1372560915
@@ -1041,7 +1042,7 @@ t1372560914
 s34470
 
 N/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox
-t1372661290
+t1372661472
 s56988
 
 N/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/splash1136.png
@@ -1092,6 +1093,10 @@ N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Obj
 t1372658311
 s71412
 
+N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o
+t2
+s0
+
 N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/PlacePost.o
 t1372578278
 s2672
@@ -1105,8 +1110,8 @@ t1372578724
 s4560
 
 N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SettingsViewController.o
-t1372661290
-s70880
+t1372661472
+s71104
 
 N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SignUpViewController.o
 t1372578278
@@ -1115,6 +1120,10 @@ s68656
 N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPost.o
 t1372578278
 s2664
+
+N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o
+t2
+s0
 
 N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/User.o
 t1372578278
@@ -1125,9 +1134,9 @@ t1372578278
 s3256
 
 N/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/nox.LinkFileList
-c0000000051D10C30000000000000085A
-t1372654640
-s2138
+c0000000051D12FAF000000000000094B
+t1372663727
+s2379
 
 N/Users/jdiprete/nox/ios/nox/icon114.png
 c0000000051CF9E0700000000000048C3
@@ -1175,9 +1184,9 @@ t1372558340
 s5972
 
 N/Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib
-c0000000051D120990000000000003BBC
-t1372659865
-s15292
+c0000000051D12F920000000000001542
+t1372663698
+s5442
 
 N/Users/jdiprete/nox/ios/nox/nox/Interfaces/FriendsViewController.xib
 c0000000051CF947D000000000000175A
@@ -1185,9 +1194,9 @@ t1372558461
 s5978
 
 N/Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib
-c0000000051D12650000000000000A042
-t1372661328
-s41026
+c0000000051D12EC80000000000002348
+t1372663496
+s9032
 
 N/Users/jdiprete/nox/ios/nox/nox/Interfaces/SettingsViewController.xib
 c0000000051D125A100000000000030FA
@@ -1309,6 +1318,16 @@ c0000000051D10C2D00000000000034D6
 t1372654637
 s13526
 
+N/Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.m
+c00000000513BBCDA0000000000005B29
+t1362869466
+s23337
+
+N/Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m
+c000000005175F3F100000000000003A0
+t1366684657
+s928
+
 N/Users/jdiprete/nox/ios/nox/nox/ViewControllers/AddFriendsViewController.h
 c0000000051CF949300000000000000EF
 t1372558483
@@ -1330,24 +1349,24 @@ t1372558363
 s764
 
 N/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.h
-c0000000051CF940400000000000000E5
-t1372558340
-s229
+c0000000051D12B89000000000000011C
+t1372662665
+s284
 
 N/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m
-c0000000051CF940400000000000002E4
-t1372558340
-s740
+c0000000051D12BA500000000000001EA
+t1372662693
+s490
 
 N/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.h
-c0000000051D1200E000000000000010F
-t1372659726
-s271
+c0000000051D12A63000000000000013C
+t1372662371
+s316
 
 N/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m
-c0000000051D124EE00000000000005A8
-t1372660974
-s1448
+c0000000051D12C1A0000000000000973
+t1372662810
+s2419
 
 N/Users/jdiprete/nox/ios/nox/nox/ViewControllers/FriendsViewController.h
 c0000000051CF947D00000000000000E9
@@ -1556,6 +1575,12 @@ r0
 CBuild AST from /Users/jdiprete/nox/ios/nox/nox/Util/KeychainItemWrapper.m
 r0
 
+CBuild AST from /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.m
+r0
+
+CBuild AST from /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m
+r0
+
 CBuild AST from /Users/jdiprete/nox/ios/nox/nox/ViewControllers/AddFriendsViewController.m
 r0
 
@@ -1585,7 +1610,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies9e7cf25f5e81b741^f4c1f25f5e81b741^-125"Warning: Multiple build commands for output file /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/icon114.png1(21%IDEActivityLogMessage2@124"Warning: Multiple build commands for output file /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/icon114.png-394354271#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#0#--18"Check dependencies36"1C372C09-536B-4D11-B6B1-8D812E4ABDFC-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc3612d2f6781b741^de014e2f6781b741^-125"Warning: Multiple build commands for output file /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/icon114.png1(21%IDEActivityLogMessage2@124"Warning: Multiple build commands for output file /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/icon114.png-394356527#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#0#--18"Check dependencies36"6ED93BEF-17AF-4676-BA75-05A59031F2AA-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AddFriendsViewController.o /Users/jdiprete/Nox/ios/nox/nox/ViewControllers/AddFriendsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s394258502.550460
@@ -1653,8 +1678,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/jdiprete/Nox/nox/ios/nox/nox/AppDelegate.md09de073b17fb741^226fed73b17fb741^---0#0#0#-19%DVTDocumentLocation2@65"file://localhost/Users/jdiprete/Nox/nox/ios/nox/nox/AppDelegate.m0000000000000000^3318"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o nox/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/Nox/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-gcdjmflwmrcotnervdqkzjjiepme/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.dia -c /Users/jdiprete/Nox/nox/ios/nox/nox/AppDelegate.m -o /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o36"19F35C6D-18B9-47D4-BDA5-E603DA833BD4-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o /Users/jdiprete/nox/ios/nox/nox/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s394352643.789622
-e394352643.853228
+s394356527.329753
+e394356527.524420
 r1
 xCompileC
 xbuild/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o
@@ -1663,7 +1688,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/jdiprete/nox/ios/nox/nox/AppDelegate.m8528cb035881b741^8b6dda035881b741^---0#0#0#-19%DVTDocumentLocation2@61"file://localhost/Users/jdiprete/nox/ios/nox/nox/AppDelegate.m0000000000000000^3266"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o nox/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.dia -c /Users/jdiprete/nox/ios/nox/nox/AppDelegate.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o36"BFD76EA7-9004-4736-83D1-4877BAAF85B5-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/jdiprete/nox/ios/nox/nox/AppDelegate.m42ec542f6781b741^2f8a862f6781b741^---0#0#0#-19%DVTDocumentLocation2@61"file://localhost/Users/jdiprete/nox/ios/nox/nox/AppDelegate.m0000000000000000^3266"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o nox/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.dia -c /Users/jdiprete/nox/ios/nox/nox/AppDelegate.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/AppDelegate.o36"3311EC93-6F4E-40C5-A3FE-D13D37A78F97-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Comment.o /Users/jdiprete/Nox/ios/nox/nox/Models/Comment.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s394258502.464012
@@ -1809,8 +1834,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/jdiprete/Nox/nox/ios/nox/nox/ViewControllers/EventViewController.m32058f92d57fb741^bbb89992d57fb741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/jdiprete/Nox/nox/ios/nox/nox/ViewControllers/EventViewController.m0000000000000000^3398"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o nox/ViewControllers/EventViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/Nox/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-gcdjmflwmrcotnervdqkzjjiepme/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.d --serialize-diagnostics /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.dia -c /Users/jdiprete/Nox/nox/ios/nox/nox/ViewControllers/EventViewController.m -o /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o36"41C1856A-3F5B-4BB3-B83F-0ACFA226D0B4-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s394271078.732260
-e394271078.784913
+s394356527.331582
+e394356527.524387
 r1
 xCompileC
 xbuild/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o
@@ -1819,7 +1844,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m8594bb661980b741^74f0c8661980b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m0000000000000000^3346"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o nox/ViewControllers/EventViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.dia -c /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o36"8E547369-97E4-4482-8175-DD4C8DBB6875-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.mfb77552f6781b741^2157862f6781b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m0000000000000000^3346"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o nox/ViewControllers/EventViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.dia -c /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o36"FE9B5A3A-EF37-41AD-B78D-45F3BB656575-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o /Users/jdiprete/Nox/ios/nox/nox/ViewControllers/EventsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s394258502.493940
@@ -1848,8 +1873,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/jdiprete/Nox/nox/ios/nox/nox/ViewControllers/EventsViewController.md7313e92d57fb741^08938e92d57fb741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/jdiprete/Nox/nox/ios/nox/nox/ViewControllers/EventsViewController.m0000000000000000^3404"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o nox/ViewControllers/EventsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/Nox/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-gcdjmflwmrcotnervdqkzjjiepme/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.d --serialize-diagnostics /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.dia -c /Users/jdiprete/Nox/nox/ios/nox/nox/ViewControllers/EventsViewController.m -o /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o36"4D08FFF4-5663-466F-8A97-D60B879BDFF5-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s394353775.745029
-e394353775.792780
+s394356527.333588
+e394356527.524410
 r1
 xCompileC
 xbuild/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o
@@ -1858,7 +1883,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m0ad8be6f5c81b741^f5f3ca6f5c81b741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m0000000000000000^3352"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o nox/ViewControllers/EventsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.dia -c /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o36"4BE16E61-5D46-4D33-BFE9-8F8C0AE0D600-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m9be6552f6781b741^0f7e862f6781b741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m0000000000000000^3352"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o nox/ViewControllers/EventsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.dia -c /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o36"66D92AA1-180C-498A-9378-425103F954B5-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/FriendsViewController.o /Users/jdiprete/Nox/ios/nox/nox/ViewControllers/FriendsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s394258502.515384
@@ -1989,6 +2014,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.m0e1696075281b741^946da4075281b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.m0000000000000000^3346"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/LoginViewController.o nox/ViewControllers/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/LoginViewController.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/LoginViewController.dia -c /Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/LoginViewController.o36"EA3B9C72-0938-46DD-B429-0EB4E4E25E34-
+
+CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s394356527.335147
+e394356527.555012
+r1
+xCompileC
+xbuild/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o
+x/Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.me40f562f6781b741^e8168e2f6781b741^---0#0#0#-19%DVTDocumentLocation2@65"file://localhost/Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.m0000000000000000^3270"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o nox/Util/MFSideMenu.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.dia -c /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o36"2D50C762-5AB0-4C62-8E6E-EDB770634763-
 
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/PlacePost.o /Users/jdiprete/Nox/ios/nox/nox/Models/PlacePost.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s394258502.464052
@@ -2198,6 +2236,19 @@ xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/jdiprete/nox/ios/nox/nox/Models/TextPost.m2a8bba661980b741^f434c0661980b741^---0#0#0#-19%DVTDocumentLocation2@65"file://localhost/Users/jdiprete/nox/ios/nox/nox/Models/TextPost.m0000000000000000^3262"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPost.o nox/Models/TextPost.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPost.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPost.dia -c /Users/jdiprete/nox/ios/nox/nox/Models/TextPost.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPost.o36"4E3CC761-3209-4E3C-93C2-F6A23C09F239-
 
+CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s394356527.336090
+e394356527.524383
+r1
+xCompileC
+xbuild/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o
+x/Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m3ee85d2f6781b741^766e862f6781b741^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m0000000000000000^3408"CompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o nox/Util/UINavigationController+MFSideMenu.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jdiprete/nox/ios/nox    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-generated-files.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-own-target-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-all-target-headers.hmap -iquote /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/nox-project-headers.hmap -I/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources/i386 -I/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/DerivedSources -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -include /var/folders/_6/szr97hk93994jxfrpxd0t1100000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/nox-Prefix-fheptgbpkoqniofyfvcfdhoqztdj/nox-Prefix.pch -MMD -MT dependencies -MF /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.d --serialize-diagnostics /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.dia -c /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.m -o /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o36"B5DCD4D1-4B4B-44B1-A55D-BD02D358712F-
+
 CCompileC build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/User.o /Users/jdiprete/Nox/ios/nox/nox/Models/User.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s394258502.488642
 e394258502.513639
@@ -2405,23 +2456,31 @@ CCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventViewController.xib
 r0
 
 CCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib
-s394352667.237457
-e394352667.255864
-r1
+s394356527.756789
+e394356527.773093
+r0
 xCompileXIB
 x/Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compiling /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib34d83c1b5881b741^7c81411b5881b741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib0000000000000000^882"CompileXIB nox/Interfaces/EventsViewController.xib    cd /Users/jdiprete/nox/ios/nox    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/EventsViewController.nib /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"CC7518D4-1433-4103-B2BC-1717A5348A45-
+o/* com.apple.ibtool.errors */
+o/Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib: error: The document "EventsViewController.xib" could not be opened. Could not read archive.
+o    Failure Reason: This version of Xcode is too old to read this archive.
+o    Recovery Suggestion: Please use a newer version of Xcode. Consider changing the document's Development Target to preserve compatibility.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compiling /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib85d0c12f6781b741^b0e5c52f6781b741^-235"/* com.apple.ibtool.errors */    Failure Reason: This version of Xcode is too old to read this arch    Recovery Suggestion: Please use a newer version of Xcode. Consider changing the document's Development Target to preserve compatibil1(21%IDEActivityLogMessage2@84"The document "EventsViewController.xib" could not be opened. Could not read archive.-394356527#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@83"file://localhost/Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#36"Interface Builder XIB Compiler Error--0#0#0#-19%DVTDocumentLocation4@83"file://localhost/Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib0000000000000000^882"CompileXIB nox/Interfaces/EventsViewController.xib    cd /Users/jdiprete/nox/ios/nox    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/EventsViewController.nib /Users/jdiprete/nox/ios/nox/nox/Interfaces/EventsViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"B8E3FB9D-77C0-4B68-AC3F-8E32CFAE0218-
 
 CCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/FriendsViewController.xib
 r0
 
 CCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib
-s394354132.255256
-e394354132.295038
-r1
+s394356527.758046
+e394356527.772788
+r0
 xCompileXIB
 x/Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compiling /Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib587241d45d81b741^98884bd45d81b741^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib0000000000000000^879"CompileXIB nox/Interfaces/LoginViewController.xib    cd /Users/jdiprete/nox/ios/nox    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/LoginViewController.nib /Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"79300FD3-AF16-4ECE-B7D0-3665B0F5740B-
+o/* com.apple.ibtool.errors */
+o/Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib: error: The document "LoginViewController.xib" could not be opened. Could not read archive.
+o    Failure Reason: This version of Xcode is too old to read this archive.
+o    Recovery Suggestion: Please use a newer version of Xcode. Consider changing the document's Development Target to preserve compatibility.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compiling /Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib2520c22f6781b741^b7d4c52f6781b741^-235"/* com.apple.ibtool.errors */    Failure Reason: This version of Xcode is too old to read this arch    Recovery Suggestion: Please use a newer version of Xcode. Consider changing the document's Development Target to preserve compatibil1(21%IDEActivityLogMessage2@83"The document "LoginViewController.xib" could not be opened. Could not read archive.-394356527#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@82"file://localhost/Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#36"Interface Builder XIB Compiler Error--0#0#0#-19%DVTDocumentLocation4@82"file://localhost/Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib0000000000000000^879"CompileXIB nox/Interfaces/LoginViewController.xib    cd /Users/jdiprete/nox/ios/nox    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/LoginViewController.nib /Users/jdiprete/nox/ios/nox/nox/Interfaces/LoginViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"FC4BDF42-58D5-4CA7-B226-DF3F763102C5-
 
 CCompileXIB /Users/jdiprete/nox/ios/nox/nox/Interfaces/SettingsViewController.xib
 s394354040.093207
@@ -2550,13 +2609,13 @@ x/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Generating /Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYMef58c492d57fb741^9fadcb92d57fb741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM/0000000000000000^580"GenerateDSYMFile build/Debug-iphonesimulator/nox.app.dSYM build/Debug-iphonesimulator/nox.app/nox    cd /Users/jdiprete/Nox/nox/ios/nox    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox -o /Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM36"E2B31DDE-9410-4817-9776-DFEC88EA7C04-
 
 CGenerateDSYMFile /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox
-s394354272.068723
-e394354272.097273
+s394356527.702339
+e394356527.749271
 r1
 xGenerateDSYMFile
 x/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM
 x/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Generating /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM5cab11605e81b741^c1e618605e81b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM/0000000000000000^568"GenerateDSYMFile build/Debug-iphonesimulator/nox.app.dSYM build/Debug-iphonesimulator/nox.app/nox    cd /Users/jdiprete/nox/ios/nox    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox -o /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM36"D60B7E44-D21B-4F3C-91FB-D9B4168BAF06-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Generating /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYMc2dfb32f6781b741^9ed0bf2f6781b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM/0000000000000000^568"GenerateDSYMFile build/Debug-iphonesimulator/nox.app.dSYM build/Debug-iphonesimulator/nox.app/nox    cd /Users/jdiprete/nox/ios/nox    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox -o /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app.dSYM36"74CC395D-CFCA-4084-8C64-403A9C52EF8E-
 
 CLd /Users/jdiprete/Nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox normal i386
 s394258502.606931
@@ -2579,14 +2638,14 @@ xi386
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Link /Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox8fa59b92d57fb741^336ec292d57fb741^---0#0#0#--1084"Ld build/Debug-iphonesimulator/nox.app/nox normal i386    cd /Users/jdiprete/Nox/nox/ios/nox    setenv IPHONEOS_DEPLOYMENT_TARGET 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator -F/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator -filelist /Users/jdiprete/Nox/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/nox.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.0 -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox36"CB747C0D-2099-412E-AE89-8AFCDC88D8D3-
 
 CLd /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox normal i386
-s394354272.037324
-e394354272.062185
+s394356527.561804
+e394356527.695565
 r1
 xLd
 x/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox
 xnormal
 xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Link /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox06a009605e81b741^58ca16605e81b741^---0#0#0#--1084"Ld build/Debug-iphonesimulator/nox.app/nox normal i386    cd /Users/jdiprete/nox/ios/nox    setenv IPHONEOS_DEPLOYMENT_TARGET 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -filelist /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/nox.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.0 -framework Security -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox36"0DDCB830-DCBA-410B-AE21-EFE0F9CA3DB5-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Link /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox0ff18f2f6781b741^5611b22f6781b741^---0#0#0#--1084"Ld build/Debug-iphonesimulator/nox.app/nox normal i386    cd /Users/jdiprete/nox/ios/nox    setenv IPHONEOS_DEPLOYMENT_TARGET 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -F/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator -filelist /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/nox.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.0 -framework Security -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app/nox36"FFBD8988-010B-4B06-873B-10AB69092645-
 
 CProcessInfoPlistFile /Users/jdiprete/Nox/ios/nox/build/Debug-iphonesimulator/nox.app/Info.plist nox/nox-Info.plist
 r0
@@ -2668,10 +2727,10 @@ x/Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Touch /Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.appe2925320d67fb741^faef5520d67fb741^---0#0#0#--366"Touch build/Debug-iphonesimulator/nox.app    cd /Users/jdiprete/Nox/nox/ios/nox    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/jdiprete/Nox/nox/ios/nox/build/Debug-iphonesimulator/nox.app36"E70E98CE-6A48-4CA6-B79C-C8D6DE1B6408-
 
 CTouch /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app
-s394354272.116616
-e394354272.122109
+s394354962.071901
+e394354962.077358
 r1
 xTouch
 x/Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Touch /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app9fe91d605e81b741^07451f605e81b741^---0#0#0#--358"Touch build/Debug-iphonesimulator/nox.app    cd /Users/jdiprete/nox/ios/nox    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app36"266B8256-E296-4996-94D4-A82B12C133BC-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Touch /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.appbc7912126181b741^96ce13126181b741^---0#0#0#--358"Touch build/Debug-iphonesimulator/nox.app    cd /Users/jdiprete/nox/ios/nox    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/jdiprete/nox/ios/nox/build/Debug-iphonesimulator/nox.app36"FCFC9260-EB25-4955-916C-1D3DEFDE2A0F-
 

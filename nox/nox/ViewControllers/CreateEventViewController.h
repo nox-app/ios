@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateEventViewController : UIViewController
+#import "EventsViewController.h"
+
+@interface CreateEventViewController : UIViewController <UITextFieldDelegate>
+{
+    id m_delegate;
+    
+    IBOutlet UITextField * m_titleTextField;
+    IBOutlet UIDatePicker * m_endDatePicker;
+}
+
+- (id)initWithDelegate:(id<EventsViewControllerDelegate>)a_delegate;
+
+- (IBAction)startPressed:(id)sender;
+- (IBAction)cancelPressed:(id)sender;
 
 @end

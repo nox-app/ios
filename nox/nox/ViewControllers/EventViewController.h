@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class Event;
+
 @interface EventViewController : UIViewController
+{
+    Event * m_event;
+    
+    IBOutlet UILabel * m_eventLabel; //@todo(jdiprete): delete this
+}
+
+
+- (id)initWithEvent:(Event *)a_event;
 
 @end

@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventsViewController : UIViewController
+@class Event;
+
+@protocol EventsViewControllerDelegate
+
+- (void)pushEventViewControllerWithEvent:(Event *)a_event;
+
+@end
+
+@interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, EventsViewControllerDelegate>
 {
-    IBOutlet UIToolbar * m_toolbar;
+    IBOutlet UITableView * m_eventsTableView;
 }
+
+- (IBAction)startEventPressed:(id)sender;
 
 @end

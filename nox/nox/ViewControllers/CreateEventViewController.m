@@ -8,17 +8,22 @@
 
 #import "CreateEventViewController.h"
 
+#import "Event.h"
+#import "EventViewController.h"
+#import "EventsViewController.h"
+#import "Profile.h"
+
 @interface CreateEventViewController ()
 
 @end
 
 @implementation CreateEventViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithDelegate:(id<EventsViewControllerDelegate>)a_delegate
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if(self = [super init])
+    {
+        m_delegate = a_delegate;
     }
     return self;
 }
@@ -26,13 +31,64 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+    
+    
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM d, yyyy"];
+    NSString * dateString = [formatter stringFromDate:[NSDate date]];
+    [m_titleTextField setText:[NSString stringWithFormat:@"%@ Event", dateString]];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSDate * endDate = [NSDate dateWithTimeIntervalSinceNow:60*60*24];
+    [m_endDatePicker setDate:endDate animated:YES];
+}
+
+#pragma mark - IBActions
+
+- (IBAction)startPressed:(id)sender
+{
+    Event * event = [[Event alloc] init];
+    [event setName:[m_titleTextField text]];
+    [event setStartedAt:[NSDate date]];
+    [event setEndedAt:[m_endDatePicker date]];
+    
+    [[[Profile sharedProfile] events] addObject:event];
+    
+    //@todo(jdiprete): Send info to server, wait for response with id before continuing
+    
+    [self dismissViewControllerAnimated:NO completion:^(void)
+     {
+         [m_delegate pushEventViewControllerWithEvent:event];
+     }];
+}
+
+- (IBAction)cancelPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)dismissKeyboard
+{
+    [m_titleTextField resignFirstResponder];
 }
 
 @end
