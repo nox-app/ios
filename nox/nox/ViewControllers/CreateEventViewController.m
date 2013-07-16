@@ -33,6 +33,7 @@
     [super viewDidLoad];
     
     UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [tapGestureRecognizer setDelegate:self];
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
     
@@ -40,6 +41,16 @@
     [formatter setDateFormat:@"MMM d, yyyy"];
     NSString * dateString = [formatter stringFromDate:[NSDate date]];
     [m_titleTextField setText:[NSString stringWithFormat:@"%@ Event", dateString]];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    //Disallow recognition of tap gestures for the cancel button
+    if([touch.view.superview isKindOfClass:[UIToolbar class]])
+    {
+        return NO;
+    }
+    return YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated

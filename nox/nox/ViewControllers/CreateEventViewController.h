@@ -10,7 +10,7 @@
 
 #import "EventsViewController.h"
 
-@interface CreateEventViewController : UIViewController <UITextFieldDelegate>
+@interface CreateEventViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
 {
     id m_delegate;
     

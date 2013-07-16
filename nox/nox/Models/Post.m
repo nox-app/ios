@@ -8,6 +8,11 @@
 
 #import "Post.h"
 
+
 @implementation Post
+
+@synthesize id = m_id;
+@synthesize time = m_time;
+@synthesize location = m_location;
 
 @end

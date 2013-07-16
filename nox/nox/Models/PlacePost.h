@@ -8,6 +8,15 @@
 
 #import "Post.h"
 
+@class Venue;
+
 @interface PlacePost : Post
+{
+    NSString * m_caption;
+    Venue * m_venue;
+}
+
+@property NSString * caption;
+@property Venue * venue;
 
 @end

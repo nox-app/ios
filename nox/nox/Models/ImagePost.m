@@ -10,4 +10,6 @@
 
 @implementation ImagePost
 
+@synthesize caption = m_caption;
+
 @end

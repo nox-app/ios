@@ -8,6 +8,7 @@
 
 #import "EventsViewController.h"
 
+#import "Constants.h"
 #import "CreateEventViewController.h"
 #import "Event.h"
 #import "EventViewController.h"
@@ -36,7 +37,11 @@
 {
     [super viewDidLoad];
     [self setupNavigationBar];
-    // Do any additional setup after loading the view from its nib.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(eventsDownloadFinished)
+                                                 name:kEventsDownloadFinishedNotification
+                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -58,12 +63,25 @@
     [self.navigationController pushViewController:eventViewController animated:NO];
 }
 
+#pragma mark - Notifications
+
+- (void)eventsDownloadFinished
+{
+    [m_eventsTableView reloadData];
+}
+
 #pragma mark - Button methods
 
 - (void)settingsPressed
 {
     SettingsViewController * settingsViewController = [[SettingsViewController alloc] init];
-    [self.navigationController pushViewController:settingsViewController animated:YES];
+    
+    [UIView animateWithDuration:0.75 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        [self.navigationController pushViewController:settingsViewController animated:NO];
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+    }];
+    
 }
 
 - (IBAction)startEventPressed:(id)sender

@@ -9,5 +9,10 @@
 #import "Post.h"
 
 @interface ImagePost : Post
+{
+    NSString * m_caption;
+}
+
+@property NSString * caption;
 
 @end

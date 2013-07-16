@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "EventsViewController.h"
-#import "FriendsMenuTableViewController.h"
+#import "FriendsMenuViewController.h"
 #import "KeychainItemWrapper.h"
 #import "LoginViewController.h"
 #import "MFSideMenu.h"
@@ -27,10 +27,10 @@
     
     UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:eventsViewController];
     
-    FriendsMenuTableViewController * friendsMenuTableViewController = [[FriendsMenuTableViewController alloc] init];
+    FriendsMenuViewController * friendsMenuViewController = [[FriendsMenuViewController alloc] init];
     
-    MFSideMenu * sideMenu = [MFSideMenu menuWithNavigationController:navigationController leftSideMenuController:nil rightSideMenuController:friendsMenuTableViewController];
-    [friendsMenuTableViewController setSideMenu:sideMenu];
+    MFSideMenu * sideMenu = [MFSideMenu menuWithNavigationController:navigationController leftSideMenuController:nil rightSideMenuController:friendsMenuViewController];
+    [friendsMenuViewController setSideMenu:sideMenu];
     
     [self.window setRootViewController:navigationController];
     

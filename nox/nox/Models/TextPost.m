@@ -10,4 +10,6 @@
 
 @implementation TextPost
 
+@synthesize body = m_body;
+
 @end

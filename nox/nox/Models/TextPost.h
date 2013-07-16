@@ -9,5 +9,10 @@
 #import "Post.h"
 
 @interface TextPost : Post
+{
+    NSString * m_body;
+}
+
+@property NSString * body;
 
 @end

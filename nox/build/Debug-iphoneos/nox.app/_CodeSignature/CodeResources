@@ -4,6 +4,14 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>07-map-marker.png</key>
+		<data>
+		+cAyxEu0Aua+a3kFb8yFDAzzXvg=
+		</data>
+		<key>08-chat.png</key>
+		<data>
+		uhJn4gplkYJkuuMDkyVdO0QgS0Q=
+		</data>
 		<key>19-gear.png</key>
 		<data>
 		7Wzp4rRUoq93Wr7xhrIpz4M2hDY=
@@ -12,17 +20,65 @@
 		<data>
 		0lU8ku8fk3T0n/VukNfinwsMZRM=
 		</data>
+		<key>70-tv.png</key>
+		<data>
+		Skmva8IjRR8Yv/VFj+QCN2aNYQo=
+		</data>
+		<key>86-camera.png</key>
+		<data>
+		Z5IdWwcz/b7KRF2UESSWQhjHHX0=
+		</data>
 		<key>AddFriendsViewController.nib</key>
 		<data>
 		+DFDxaSjKL7i+05BNHqi5GlusC0=
 		</data>
+		<key>CameraOverlayView.nib/objects.nib</key>
+		<data>
+		5dNnyAgtj8RflZwT0Tx6buj+64E=
+		</data>
+		<key>CameraOverlayView.nib/runtime.nib</key>
+		<data>
+		KibBWiZTLpkzkH0/cRj/AdKxzGc=
+		</data>
+		<key>CameraOverlayViewController.nib/objects.nib</key>
+		<data>
+		gLOJiAqw/ySEYdlPLl83D5WTZPo=
+		</data>
+		<key>CameraOverlayViewController.nib/runtime.nib</key>
+		<data>
+		0Gc5LaCp0nDLKc1HtL41ufXmG+M=
+		</data>
+		<key>CameraViewController.nib/objects.nib</key>
+		<data>
+		nN1EcYlptVznC6UT6Yk4yiPohgk=
+		</data>
+		<key>CameraViewController.nib/runtime.nib</key>
+		<data>
+		WDhBsJvtUdQINPLmSK+VPRx6HKk=
+		</data>
+		<key>CheckInViewController.nib/objects.nib</key>
+		<data>
+		4uGqFprnBfAOnZhtCAX7Os4Zowo=
+		</data>
+		<key>CheckInViewController.nib/runtime.nib</key>
+		<data>
+		PD4It2T2R1b6dL/clWdfXJ4r+2g=
+		</data>
+		<key>CommentViewController.nib/objects.nib</key>
+		<data>
+		z09F0qm5Hr3DbxWUeyrdlrIiEvk=
+		</data>
+		<key>CommentViewController.nib/runtime.nib</key>
+		<data>
+		Xe9uCm1H4jg8sFYARowe8TfBhLc=
+		</data>
 		<key>CreateEventViewController.nib/objects.nib</key>
 		<data>
-		pSkpUD3P6vhv12oFEBzSGqa3XPY=
+		2yt+ps8vFnrigpC2o8cju2bH8IA=
 		</data>
 		<key>CreateEventViewController.nib/runtime.nib</key>
 		<data>
-		sZFMyVrOPXVTrfNZzZMf3ivrafQ=
+		wTxv89q5YBtXFVG3RDy/TqqzOHo=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
@@ -42,31 +98,43 @@
 		</data>
 		<key>EventViewController.nib/objects.nib</key>
 		<data>
-		piaSTyzpBnVKqbiN3ZgLje4ugpk=
+		pbnKVbngtnCw/MHG9Vcquv7bMG0=
 		</data>
 		<key>EventViewController.nib/runtime.nib</key>
 		<data>
-		WjFKmlUAaDLMc75XaorMhPDmqHY=
+		gSLbedBFxHFZ6vai+J+rzp+B7no=
 		</data>
 		<key>EventsViewController.nib/objects.nib</key>
 		<data>
-		gLpSZS2YMZeaWESxjSyrMtWak60=
+		6Mi1gGrlJ68SeXF+mi1C30uoq7E=
 		</data>
 		<key>EventsViewController.nib/runtime.nib</key>
 		<data>
-		ImvJmKBNSpxTBiT1V5m//kKlgGc=
+		ChSBALjA2JqNxUZKiJay4hRHOsI=
 		</data>
-		<key>FriendsViewController.nib</key>
+		<key>FriendsMenuViewController.nib/objects.nib</key>
 		<data>
-		Q7mYg8IQrZcoKYo81kij5rRPlog=
+		EAaoERS8T2uUjKsBRzW1GL1rOLQ=
+		</data>
+		<key>FriendsMenuViewController.nib/runtime.nib</key>
+		<data>
+		8ijmaL/JXw2oO1syoq0Xd1Jrnhc=
+		</data>
+		<key>FriendsViewController.nib/objects.nib</key>
+		<data>
+		PFmLZbRDgkuagiinap7jXVz6GbY=
+		</data>
+		<key>FriendsViewController.nib/runtime.nib</key>
+		<data>
+		SOo6wWqWP7YGSJOwPZGYgUTVx+w=
 		</data>
 		<key>LoginViewController.nib/objects.nib</key>
 		<data>
-		/CRY3qauxU6J0b64J3TtLxOYOf0=
+		hGAPZKWw/k27NlywHXI9dBMpOVk=
 		</data>
 		<key>LoginViewController.nib/runtime.nib</key>
 		<data>
-		djDLqfGDjn3lBV13GjZx+Abc2MU=
+		wLnlKkedHdZbUB2g/PubvD8q0l8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -74,11 +142,11 @@
 		</data>
 		<key>SettingsViewController.nib/objects.nib</key>
 		<data>
-		nY0PporPxgJMQLcDwtd4NinNRpc=
+		X9AbQLKA2Rbeb+HD3oYWV+Jb9R4=
 		</data>
 		<key>SettingsViewController.nib/runtime.nib</key>
 		<data>
-		ySel4tyx2aTk2bywK8JA56DGYNA=
+		p96i0XXpTbQomW4xYLjZgKlf8/E=
 		</data>
 		<key>SignUpViewController.nib/objects.nib</key>
 		<data>

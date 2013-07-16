@@ -1,6 +1,7 @@
 dependencies: \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/Constants.h \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/CreateEventViewController.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Event.h \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.h \

@@ -8,6 +8,11 @@
 
 #import "PlacePost.h"
 
+#import "Venue.h"
+
 @implementation PlacePost
+
+@synthesize caption = m_caption;
+@synthesize venue = m_venue;
 
 @end

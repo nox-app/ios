@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class Post;
+
 @interface Event : NSObject
 {
     NSInteger m_id;
@@ -17,7 +19,7 @@
     NSDate * m_updatedAt;
     NSString * m_assetDir;
     
-    NSArray * m_postsArray;
+    NSMutableArray * m_postsArray;
 }
 
 @property NSInteger id;
@@ -26,5 +28,9 @@
 @property NSDate * endedAt;
 @property NSDate * updatedAt;
 @property NSString * assetDir;
+
+- (id)initWithDictionary:(NSDictionary *)a_dictionary;
+
+- (void)addPost:(Post *)a_post;
 
 @end

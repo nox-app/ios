@@ -10,7 +10,7 @@
 
 @class Event;
 
-@interface EventViewController : UIViewController
+@interface EventViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     Event * m_event;
     
@@ -19,5 +19,9 @@
 
 
 - (id)initWithEvent:(Event *)a_event;
+
+- (IBAction)photoPressed:(id)sender;
+- (IBAction)checkInPressed:(id)sender;
+- (IBAction)statusUpdatePressed:(id)sender;
 
 @end

@@ -35,7 +35,6 @@
 		330E24C4177FCC5600AA1913 /* CreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24BC177FCC5600AA1913 /* CreateEventViewController.xib */; };
 		330E24C5177FCC5600AA1913 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24BD177FCC5600AA1913 /* EventsViewController.xib */; };
 		330E24C6177FCC5600AA1913 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24BE177FCC5600AA1913 /* EventViewController.xib */; };
-		330E24C7177FCC5600AA1913 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24BF177FCC5600AA1913 /* FriendsViewController.xib */; };
 		330E24C8177FCC5600AA1913 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24C0177FCC5600AA1913 /* LoginViewController.xib */; };
 		330E24C9177FCC5600AA1913 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24C1177FCC5600AA1913 /* SettingsViewController.xib */; };
 		330E24CA177FCC5600AA1913 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24C2177FCC5600AA1913 /* SignUpViewController.xib */; };
@@ -50,11 +49,30 @@
 		330E24F1178155ED00AA1913 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 330E24F0178155ED00AA1913 /* 19-gear.png */; };
 		330E24F61781622700AA1913 /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F31781622700AA1913 /* MFSideMenu.m */; };
 		330E24F71781622700AA1913 /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */; };
+		339B5EE517950D0B007DD626 /* CameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5EE417950CD4007DD626 /* CameraOverlayView.xib */; };
 		33E0EFE8178172E4003CE1E5 /* greybutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFE717817218003CE1E5 /* greybutton.png */; };
 		33E0EFEA17817688003CE1E5 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFE917817586003CE1E5 /* 53-house.png */; };
-		33E0EFEF17817919003CE1E5 /* FriendsMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0EFEC1781771E003CE1E5 /* FriendsMenuTableViewController.m */; };
 		33E0EFF217817A50003CE1E5 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFF017817A3E003CE1E5 /* menu-icon.png */; };
 		33E0EFF317817A50003CE1E5 /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFF117817A3E003CE1E5 /* menu-icon@2x.png */; };
+		33E0EFF81787F8FF003CE1E5 /* 07-map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFF41787F8F2003CE1E5 /* 07-map-marker.png */; };
+		33E0EFF91787F8FF003CE1E5 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFF51787F8F2003CE1E5 /* 08-chat.png */; };
+		33E0EFFA1787F8FF003CE1E5 /* 70-tv.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFF61787F8F2003CE1E5 /* 70-tv.png */; };
+		33E0EFFB1787F8FF003CE1E5 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFF71787F8F2003CE1E5 /* 86-camera.png */; };
+		33E0F00517880014003CE1E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0F00417880014003CE1E5 /* CoreLocation.framework */; };
+		33E0F007178800D2003CE1E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0F006178800D2003CE1E5 /* MapKit.framework */; };
+		33E0F00817880156003CE1E5 /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0EFFD1787FCA5003CE1E5 /* CheckInViewController.m */; };
+		33E0F00917880167003CE1E5 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F0011787FF34003CE1E5 /* Venue.m */; };
+		33E0F00A17880167003CE1E5 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F0031787FF89003CE1E5 /* Location.m */; };
+		33E0F00D178801EE003CE1E5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F00C178801A4003CE1E5 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		33E0F00E17880604003CE1E5 /* CheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFFF1787FCC5003CE1E5 /* CheckInViewController.xib */; };
+		33E0F010178806D9003CE1E5 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330E24BF177FCC5600AA1913 /* FriendsViewController.xib */; };
+		33E0F01617880A9E003CE1E5 /* FriendsMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E0F015178809D9003CE1E5 /* FriendsMenuViewController.xib */; };
+		33E0F01717880AA8003CE1E5 /* FriendsMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F013178809BC003CE1E5 /* FriendsMenuViewController.m */; };
+		33E0F0211788F4FA003CE1E5 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F01D1788F1A0003CE1E5 /* CommentViewController.m */; };
+		33E0F0221788F502003CE1E5 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E0F01F1788F1DF003CE1E5 /* CommentViewController.xib */; };
+		33E0F0281794BBE6003CE1E5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E0F0271794BA99003CE1E5 /* CameraViewController.xib */; };
+		33E0F0291794BBF4003CE1E5 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F0251794BA4A003CE1E5 /* CameraViewController.m */; };
+		33E0F02C1794D19F003CE1E5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F02B1794D14A003CE1E5 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,13 +142,37 @@
 		330E24F31781622700AA1913 /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFSideMenu.m; path = Util/MFSideMenu.m; sourceTree = "<group>"; };
 		330E24F41781622700AA1913 /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+MFSideMenu.h"; path = "Util/UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
 		330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+MFSideMenu.m"; path = "Util/UINavigationController+MFSideMenu.m"; sourceTree = "<group>"; };
+		339B5EE417950CD4007DD626 /* CameraOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraOverlayView.xib; sourceTree = "<group>"; };
 		33E0EFE717817218003CE1E5 /* greybutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greybutton.png; path = Resources/greybutton.png; sourceTree = "<group>"; };
 		33E0EFE917817586003CE1E5 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "53-house.png"; path = "Resources/53-house.png"; sourceTree = "<group>"; };
-		33E0EFEB1781771E003CE1E5 /* FriendsMenuTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FriendsMenuTableViewController.h; path = ViewControllers/FriendsMenuTableViewController.h; sourceTree = "<group>"; };
-		33E0EFEC1781771E003CE1E5 /* FriendsMenuTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FriendsMenuTableViewController.m; path = ViewControllers/FriendsMenuTableViewController.m; sourceTree = "<group>"; };
-		33E0EFEE17817735003CE1E5 /* FriendsMenuTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FriendsMenuTableViewController.xib; path = Interfaces/FriendsMenuTableViewController.xib; sourceTree = "<group>"; };
 		33E0EFF017817A3E003CE1E5 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-icon.png"; path = "Resources/menu-icon.png"; sourceTree = "<group>"; };
 		33E0EFF117817A3E003CE1E5 /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-icon@2x.png"; path = "Resources/menu-icon@2x.png"; sourceTree = "<group>"; };
+		33E0EFF41787F8F2003CE1E5 /* 07-map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "07-map-marker.png"; path = "Resources/07-map-marker.png"; sourceTree = "<group>"; };
+		33E0EFF51787F8F2003CE1E5 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "08-chat.png"; path = "Resources/08-chat.png"; sourceTree = "<group>"; };
+		33E0EFF61787F8F2003CE1E5 /* 70-tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "70-tv.png"; path = "Resources/70-tv.png"; sourceTree = "<group>"; };
+		33E0EFF71787F8F2003CE1E5 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "86-camera.png"; path = "Resources/86-camera.png"; sourceTree = "<group>"; };
+		33E0EFFC1787FCA5003CE1E5 /* CheckInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CheckInViewController.h; path = ViewControllers/CheckInViewController.h; sourceTree = "<group>"; };
+		33E0EFFD1787FCA5003CE1E5 /* CheckInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CheckInViewController.m; path = ViewControllers/CheckInViewController.m; sourceTree = "<group>"; };
+		33E0EFFF1787FCC5003CE1E5 /* CheckInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CheckInViewController.xib; path = Interfaces/CheckInViewController.xib; sourceTree = "<group>"; };
+		33E0F0001787FF34003CE1E5 /* Venue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Venue.h; path = Models/Venue.h; sourceTree = "<group>"; };
+		33E0F0011787FF34003CE1E5 /* Venue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Venue.m; path = Models/Venue.m; sourceTree = "<group>"; };
+		33E0F0021787FF89003CE1E5 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Models/Location.h; sourceTree = "<group>"; };
+		33E0F0031787FF89003CE1E5 /* Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Models/Location.m; sourceTree = "<group>"; };
+		33E0F00417880014003CE1E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		33E0F006178800D2003CE1E5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33E0F00B178801A4003CE1E5 /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Util/JSONKit.h; sourceTree = "<group>"; };
+		33E0F00C178801A4003CE1E5 /* JSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Util/JSONKit.m; sourceTree = "<group>"; };
+		33E0F012178809BC003CE1E5 /* FriendsMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FriendsMenuViewController.h; path = ViewControllers/FriendsMenuViewController.h; sourceTree = "<group>"; };
+		33E0F013178809BC003CE1E5 /* FriendsMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FriendsMenuViewController.m; path = ViewControllers/FriendsMenuViewController.m; sourceTree = "<group>"; };
+		33E0F015178809D9003CE1E5 /* FriendsMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FriendsMenuViewController.xib; path = Interfaces/FriendsMenuViewController.xib; sourceTree = "<group>"; };
+		33E0F01C1788F1A0003CE1E5 /* CommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommentViewController.h; path = ViewControllers/CommentViewController.h; sourceTree = "<group>"; };
+		33E0F01D1788F1A0003CE1E5 /* CommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CommentViewController.m; path = ViewControllers/CommentViewController.m; sourceTree = "<group>"; };
+		33E0F01F1788F1DF003CE1E5 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CommentViewController.xib; path = Interfaces/CommentViewController.xib; sourceTree = "<group>"; };
+		33E0F0241794BA4A003CE1E5 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ViewControllers/CameraViewController.h; sourceTree = "<group>"; };
+		33E0F0251794BA4A003CE1E5 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ViewControllers/CameraViewController.m; sourceTree = "<group>"; };
+		33E0F0271794BA99003CE1E5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraViewController.xib; path = Interfaces/CameraViewController.xib; sourceTree = "<group>"; };
+		33E0F02A1794D14A003CE1E5 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Util/Constants.h; sourceTree = "<group>"; };
+		33E0F02B1794D14A003CE1E5 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Util/Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E0F007178800D2003CE1E5 /* MapKit.framework in Frameworks */,
+				33E0F00517880014003CE1E5 /* CoreLocation.framework in Frameworks */,
 				330E24EB17813AB100AA1913 /* Security.framework in Frameworks */,
 				330E245F177FB0C900AA1913 /* UIKit.framework in Frameworks */,
 				330E2461177FB0C900AA1913 /* Foundation.framework in Frameworks */,
@@ -171,6 +215,8 @@
 		330E245D177FB0C900AA1913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33E0F006178800D2003CE1E5 /* MapKit.framework */,
+				33E0F00417880014003CE1E5 /* CoreLocation.framework */,
 				330E245E177FB0C900AA1913 /* UIKit.framework */,
 				330E2460177FB0C900AA1913 /* Foundation.framework */,
 				330E2462177FB0C900AA1913 /* CoreGraphics.framework */,
@@ -226,8 +272,14 @@
 				330E24B2177FCBFE00AA1913 /* FriendsViewController.m */,
 				330E24B6177FCC1400AA1913 /* AddFriendsViewController.h */,
 				330E24B7177FCC1400AA1913 /* AddFriendsViewController.m */,
-				33E0EFEB1781771E003CE1E5 /* FriendsMenuTableViewController.h */,
-				33E0EFEC1781771E003CE1E5 /* FriendsMenuTableViewController.m */,
+				33E0EFFC1787FCA5003CE1E5 /* CheckInViewController.h */,
+				33E0EFFD1787FCA5003CE1E5 /* CheckInViewController.m */,
+				33E0F012178809BC003CE1E5 /* FriendsMenuViewController.h */,
+				33E0F013178809BC003CE1E5 /* FriendsMenuViewController.m */,
+				33E0F01C1788F1A0003CE1E5 /* CommentViewController.h */,
+				33E0F01D1788F1A0003CE1E5 /* CommentViewController.m */,
+				33E0F0241794BA4A003CE1E5 /* CameraViewController.h */,
+				33E0F0251794BA4A003CE1E5 /* CameraViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -251,6 +303,10 @@
 				330E2490177FCB0A00AA1913 /* PlacePost.m */,
 				330E24E217801B0700AA1913 /* Profile.h */,
 				330E24E317801B0700AA1913 /* Profile.m */,
+				33E0F0001787FF34003CE1E5 /* Venue.h */,
+				33E0F0011787FF34003CE1E5 /* Venue.m */,
+				33E0F0021787FF89003CE1E5 /* Location.h */,
+				33E0F0031787FF89003CE1E5 /* Location.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -258,7 +314,10 @@
 		330E24B0177FCBC700AA1913 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				33E0EFEE17817735003CE1E5 /* FriendsMenuTableViewController.xib */,
+				33E0F0271794BA99003CE1E5 /* CameraViewController.xib */,
+				33E0F01F1788F1DF003CE1E5 /* CommentViewController.xib */,
+				33E0F015178809D9003CE1E5 /* FriendsMenuViewController.xib */,
+				33E0EFFF1787FCC5003CE1E5 /* CheckInViewController.xib */,
 				330E24BB177FCC5600AA1913 /* AddFriendsViewController.xib */,
 				330E24BC177FCC5600AA1913 /* CreateEventViewController.xib */,
 				330E24BD177FCC5600AA1913 /* EventsViewController.xib */,
@@ -267,6 +326,7 @@
 				330E24C0177FCC5600AA1913 /* LoginViewController.xib */,
 				330E24C1177FCC5600AA1913 /* SettingsViewController.xib */,
 				330E24C2177FCC5600AA1913 /* SignUpViewController.xib */,
+				339B5EE417950CD4007DD626 /* CameraOverlayView.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -274,6 +334,10 @@
 		330E24CB177FD52D00AA1913 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33E0EFF41787F8F2003CE1E5 /* 07-map-marker.png */,
+				33E0EFF51787F8F2003CE1E5 /* 08-chat.png */,
+				33E0EFF61787F8F2003CE1E5 /* 70-tv.png */,
+				33E0EFF71787F8F2003CE1E5 /* 86-camera.png */,
 				33E0EFF017817A3E003CE1E5 /* menu-icon.png */,
 				33E0EFF117817A3E003CE1E5 /* menu-icon@2x.png */,
 				33E0EFE917817586003CE1E5 /* 53-house.png */,
@@ -295,6 +359,10 @@
 				330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */,
 				330E24ED17813EFB00AA1913 /* KeychainItemWrapper.h */,
 				330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */,
+				33E0F00B178801A4003CE1E5 /* JSONKit.h */,
+				33E0F00C178801A4003CE1E5 /* JSONKit.m */,
+				33E0F02A1794D14A003CE1E5 /* Constants.h */,
+				33E0F02B1794D14A003CE1E5 /* Constants.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -350,6 +418,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339B5EE517950D0B007DD626 /* CameraOverlayView.xib in Resources */,
+				33E0F0281794BBE6003CE1E5 /* CameraViewController.xib in Resources */,
+				33E0F0221788F502003CE1E5 /* CommentViewController.xib in Resources */,
+				33E0F01617880A9E003CE1E5 /* FriendsMenuViewController.xib in Resources */,
+				33E0F010178806D9003CE1E5 /* FriendsViewController.xib in Resources */,
+				33E0F00E17880604003CE1E5 /* CheckInViewController.xib in Resources */,
+				33E0EFF81787F8FF003CE1E5 /* 07-map-marker.png in Resources */,
+				33E0EFF91787F8FF003CE1E5 /* 08-chat.png in Resources */,
+				33E0EFFA1787F8FF003CE1E5 /* 70-tv.png in Resources */,
+				33E0EFFB1787F8FF003CE1E5 /* 86-camera.png in Resources */,
 				33E0EFF217817A50003CE1E5 /* menu-icon.png in Resources */,
 				33E0EFF317817A50003CE1E5 /* menu-icon@2x.png in Resources */,
 				33E0EFEA17817688003CE1E5 /* 53-house.png in Resources */,
@@ -362,7 +440,6 @@
 				330E24C4177FCC5600AA1913 /* CreateEventViewController.xib in Resources */,
 				330E24C5177FCC5600AA1913 /* EventsViewController.xib in Resources */,
 				330E24C6177FCC5600AA1913 /* EventViewController.xib in Resources */,
-				330E24C7177FCC5600AA1913 /* FriendsViewController.xib in Resources */,
 				330E24C8177FCC5600AA1913 /* LoginViewController.xib in Resources */,
 				330E24C9177FCC5600AA1913 /* SettingsViewController.xib in Resources */,
 				330E24CA177FCC5600AA1913 /* SignUpViewController.xib in Resources */,
@@ -382,7 +459,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33E0EFEF17817919003CE1E5 /* FriendsMenuTableViewController.m in Sources */,
+				33E0F02C1794D19F003CE1E5 /* Constants.m in Sources */,
+				33E0F0291794BBF4003CE1E5 /* CameraViewController.m in Sources */,
+				33E0F0211788F4FA003CE1E5 /* CommentViewController.m in Sources */,
+				33E0F01717880AA8003CE1E5 /* FriendsMenuViewController.m in Sources */,
+				33E0F00D178801EE003CE1E5 /* JSONKit.m in Sources */,
+				33E0F00917880167003CE1E5 /* Venue.m in Sources */,
+				33E0F00A17880167003CE1E5 /* Location.m in Sources */,
+				33E0F00817880156003CE1E5 /* CheckInViewController.m in Sources */,
 				330E246B177FB0C900AA1913 /* main.m in Sources */,
 				330E246F177FB0C900AA1913 /* AppDelegate.m in Sources */,
 				330E247F177FC96D00AA1913 /* User.m in Sources */,

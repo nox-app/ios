@@ -50,7 +50,7 @@
                     <items>
                         <barButtonItem systemItem="cancel" id="7Eo-C9-wEd">
                             <connections>
-                                <action selector="cancelPressed:" destination="-1" id="mdi-CX-IPb"/>
+                                <action selector="cancelPressed:" destination="-1" id="Ebn-eU-EhU"/>
                             </connections>
                         </barButtonItem>
                     </items>

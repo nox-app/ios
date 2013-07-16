@@ -1,20 +1,20 @@
 //
-//  FriendsMenuTableViewController.m
+//  FriendsMenuViewController.m
 //  nox
 //
-//  Created by Justine DiPrete on 7/1/13.
+//  Created by Justine DiPrete on 7/6/13.
 //  Copyright (c) 2013 Justine DiPrete. All rights reserved.
 //
 
-#import "FriendsMenuTableViewController.h"
+#import "FriendsMenuViewController.h"
 
 #import "MFSideMenu.h"
 
-@interface FriendsMenuTableViewController ()
+@interface FriendsMenuViewController ()
 
 @end
 
-@implementation FriendsMenuTableViewController
+@implementation FriendsMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,11 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    CGRect searchBarFrame = CGRectMake(0, 0, self.tableView.frame.size.width, 45.0);
-    m_searchBar = [[UISearchBar alloc] initWithFrame:searchBarFrame];
-    [m_searchBar setDelegate:self];
-    [self.tableView setTableHeaderView:m_searchBar];
 }
 
 #pragma mark - Table view data source

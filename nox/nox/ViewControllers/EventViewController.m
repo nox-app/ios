@@ -8,6 +8,9 @@
 
 #import "EventViewController.h"
 
+#import "CameraViewController.h"
+#import "CheckInViewController.h"
+#import "CommentViewController.h"
 #import "Event.h"
 #import "MFSideMenu.h"
 
@@ -49,6 +52,26 @@
 - (void)homePressed
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - IBActions
+
+- (IBAction)photoPressed:(id)sender
+{
+    CameraViewController * cameraViewController = [[CameraViewController alloc] init];
+    [self presentViewController:cameraViewController animated:YES completion:nil];
+}
+
+- (IBAction)checkInPressed:(id)sender
+{
+    CheckInViewController * checkInViewController = [[CheckInViewController alloc] init];
+    [self presentViewController:checkInViewController animated:YES completion:nil];
+}
+
+- (IBAction)statusUpdatePressed:(id)sender
+{
+    CommentViewController * commentViewController = [[CommentViewController alloc] initWithEvent:m_event];
+    [self presentViewController:commentViewController animated:YES completion:nil];
 }
 
 @end
