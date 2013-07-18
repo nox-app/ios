@@ -50,6 +50,21 @@
 		330E24F61781622700AA1913 /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F31781622700AA1913 /* MFSideMenu.m */; };
 		330E24F71781622700AA1913 /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */; };
 		339B5EE517950D0B007DD626 /* CameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5EE417950CD4007DD626 /* CameraOverlayView.xib */; };
+		339B5EE817973B43007DD626 /* PictureEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5EE717973B2A007DD626 /* PictureEditView.xib */; };
+		339B5EEC1797474C007DD626 /* PictureEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EEB179746F3007DD626 /* PictureEditView.m */; };
+		339B5EF117975B3E007DD626 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EF017975ADF007DD626 /* UIPlaceHolderTextView.m */; };
+		339B5EF51797A1FC007DD626 /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EF41797A198007DD626 /* CameraOverlayView.m */; };
+		339B5EF71797A7CE007DD626 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 339B5EF61797A7BE007DD626 /* camera.png */; };
+		339B5F041797BBEC007DD626 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F001797B9F1007DD626 /* EventTableViewCell.xib */; };
+		339B5F051797BBEC007DD626 /* TextPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F011797BA0B007DD626 /* TextPostTableViewCell.xib */; };
+		339B5F061797BBEC007DD626 /* ImagePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */; };
+		339B5F071797BBEC007DD626 /* PlacePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F031797BA2F007DD626 /* PlacePostTableViewCell.xib */; };
+		339B5F081797BBFB007DD626 /* ImagePostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EF91797B965007DD626 /* ImagePostTableViewCell.m */; };
+		339B5F091797BBFB007DD626 /* TextPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EFB1797B97D007DD626 /* TextPostTableViewCell.m */; };
+		339B5F0A1797BBFB007DD626 /* PlacePostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EFD1797B991007DD626 /* PlacePostTableViewCell.m */; };
+		339B5F0B1797BBFB007DD626 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EFF1797B9BD007DD626 /* EventTableViewCell.m */; };
+		339B5F0D1797C27A007DD626 /* homer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F0C1797C26B007DD626 /* homer.jpg */; };
+		339B5F131797D794007DD626 /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5F121797D770007DD626 /* RoundedView.m */; };
 		33E0EFE8178172E4003CE1E5 /* greybutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFE717817218003CE1E5 /* greybutton.png */; };
 		33E0EFEA17817688003CE1E5 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFE917817586003CE1E5 /* 53-house.png */; };
 		33E0EFF217817A50003CE1E5 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E0EFF017817A3E003CE1E5 /* menu-icon.png */; };
@@ -143,6 +158,29 @@
 		330E24F41781622700AA1913 /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+MFSideMenu.h"; path = "Util/UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
 		330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+MFSideMenu.m"; path = "Util/UINavigationController+MFSideMenu.m"; sourceTree = "<group>"; };
 		339B5EE417950CD4007DD626 /* CameraOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraOverlayView.xib; sourceTree = "<group>"; };
+		339B5EE717973B2A007DD626 /* PictureEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PictureEditView.xib; path = Interfaces/PictureEditView.xib; sourceTree = "<group>"; };
+		339B5EEA179746F3007DD626 /* PictureEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PictureEditView.h; path = Views/PictureEditView.h; sourceTree = "<group>"; };
+		339B5EEB179746F3007DD626 /* PictureEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PictureEditView.m; path = Views/PictureEditView.m; sourceTree = "<group>"; };
+		339B5EEF17975ADF007DD626 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIPlaceHolderTextView.h; path = Views/UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		339B5EF017975ADF007DD626 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIPlaceHolderTextView.m; path = Views/UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		339B5EF31797A198007DD626 /* CameraOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraOverlayView.h; path = Views/CameraOverlayView.h; sourceTree = "<group>"; };
+		339B5EF41797A198007DD626 /* CameraOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CameraOverlayView.m; path = Views/CameraOverlayView.m; sourceTree = "<group>"; };
+		339B5EF61797A7BE007DD626 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Resources/camera.png; sourceTree = "<group>"; };
+		339B5EF81797B965007DD626 /* ImagePostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImagePostTableViewCell.h; path = Views/ImagePostTableViewCell.h; sourceTree = "<group>"; };
+		339B5EF91797B965007DD626 /* ImagePostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ImagePostTableViewCell.m; path = Views/ImagePostTableViewCell.m; sourceTree = "<group>"; };
+		339B5EFA1797B97D007DD626 /* TextPostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TextPostTableViewCell.h; path = Views/TextPostTableViewCell.h; sourceTree = "<group>"; };
+		339B5EFB1797B97D007DD626 /* TextPostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TextPostTableViewCell.m; path = Views/TextPostTableViewCell.m; sourceTree = "<group>"; };
+		339B5EFC1797B991007DD626 /* PlacePostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlacePostTableViewCell.h; path = Views/PlacePostTableViewCell.h; sourceTree = "<group>"; };
+		339B5EFD1797B991007DD626 /* PlacePostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PlacePostTableViewCell.m; path = Views/PlacePostTableViewCell.m; sourceTree = "<group>"; };
+		339B5EFE1797B9BD007DD626 /* EventTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EventTableViewCell.h; path = Views/EventTableViewCell.h; sourceTree = "<group>"; };
+		339B5EFF1797B9BD007DD626 /* EventTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EventTableViewCell.m; path = Views/EventTableViewCell.m; sourceTree = "<group>"; };
+		339B5F001797B9F1007DD626 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventTableViewCell.xib; path = Interfaces/EventTableViewCell.xib; sourceTree = "<group>"; };
+		339B5F011797BA0B007DD626 /* TextPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextPostTableViewCell.xib; path = Interfaces/TextPostTableViewCell.xib; sourceTree = "<group>"; };
+		339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ImagePostTableViewCell.xib; path = Interfaces/ImagePostTableViewCell.xib; sourceTree = "<group>"; };
+		339B5F031797BA2F007DD626 /* PlacePostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacePostTableViewCell.xib; sourceTree = "<group>"; };
+		339B5F0C1797C26B007DD626 /* homer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = homer.jpg; path = Resources/homer.jpg; sourceTree = "<group>"; };
+		339B5F111797D770007DD626 /* RoundedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RoundedView.h; path = Views/RoundedView.h; sourceTree = "<group>"; };
+		339B5F121797D770007DD626 /* RoundedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RoundedView.m; path = Views/RoundedView.m; sourceTree = "<group>"; };
 		33E0EFE717817218003CE1E5 /* greybutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greybutton.png; path = Resources/greybutton.png; sourceTree = "<group>"; };
 		33E0EFE917817586003CE1E5 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "53-house.png"; path = "Resources/53-house.png"; sourceTree = "<group>"; };
 		33E0EFF017817A3E003CE1E5 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-icon.png"; path = "Resources/menu-icon.png"; sourceTree = "<group>"; };
@@ -227,6 +265,7 @@
 		330E2464177FB0C900AA1913 /* nox */ = {
 			isa = PBXGroup;
 			children = (
+				339B5EE917974560007DD626 /* Views */,
 				330E24EC17813ECB00AA1913 /* Util */,
 				330E24CB177FD52D00AA1913 /* Resources */,
 				330E24B0177FCBC700AA1913 /* Interfaces */,
@@ -327,6 +366,11 @@
 				330E24C1177FCC5600AA1913 /* SettingsViewController.xib */,
 				330E24C2177FCC5600AA1913 /* SignUpViewController.xib */,
 				339B5EE417950CD4007DD626 /* CameraOverlayView.xib */,
+				339B5EE717973B2A007DD626 /* PictureEditView.xib */,
+				339B5F001797B9F1007DD626 /* EventTableViewCell.xib */,
+				339B5F011797BA0B007DD626 /* TextPostTableViewCell.xib */,
+				339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */,
+				339B5F031797BA2F007DD626 /* PlacePostTableViewCell.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -334,6 +378,8 @@
 		330E24CB177FD52D00AA1913 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				339B5F0C1797C26B007DD626 /* homer.jpg */,
+				339B5EF61797A7BE007DD626 /* camera.png */,
 				33E0EFF41787F8F2003CE1E5 /* 07-map-marker.png */,
 				33E0EFF51787F8F2003CE1E5 /* 08-chat.png */,
 				33E0EFF61787F8F2003CE1E5 /* 70-tv.png */,
@@ -365,6 +411,29 @@
 				33E0F02B1794D14A003CE1E5 /* Constants.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		339B5EE917974560007DD626 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				339B5EEA179746F3007DD626 /* PictureEditView.h */,
+				339B5EEB179746F3007DD626 /* PictureEditView.m */,
+				339B5EEF17975ADF007DD626 /* UIPlaceHolderTextView.h */,
+				339B5EF017975ADF007DD626 /* UIPlaceHolderTextView.m */,
+				339B5EF31797A198007DD626 /* CameraOverlayView.h */,
+				339B5EF41797A198007DD626 /* CameraOverlayView.m */,
+				339B5EF81797B965007DD626 /* ImagePostTableViewCell.h */,
+				339B5EF91797B965007DD626 /* ImagePostTableViewCell.m */,
+				339B5EFA1797B97D007DD626 /* TextPostTableViewCell.h */,
+				339B5EFB1797B97D007DD626 /* TextPostTableViewCell.m */,
+				339B5EFC1797B991007DD626 /* PlacePostTableViewCell.h */,
+				339B5EFD1797B991007DD626 /* PlacePostTableViewCell.m */,
+				339B5EFE1797B9BD007DD626 /* EventTableViewCell.h */,
+				339B5EFF1797B9BD007DD626 /* EventTableViewCell.m */,
+				339B5F111797D770007DD626 /* RoundedView.h */,
+				339B5F121797D770007DD626 /* RoundedView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +487,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339B5F0D1797C27A007DD626 /* homer.jpg in Resources */,
+				339B5F041797BBEC007DD626 /* EventTableViewCell.xib in Resources */,
+				339B5F051797BBEC007DD626 /* TextPostTableViewCell.xib in Resources */,
+				339B5F061797BBEC007DD626 /* ImagePostTableViewCell.xib in Resources */,
+				339B5F071797BBEC007DD626 /* PlacePostTableViewCell.xib in Resources */,
+				339B5EF71797A7CE007DD626 /* camera.png in Resources */,
+				339B5EE817973B43007DD626 /* PictureEditView.xib in Resources */,
 				339B5EE517950D0B007DD626 /* CameraOverlayView.xib in Resources */,
 				33E0F0281794BBE6003CE1E5 /* CameraViewController.xib in Resources */,
 				33E0F0221788F502003CE1E5 /* CommentViewController.xib in Resources */,
@@ -459,6 +535,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339B5F131797D794007DD626 /* RoundedView.m in Sources */,
+				339B5F081797BBFB007DD626 /* ImagePostTableViewCell.m in Sources */,
+				339B5F091797BBFB007DD626 /* TextPostTableViewCell.m in Sources */,
+				339B5F0A1797BBFB007DD626 /* PlacePostTableViewCell.m in Sources */,
+				339B5F0B1797BBFB007DD626 /* EventTableViewCell.m in Sources */,
+				339B5EF51797A1FC007DD626 /* CameraOverlayView.m in Sources */,
+				339B5EF117975B3E007DD626 /* UIPlaceHolderTextView.m in Sources */,
+				339B5EEC1797474C007DD626 /* PictureEditView.m in Sources */,
 				33E0F02C1794D19F003CE1E5 /* Constants.m in Sources */,
 				33E0F0291794BBF4003CE1E5 /* CameraViewController.m in Sources */,
 				33E0F0211788F4FA003CE1E5 /* CommentViewController.m in Sources */,

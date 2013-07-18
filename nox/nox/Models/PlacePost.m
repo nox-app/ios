@@ -15,4 +15,13 @@
 @synthesize caption = m_caption;
 @synthesize venue = m_venue;
 
+- (id)init
+{
+    if(self = [super init])
+    {
+        m_type = kPlaceType;
+    }
+    return self;
+}
+
 @end

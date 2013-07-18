@@ -12,6 +12,8 @@ NSString * const kEventsURL = @"http://192.168.1.113/nox/events/getEvents.php";
 
 NSString * const kEventsDownloadFinishedNotification = @"EventsDownloadFinishedNotification";
 
+NSInteger const kMaxCharacterLimit = 140;
+
 @implementation Constants
 
 @end

@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "CreateEventViewController.h"
 #import "Event.h"
+#import "EventTableViewCell.h"
 #import "EventViewController.h"
 #import "MFSideMenu.h"
 #import "Profile.h"
@@ -19,6 +20,8 @@
 @interface EventsViewController ()
 
 @end
+
+static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
 
 @implementation EventsViewController
 
@@ -37,6 +40,8 @@
 {
     [super viewDidLoad];
     [self setupNavigationBar];
+    
+    [m_eventsTableView registerNib:[UINib nibWithNibName:@"EventTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kEventCellReuseIdentifier];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(eventsDownloadFinished)
@@ -106,18 +111,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * identifier = @"Identifier";
-    
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    EventTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kEventCellReuseIdentifier];
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kEventCellReuseIdentifier];
     }
     
     Event * event = [[[Profile sharedProfile] events] objectAtIndex:[indexPath row]];
-    [cell.textLabel setText:[event name]];
+    [[cell eventTitleLabel] setText:[event name]];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [EventTableViewCell height];
 }
 
 #pragma mark - Table view delegate

@@ -14,5 +14,7 @@
 @synthesize id = m_id;
 @synthesize time = m_time;
 @synthesize location = m_location;
+@synthesize user = m_user;
+@synthesize type = m_type;
 
 @end

@@ -19,7 +19,7 @@
     NSDate * m_updatedAt;
     NSString * m_assetDir;
     
-    NSMutableArray * m_postsArray;
+    NSMutableArray * m_posts;
 }
 
 @property NSInteger id;
@@ -28,6 +28,8 @@
 @property NSDate * endedAt;
 @property NSDate * updatedAt;
 @property NSString * assetDir;
+
+@property NSMutableArray * posts;
 
 - (id)initWithDictionary:(NSDictionary *)a_dictionary;
 

@@ -12,4 +12,13 @@
 
 @synthesize body = m_body;
 
+- (id)init
+{
+    if(self = [super init])
+    {
+        m_type = kTextType;
+    }
+    return self;
+}
+
 @end

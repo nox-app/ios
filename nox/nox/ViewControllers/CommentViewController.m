@@ -8,9 +8,11 @@
 
 #import "CommentViewController.h"
 
+#import "Constants.h"
 #import "Event.h"
 #import "Profile.h"
 #import "TextPost.h"
+#import "UIPlaceHolderTextView.h"
 
 @interface CommentViewController ()
 
@@ -30,7 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [m_commentTextView setPlaceholderText:@"What's going on?"];
+    [m_commentTextView setPlaceholderColor:[UIColor lightGrayColor]];
+    [m_commentTextView setDelegate:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,6 +56,21 @@
     [textPost setBody:text];
     [textPost setTime:[NSDate date]];
     [textPost setLocation:[[Profile sharedProfile] lastLocation]];
+    [textPost setUser:[[Profile sharedProfile] user]];
+    
+    [m_event addPost:textPost];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextView Delegate  Methods
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if([[textView text] length] - range.length + text.length > kMaxCharacterLimit)
+    {
+        return NO;
+    }
+    return YES;
 }
 
 @end

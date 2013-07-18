@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class Event;
+@class UIPlaceHolderTextView;
 
-@interface CommentViewController : UIViewController
+@interface CommentViewController : UIViewController <UITextViewDelegate>
 {
-    IBOutlet UITextView * m_commentTextView;
+    IBOutlet UIPlaceHolderTextView * m_commentTextView;
     
     Event * m_event;
 }

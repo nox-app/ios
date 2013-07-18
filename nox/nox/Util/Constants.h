@@ -12,6 +12,8 @@ extern NSString * const kEventsURL;
 
 extern NSString * const kEventsDownloadFinishedNotification;
 
+extern NSInteger const kMaxCharacterLimit;
+
 @interface Constants : NSObject
 
 @end

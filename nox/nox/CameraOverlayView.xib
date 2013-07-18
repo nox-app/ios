@@ -12,15 +12,15 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1">
+        <view opaque="NO" contentMode="scaleToFill" id="1" customClass="CameraOverlayView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p44-vT-iO9">
-                    <rect key="frame" x="124" y="388" width="73" height="39"/>
+                    <rect key="frame" x="124" y="388" width="73" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" image="86-camera.png" backgroundImage="greybutton.png">
+                    <state key="normal" backgroundImage="camera.png">
                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -40,6 +40,12 @@
                                 <action selector="cameraDonePressed:" destination="-1" id="mO3-MY-9pl"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2pN-wd-fYd"/>
+                        <barButtonItem title="Post" width="49" id="If5-5n-rm3">
+                            <connections>
+                                <action selector="postPressed:" destination="-1" id="QLk-7a-pLx"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
                 <view contentMode="scaleToFill" id="JRt-wa-fqO">
@@ -54,13 +60,12 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.24955268899999999" green="0.4030984379" blue="0.62083899460000003" alpha="0.0" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="86-camera.png" width="24" height="18"/>
-        <image name="greybutton.png" width="250" height="50"/>
+        <image name="camera.png" width="479" height="414"/>
     </resources>
 </document>

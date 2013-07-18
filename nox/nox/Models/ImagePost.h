@@ -11,8 +11,10 @@
 @interface ImagePost : Post
 {
     NSString * m_caption;
+    UIImage * m_image;
 }
 
 @property NSString * caption;
+@property UIImage * image;
 
 @end

@@ -11,5 +11,15 @@
 @implementation ImagePost
 
 @synthesize caption = m_caption;
+@synthesize image = m_image;
+
+- (id)init
+{
+    if(self = [super init])
+    {
+        m_type = kImageType;
+    }
+    return self;
+}
 
 @end

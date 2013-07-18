@@ -1,2 +1,2 @@
-dependencies: /Users/jdiprete/nox/ios/nox/nox/View/CameraOverlayView.m \
-  /Users/jdiprete/nox/ios/nox/nox/View/CameraOverlayView.h
+dependencies: /Users/jdiprete/nox/ios/nox/nox/Views/CameraOverlayView.m \
+  /Users/jdiprete/nox/ios/nox/nox/Views/CameraOverlayView.h

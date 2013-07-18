@@ -10,11 +10,11 @@
 
 @class Event;
 
-@interface EventViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface EventViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     Event * m_event;
     
-    IBOutlet UILabel * m_eventLabel; //@todo(jdiprete): delete this
+    IBOutlet UITableView * m_tableView;
 }
 
 
