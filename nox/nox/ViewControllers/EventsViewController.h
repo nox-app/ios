@@ -10,13 +10,7 @@
 
 @class Event;
 
-@protocol EventsViewControllerDelegate
-
-- (void)pushEventViewControllerWithEvent:(Event *)a_event;
-
-@end
-
-@interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, EventsViewControllerDelegate>
+@interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView * m_eventsTableView;
 }

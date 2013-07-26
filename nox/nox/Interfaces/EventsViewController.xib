@@ -17,10 +17,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSY-tL-NG6">
-                    <rect key="frame" x="20" y="504" width="280" height="44"/>
+                    <rect key="frame" x="0.0" y="497" width="320" height="71"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" backgroundImage="greybutton.png">
+                    <state key="normal" backgroundImage="blackbutton.png">
                         <attributedString key="attributedTitle">
                             <fragment content="Start Event">
                                 <attributes>
@@ -38,18 +38,19 @@
                     <rect key="frame" x="0.0" y="63" width="320" height="433"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="wsb-T0-wbo"/>
                         <outlet property="delegate" destination="-1" id="r8y-he-G4z"/>
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.24955268899999999" green="0.4030984379" blue="0.62083899460000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.1090216871" green="0.1934793414" blue="0.31649116849999998" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="greybutton.png" width="250" height="50"/>
+        <image name="blackbutton.png" width="465" height="154"/>
     </resources>
 </document>

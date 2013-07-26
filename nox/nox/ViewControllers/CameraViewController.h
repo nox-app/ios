@@ -10,26 +10,27 @@
 
 @class Event;
 @class ImagePost;
-@class PictureEditView;
 @class UIPlaceHolderTextView;
 
-@interface CameraViewController : UIImagePickerController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, UITextViewDelegate>
+@interface CameraViewController : UIImagePickerController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 {
     IBOutlet UIView * m_cameraOverlayView;
     
     IBOutlet UIScrollView * m_photoScrollView;
     IBOutlet UIView * m_photoView;
-    IBOutlet UIImageView * m_editImageView;
-    IBOutlet UIPlaceHolderTextView * m_editCaptionTextView;
-    
-    PictureEditView * m_pictureEditView;
     
     NSMutableArray * m_photoArray;
     NSMutableArray * m_imagePostArray;
     
     Event * m_event;
-    
     ImagePost * m_currentImagePost;
+    
+    float m_pictureDragY;
+    
+    IBOutlet UIView * m_pictureDetailView;
+    IBOutlet UIImageView * m_pictureImageView;
+    IBOutlet UIButton * m_cameraButton;
+    IBOutlet UIButton * m_postButton;
 }
 
 - (id)initWithEvent:(Event *)a_event;
@@ -37,9 +38,8 @@
 - (IBAction)cameraDonePressed:(id)sender;
 - (IBAction)takePicturePressed:(id)sender;
 
-- (IBAction)cancelPictureEditPressed:(id)sender;
-- (IBAction)savePictureEditPressed:(id)sender;
-
 - (IBAction)postPressed:(id)sender;
+- (IBAction)switchCameraViewPressed:(id)sender;
+- (IBAction)switchToCameraPressed:(id)sender;
 
 @end

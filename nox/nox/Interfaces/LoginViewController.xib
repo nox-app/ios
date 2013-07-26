@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4457.9" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4471.1" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3697.3"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
-                <outlet property="m_emailTextField" destination="105" id="192"/>
-                <outlet property="m_passwordTextField" destination="112" id="193"/>
+                <outlet property="m_emailTextField" destination="Ut2-g9-YV4" id="czO-Gt-nmp"/>
+                <outlet property="m_passwordTextField" destination="8Zq-nj-q5B" id="Fkq-WB-DAG"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -17,69 +17,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
-                    <rect key="frame" x="36" y="45" width="248" height="126"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="248" id="20"/>
-                        <constraint firstAttribute="height" constant="126" id="143"/>
-                    </constraints>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49">
-                    <rect key="frame" x="36" y="275" width="248" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="181"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" backgroundImage="greybutton.png">
-                        <attributedString key="attributedTitle">
-                            <fragment content="Log In">
-                                <attributes>
-                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                    </state>
-                    <connections>
-                        <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="176"/>
-                    </connections>
-                </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="New to Nox?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63">
-                    <rect key="frame" x="108" y="376" width="104" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="104" id="69"/>
-                        <constraint firstAttribute="height" constant="21" id="73"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="105">
-                    <rect key="frame" x="36" y="190" width="248" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="4XD-k7-mAW"/>
-                    </connections>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="112">
-                    <rect key="frame" x="36" y="228" width="248" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="zGj-Ma-HUd"/>
-                    </connections>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCY-bj-R5I">
-                    <rect key="frame" x="108" y="405" width="104" height="34"/>
+                    <rect key="frame" x="108" y="411" width="104" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" backgroundImage="greybutton.png">
+                    <state key="normal" backgroundImage="blackbutton.png">
                         <attributedString key="attributedTitle">
                             <fragment content="Sign Up">
                                 <attributes>
@@ -90,28 +32,58 @@
                         </attributedString>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LU-PJ-43O">
+                    <rect key="frame" x="36" y="266" width="248" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Login" backgroundImage="blackbutton.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="c5t-Ip-G3M"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to nox?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRk-Db-jCw">
+                    <rect key="frame" x="112" y="382" width="97" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ut2-g9-YV4">
+                    <rect key="frame" x="36" y="190" width="248" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ajg-hn-LB9"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Zq-nj-q5B">
+                    <rect key="frame" x="36" y="228" width="248" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="R95-Ai-L8A"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-jh-Q7l">
+                    <rect key="frame" x="69" y="74" width="182" height="82"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.24955268899999999" green="0.4030984379" blue="0.62083899460000003" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstItem="105" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="107"/>
-                <constraint firstItem="105" firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="111"/>
-                <constraint firstItem="112" firstAttribute="leading" secondItem="105" secondAttribute="leading" id="114"/>
-                <constraint firstItem="112" firstAttribute="trailing" secondItem="105" secondAttribute="trailing" id="116"/>
-                <constraint firstItem="112" firstAttribute="top" secondItem="105" secondAttribute="bottom" constant="8" symbolic="YES" id="148"/>
-                <constraint firstItem="105" firstAttribute="top" secondItem="1" secondAttribute="top" constant="190" id="149"/>
-                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="45" id="151"/>
-                <constraint firstItem="49" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="184"/>
-                <constraint firstItem="49" firstAttribute="centerX" secondItem="63" secondAttribute="centerX" id="185"/>
-                <constraint firstItem="49" firstAttribute="trailing" secondItem="112" secondAttribute="trailing" id="186"/>
-                <constraint firstItem="49" firstAttribute="leading" secondItem="112" secondAttribute="leading" id="187"/>
-                <constraint firstAttribute="bottom" secondItem="49" secondAttribute="bottom" constant="239" id="191"/>
-            </constraints>
+            <color key="backgroundColor" red="0.10902168709248498" green="0.19347934144278453" blue="0.31649116847826086" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="greybutton.png" width="250" height="50"/>
-        <image name="logo.png" width="202" height="147"/>
+        <image name="blackbutton.png" width="465" height="154"/>
+        <image name="logo.png" width="175" height="73"/>
     </resources>
 </document>

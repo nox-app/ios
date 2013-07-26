@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Justine DiPrete. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
 @interface RoundedView : UIView
+
+- (void)attachPopUpAnimation;
 
 @end

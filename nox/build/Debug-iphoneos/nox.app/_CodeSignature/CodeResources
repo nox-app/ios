@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>02-redo.png</key>
+		<data>
+		/LrDNhpOeCH7aR8EY8WVQPusK7I=
+		</data>
 		<key>07-map-marker.png</key>
 		<data>
 		+cAyxEu0Aua+a3kFb8yFDAzzXvg=
@@ -30,55 +34,47 @@
 		</data>
 		<key>AddFriendsViewController.nib</key>
 		<data>
-		+DFDxaSjKL7i+05BNHqi5GlusC0=
+		4j92jQyLPpvKrvYVZwRnmyp/Q+o=
 		</data>
 		<key>CameraOverlayView.nib/objects.nib</key>
 		<data>
-		hCsSZb7DLT3S6zdkytk22x3W1Cs=
+		r8Um6tg5IScKiEpBd0JIhZ0DcnE=
 		</data>
 		<key>CameraOverlayView.nib/runtime.nib</key>
 		<data>
-		UHVrpkZ0ydQlKvi3XtmujKpXZhg=
-		</data>
-		<key>CameraOverlayViewController.nib/objects.nib</key>
-		<data>
-		gLOJiAqw/ySEYdlPLl83D5WTZPo=
-		</data>
-		<key>CameraOverlayViewController.nib/runtime.nib</key>
-		<data>
-		0Gc5LaCp0nDLKc1HtL41ufXmG+M=
+		WzwJOsT2sTE6brlYaq25i3iFqqU=
 		</data>
 		<key>CameraViewController.nib/objects.nib</key>
 		<data>
-		nN1EcYlptVznC6UT6Yk4yiPohgk=
+		mYH+pk5yjE+XnaHluhlalCtzzdY=
 		</data>
 		<key>CameraViewController.nib/runtime.nib</key>
 		<data>
-		WDhBsJvtUdQINPLmSK+VPRx6HKk=
+		vTCScWz/eSAo13//wPr/nj88fbU=
 		</data>
 		<key>CheckInViewController.nib/objects.nib</key>
 		<data>
-		4uGqFprnBfAOnZhtCAX7Os4Zowo=
+		s4QxhQDf+WGKiiFWEIrMtfRbc5A=
 		</data>
 		<key>CheckInViewController.nib/runtime.nib</key>
 		<data>
-		PD4It2T2R1b6dL/clWdfXJ4r+2g=
+		IchFqjeKz2h78dumGn7BpHi5ASQ=
 		</data>
 		<key>CommentViewController.nib/objects.nib</key>
 		<data>
-		jdR1AShQU0t81jipBszinHSGxzQ=
+		uyHcgwoigGWeBsVUwK98TxJJ6Yc=
 		</data>
 		<key>CommentViewController.nib/runtime.nib</key>
 		<data>
-		pa9TFq21IKN48q8Wu4PW5nJX0I0=
+		po638QkKQT+gTxlgV5okWrRkLRM=
 		</data>
-		<key>CreateEventViewController.nib/objects.nib</key>
+		<key>CommentsView.nib/objects.nib</key>
 		<data>
-		2yt+ps8vFnrigpC2o8cju2bH8IA=
+		MK8fLzN7RVWCtEsxEadNfg15d0U=
 		</data>
-		<key>CreateEventViewController.nib/runtime.nib</key>
+		<key>CommentsView.nib/runtime.nib</key>
 		<data>
-		wTxv89q5YBtXFVG3RDy/TqqzOHo=
+		dKzyGBoy2Eu8DANiFoiiPcoJ74M=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
@@ -98,67 +94,67 @@
 		</data>
 		<key>EventTableViewCell.nib/objects.nib</key>
 		<data>
-		zNNzJx+cBjjR345EDt5B+5cYrpE=
+		p+VKaZy9HqUsGu7qMDFOhRAXOwE=
 		</data>
 		<key>EventTableViewCell.nib/runtime.nib</key>
 		<data>
-		siQzy4FOFYZEXfcK773QW6db7vE=
+		SToz+CIr8H60YUPpX1LYdDjx27M=
 		</data>
 		<key>EventViewController.nib/objects.nib</key>
 		<data>
-		wn60DKpjsjmoZaMJ5ygpzvoyjtg=
+		RuVOUJLgAv/A0o8eJmjjUlxoyTI=
 		</data>
 		<key>EventViewController.nib/runtime.nib</key>
 		<data>
-		vonp13I18TKR4qfe9wlg2+HTxLQ=
+		gt2Y84Mc9dkv7Hk3+h3ykFTjXss=
 		</data>
 		<key>EventsViewController.nib/objects.nib</key>
 		<data>
-		cIeFk2U8Kp8KvXQSldfF7CFYreY=
+		NcBiAK6uJm0FO14OHxJje7eykBA=
 		</data>
 		<key>EventsViewController.nib/runtime.nib</key>
 		<data>
-		rik28UDxl5dyUbpmmiesdlILnL8=
+		M3EPoiQ/Rbd3lZ6I3kaci/g3K2U=
 		</data>
 		<key>FriendsMenuViewController.nib/objects.nib</key>
 		<data>
-		EAaoERS8T2uUjKsBRzW1GL1rOLQ=
+		Y89XfUyuQycM3K6XK5zcSsf8hoI=
 		</data>
 		<key>FriendsMenuViewController.nib/runtime.nib</key>
 		<data>
-		8ijmaL/JXw2oO1syoq0Xd1Jrnhc=
+		PrVqTB4z07ytUNgdJydpqw4qTVY=
 		</data>
 		<key>FriendsViewController.nib/objects.nib</key>
 		<data>
-		PFmLZbRDgkuagiinap7jXVz6GbY=
+		1AvQy5054ICcIxS8Vox/pJVJl2w=
 		</data>
 		<key>FriendsViewController.nib/runtime.nib</key>
 		<data>
-		SOo6wWqWP7YGSJOwPZGYgUTVx+w=
+		gcoBZgVsTgpjA/dIN3PTM78Gdmk=
 		</data>
 		<key>ImagePostTableViewCell.nib/objects.nib</key>
 		<data>
-		dbA2MPxV/186UIgooNwBtJ5uFxQ=
+		Kqtiq7F2rRpLOmyVddiDGPhV+Tk=
 		</data>
 		<key>ImagePostTableViewCell.nib/runtime.nib</key>
 		<data>
-		7P/vHrungZUkLves4Xme9r5amBY=
+		AUGwXxD3y7y/Vxj3pbw0iewW+ck=
 		</data>
 		<key>LoginViewController.nib/objects.nib</key>
 		<data>
-		hGAPZKWw/k27NlywHXI9dBMpOVk=
+		veqAMx6xdXwBU8noORZkm5AKpKE=
 		</data>
 		<key>LoginViewController.nib/runtime.nib</key>
 		<data>
-		wLnlKkedHdZbUB2g/PubvD8q0l8=
+		vHAhCKhPl3FFpP2FBW9vGcB0Ecc=
 		</data>
 		<key>PictureEditView.nib/objects.nib</key>
 		<data>
-		n6FpKfQKIfng6pYPu6XBCvdL7UQ=
+		Y69eUi+PpR0AGe95AIlNpB9j8os=
 		</data>
 		<key>PictureEditView.nib/runtime.nib</key>
 		<data>
-		I9wNtCz+6tWpnZOjw68KCI9j0gk=
+		51gxemulDbGH6HiXNgXWAN6trqM=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -166,39 +162,51 @@
 		</data>
 		<key>PlacePostTableViewCell.nib/objects.nib</key>
 		<data>
-		0Zf4pP9e/KdJlowvGDRcDTQ4wBA=
+		SQLRWNCSgWQHG9qVuG4OQJucaDw=
 		</data>
 		<key>PlacePostTableViewCell.nib/runtime.nib</key>
 		<data>
-		n/NBlVYw+x9J6eDu//hxuu5vpBk=
+		ry/6LhDZDIN1jkWCSQ3cZY2IbgI=
 		</data>
 		<key>SettingsViewController.nib/objects.nib</key>
 		<data>
-		X9AbQLKA2Rbeb+HD3oYWV+Jb9R4=
+		C41b9gZGCRCynvePtpbyddzrdhI=
 		</data>
 		<key>SettingsViewController.nib/runtime.nib</key>
 		<data>
-		p96i0XXpTbQomW4xYLjZgKlf8/E=
+		dPjtSv475tXCguzSx+YEBedBuC4=
 		</data>
 		<key>SignUpViewController.nib/objects.nib</key>
 		<data>
-		zjVyS8wrUWcYvlvdRjjquXPPDVw=
+		1s7khAWMKl20G47E5uMnMzYkzpU=
 		</data>
 		<key>SignUpViewController.nib/runtime.nib</key>
 		<data>
-		GYpwA8dy1O3PXvn+zAd95DVjyaY=
+		4vOnvAEi/nUNaKt/mP7SIdNiQGI=
 		</data>
 		<key>TextPostTableViewCell.nib/objects.nib</key>
 		<data>
-		tp4UjrouqlkP+JSQsy7dicIBZLA=
+		9Q0sfjxweFGPSGjGk8COzgsXVkI=
 		</data>
 		<key>TextPostTableViewCell.nib/runtime.nib</key>
 		<data>
-		JiZdv/0YxIWqLmdjYpB1GEJdBIA=
+		/pRM1vibBoKUDosGyRRZJOMfveQ=
+		</data>
+		<key>blackbutton.png</key>
+		<data>
+		0hs8NmMAw2oaAnxPFtxqjubPido=
+		</data>
+		<key>bluecirclebutton.png</key>
+		<data>
+		p1XnEbXdGKnMPWLs36Ggm+0DU4M=
 		</data>
 		<key>camera.png</key>
 		<data>
 		pgX4RAtDIyfLtGMBZL/Z75HM5dc=
+		</data>
+		<key>downarrrow.png</key>
+		<data>
+		O5wCMidCansSr15LQqiJESQixoI=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -218,11 +226,15 @@
 		</data>
 		<key>icon114.png</key>
 		<data>
-		PwzpGpSqYrE+SnZufrsGqkDupnU=
+		XJnA5h23xyb+VGoqIRgeN/8VPYs=
+		</data>
+		<key>icon144.png</key>
+		<data>
+		wGjxAAqgOckGmh0qyY7gFwJGEnw=
 		</data>
 		<key>logo.png</key>
 		<data>
-		9haWR8ZkGJD+nKhKXtohDa6XgFc=
+		45N4+W2zHnvnshXyZkPHj3zrHOw=
 		</data>
 		<key>menu-icon.png</key>
 		<data>
@@ -235,6 +247,22 @@
 		<key>splash1136.png</key>
 		<data>
 		walq0wxe4n2RC4HPI/hIMnNgvz0=
+		</data>
+		<key>thumbsdown.png</key>
+		<data>
+		OutQsi23J8Uic4Eeqkw1tUQas8Y=
+		</data>
+		<key>thumbsup.png</key>
+		<data>
+		yimACdSHYuQIwaKpkr041/faXVQ=
+		</data>
+		<key>whitebutton.png</key>
+		<data>
+		40eS6wu6c23SikkNXfeiyd0Ws10=
+		</data>
+		<key>xbutton.png</key>
+		<data>
+		UARO+0L0UNzpOUila6aucZ5PBQE=
 		</data>
 	</dict>
 	<key>rules</key>

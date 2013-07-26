@@ -1,3 +1,6 @@
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/CommentsView.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/OutlinedLabel.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/CellScrollView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/RoundedView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/ImagePostTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/TextPostTableViewCell.o
@@ -5,7 +8,6 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/EventTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/CameraOverlayView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/UIPlaceHolderTextView.o
-/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/PictureEditView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/Constants.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/CameraViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/CommentViewController.o
@@ -27,7 +29,6 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/SignUpViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/EventsViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/EventViewController.o
-/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/CreateEventViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/SettingsViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/FriendsViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7s/AddFriendsViewController.o

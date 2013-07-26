@@ -8,6 +8,8 @@
 
 #import "Constants.h"
 
+NSString * const kNoxAPIBaseURL = @"http://192.168.1.113/api/v1";
+
 NSString * const kEventsURL = @"http://192.168.1.113/nox/events/getEvents.php";
 
 NSString * const kEventsDownloadFinishedNotification = @"EventsDownloadFinishedNotification";

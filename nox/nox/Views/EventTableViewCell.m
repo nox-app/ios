@@ -29,7 +29,7 @@
 + (CGFloat)height
 {
     //return the height of the cell
-    return 62;
+    return 116;
 }
 
 @end

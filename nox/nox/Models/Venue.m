@@ -10,7 +10,10 @@
 
 #import "Location.h"
 
+NSString * const kVenueIconDidDownloadNotification = @"VenueIconDidDownloadNotification";
+
 @implementation Venue
+
 @synthesize iconURL = m_iconURL;
 @synthesize iconImage = m_iconImage;
 @synthesize id = m_id;
@@ -54,9 +57,15 @@
     
 }
 
+- (void)iconDownloadDidFinish
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kVenueIconDidDownloadNotification object:self];
+}
+
 - (void)downloadIcon
 {
     m_iconImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:m_iconURL]]];
+    [self performSelectorOnMainThread:@selector(iconDownloadDidFinish) withObject:nil waitUntilDone:NO];
 }
 
 

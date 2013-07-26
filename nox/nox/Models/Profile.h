@@ -9,6 +9,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 
+@class Event;
 @class User;
 
 @interface Profile : NSObject <NSURLConnectionDelegate, CLLocationManagerDelegate>
@@ -28,5 +29,7 @@
 @property CLLocation * lastLocation;
 
 + (Profile *)sharedProfile;
+
+- (void)addEvent:(Event *)a_event;
 
 @end

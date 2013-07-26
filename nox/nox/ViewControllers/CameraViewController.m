@@ -11,7 +11,6 @@
 #import "Constants.h"
 #import "Event.h"
 #import "ImagePost.h"
-#import "PictureEditView.h"
 #import "Profile.h"
 #import "UIPlaceHolderTextView.h"
 
@@ -41,14 +40,6 @@ static const float kKeyboardOffset = 120.0;
     
     m_photoArray = [[NSMutableArray alloc] init];
     m_imagePostArray = [[NSMutableArray alloc] init];
-    
-    m_pictureEditView = [[[NSBundle mainBundle] loadNibNamed:@"PictureEditView" owner:self options:nil] objectAtIndex:0];
-    m_editCaptionTextView.layer.borderWidth = 3.0;
-    m_editCaptionTextView.layer.borderColor = [UIColor blackColor].CGColor;
-    m_editCaptionTextView.layer.cornerRadius = 5.0;
-    [m_editCaptionTextView setPlaceholderText:@"Enter your caption"];
-    [m_editCaptionTextView setPlaceholderColor:[UIColor lightGrayColor]];
-    [m_editCaptionTextView setDelegate:self];
     
     [self setSourceType:UIImagePickerControllerSourceTypeCamera];
     [self setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto];
@@ -80,71 +71,109 @@ static const float kKeyboardOffset = 120.0;
 - (void)openPictureEditViewForImageAtIndex:(NSInteger)a_index
 {
     m_currentImagePost = [m_imagePostArray objectAtIndex:a_index];
-    [m_pictureEditView setImage:[m_currentImagePost image]];
-    [m_pictureEditView setFrame:CGRectMake(0, 25, m_pictureEditView.frame.size.width, m_pictureEditView.frame.size.height)];
-    [m_editCaptionTextView setText:[m_currentImagePost caption]];
-    [self.view addSubview:m_pictureEditView];
-}
-
-- (IBAction)cancelPictureEditPressed:(id)sender
-{
-    [UIView animateWithDuration:0.3 animations:^(void)
-     {
-         [m_pictureEditView setFrame:CGRectMake(m_pictureEditView.frame.origin.x, [UIScreen mainScreen].bounds.size.height, m_pictureEditView.frame.size.width, m_pictureEditView.frame.size.height)];
-     }completion:^(BOOL finished)
-     {
-         [m_pictureEditView removeFromSuperview];
-     }];
-    [m_editCaptionTextView setText:@""];
-}
-
-- (IBAction)savePictureEditPressed:(id)sender
-{
-    [m_currentImagePost setCaption:[m_editCaptionTextView text]];
     
-    [UIView animateWithDuration:0.3 animations:^(void)
-     {
-         [m_pictureEditView setFrame:CGRectMake(m_pictureEditView.frame.origin.x, [UIScreen mainScreen].bounds.size.height, m_pictureEditView.frame.size.width, m_pictureEditView.frame.size.height)];
-     }completion:^(BOOL finished)
-     {
-         [m_pictureEditView removeFromSuperview];
-         [m_editCaptionTextView setText:@""];
-     }];
+    [m_pictureImageView setImage:[m_currentImagePost image]];
+    [m_pictureDetailView setFrame:CGRectMake(0, 40, m_pictureDetailView.frame.size.width, m_pictureDetailView.frame.size.height)];
+    [self.view addSubview:m_pictureDetailView];
 }
 
-#pragma mark - UITextView Delegate Methods
-
-- (void)textViewDidBeginEditing:(UITextView *)textView
+- (void)switchToCameraPressed:(id)sender
 {
-    [UIView animateWithDuration:0.3 animations:^(void)
-     {
-         [m_pictureEditView setFrame:CGRectMake(m_pictureEditView.frame.origin.x, m_pictureEditView.frame.origin.y - kKeyboardOffset, m_pictureEditView.frame.size.width, m_pictureEditView.frame.size.height)];
-     }completion:nil];
-}
-
-- (void)textViewDidEndEditing:(UITextView *)textView
-{
-    [UIView animateWithDuration:0.3 animations:^(void)
-     {
-         [m_pictureEditView setFrame:CGRectMake(m_pictureEditView.frame.origin.x, m_pictureEditView.frame.origin.y + kKeyboardOffset, m_pictureEditView.frame.size.width, m_pictureEditView.frame.size.height)];
-     }completion:nil];
-}
-
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
-{
-    if([text isEqualToString:@"\n"])
-    {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    else if([[textView text] length] - range.length + text.length > kMaxCharacterLimit)
-    {
-        return NO;
-    }
-    return YES;
+    [m_pictureDetailView removeFromSuperview];
 }
 
 #pragma mark - Photo View Methods
+
+//scale these down to save memory cause shit is crashing...
+- (UIImage *)resizeImage:(UIImage *)a_image toSize:(CGSize)a_size
+{
+    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, a_size.width, a_size.height));
+    CGRect transposedRect = CGRectMake(0, 0, newRect.size.height, newRect.size.width);
+    CGImageRef imageRef = a_image.CGImage;
+    
+    // Build a context that's the same dimensions as the new size
+    CGContextRef bitmap = CGBitmapContextCreate(NULL,
+                                                newRect.size.width,
+                                                newRect.size.height,
+                                                CGImageGetBitsPerComponent(imageRef),
+                                                0,
+                                                CGImageGetColorSpace(imageRef),
+                                                CGImageGetBitmapInfo(imageRef));
+    
+    BOOL transpose;
+    switch(a_image.imageOrientation)
+    {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transpose = YES;
+            break;
+            
+        default:
+            transpose = NO;
+    }
+    
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    switch (a_image.imageOrientation) {
+        case UIImageOrientationDown:           // EXIF = 3
+        case UIImageOrientationDownMirrored:   // EXIF = 4
+            transform = CGAffineTransformTranslate(transform, a_size.width, a_size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+            
+        case UIImageOrientationLeft:           // EXIF = 6
+        case UIImageOrientationLeftMirrored:   // EXIF = 5
+            transform = CGAffineTransformTranslate(transform, a_size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+            
+        case UIImageOrientationRight:          // EXIF = 8
+        case UIImageOrientationRightMirrored:  // EXIF = 7
+            transform = CGAffineTransformTranslate(transform, 0, a_size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+        default:
+            break;
+    }
+    
+    switch (a_image.imageOrientation) {
+        case UIImageOrientationUpMirrored:     // EXIF = 2
+        case UIImageOrientationDownMirrored:   // EXIF = 4
+            transform = CGAffineTransformTranslate(transform, a_size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+            
+        case UIImageOrientationLeftMirrored:   // EXIF = 5
+        case UIImageOrientationRightMirrored:  // EXIF = 7
+            transform = CGAffineTransformTranslate(transform, a_size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        default:
+            break;
+    }
+    
+    // Rotate and/or flip the image if required by its orientation
+    CGContextConcatCTM(bitmap, transform);
+    
+    // Set the quality level to use when rescaling
+    CGContextSetInterpolationQuality(bitmap, kCGInterpolationHigh);
+    
+    // Draw into the context; this scales the image
+    CGContextDrawImage(bitmap, transpose ? transposedRect : newRect, imageRef);
+    
+    // Get the resized image from the context and a UIImage
+    CGImageRef newImageRef = CGBitmapContextCreateImage(bitmap);
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+    
+    // Clean up
+    CGContextRelease(bitmap);
+    CGImageRelease(newImageRef);
+    
+    return newImage;
+
+}
 
 - (void)addPhotoToView:(UIImage *)a_picture
 {
@@ -159,8 +188,15 @@ static const float kKeyboardOffset = 120.0;
     
     UIImageView * photoImageView = [[UIImageView alloc] init];
     [m_photoArray addObject:photoImageView];
-    [photoImageView setImage:a_picture];
+    
     float pictureDimension = m_photoView.frame.size.height - 2*kPictureYOffset;
+    
+    //resize picture to save memory
+    float deviceScale = [[UIScreen mainScreen] scale];
+    a_picture = [self resizeImage:a_picture toSize:CGSizeMake(pictureDimension * deviceScale, pictureDimension * deviceScale)];
+    
+    [photoImageView setImage:a_picture];
+
     float pictureX = ([m_photoArray count] - 1) * (pictureDimension + kPictureXOffset) + kPictureXOffset;
     [photoImageView setFrame:CGRectMake(pictureX, kPictureYOffset, pictureDimension, pictureDimension)];
     [m_photoScrollView addSubview:photoImageView];
@@ -169,11 +205,12 @@ static const float kKeyboardOffset = 120.0;
     
     [photoImageView setUserInteractionEnabled:YES];
     
-    //Add Swipe Gesture Recognizer
-    UISwipeGestureRecognizer * swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pictureDidSwipe:)];
-    [swipeGestureRecognizer setDelegate:self];
-    [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionDown];
-    [photoImageView addGestureRecognizer:swipeGestureRecognizer];
+    //Add Pan Gesture Recognizer to delete pictures
+    UIPanGestureRecognizer * panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragPicture:)];
+    [panGestureRecognizer setDelegate:self];
+    [panGestureRecognizer setMinimumNumberOfTouches:1];
+    [panGestureRecognizer setMaximumNumberOfTouches:1];
+    [photoImageView addGestureRecognizer:panGestureRecognizer];
     
     //Add Tap Gesture Recognizer
     UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pictureDidTap:)];
@@ -182,33 +219,72 @@ static const float kKeyboardOffset = 120.0;
     [photoImageView addGestureRecognizer:tapGestureRecognizer];
 }
 
-- (void)pictureDidSwipe:(UIGestureRecognizer *)a_gestureRecognizer
+- (void)dragPicture:(UIGestureRecognizer *)a_gestureRecognizer
 {
-    for(int i = 0; i < [m_photoArray count]; i++)
-    {
-        if([a_gestureRecognizer.view isEqual:[m_photoArray objectAtIndex:i]])
-        {
-            [self removePhotoAtIndex:i];
-            break;
-        }
-    }
-}
-
-- (void)removePhotoAtIndex:(NSInteger)a_index
-{
-    UIImageView * photoView = [m_photoArray objectAtIndex:a_index];
+    UIView * picture = [a_gestureRecognizer view];
+    CGPoint translatedPoint = [(UIPanGestureRecognizer*)a_gestureRecognizer translationInView:self.view];
     
-    //@todo(jdiprete): drag off screen instead of animating
-    [UIView animateWithDuration:0.3 animations:^(void)
-     {
-         [photoView setFrame:CGRectMake(photoView.frame.origin.x, [UIScreen mainScreen].bounds.size.height, photoView.frame.size.width, photoView.frame.size.height)];
-     } completion:^(BOOL finished)
-     {
-         [photoView removeFromSuperview];
-         [m_photoArray removeObjectAtIndex:a_index];
-         [m_imagePostArray removeObjectAtIndex:a_index];
-         [self updatePhotosFromIndex:a_index];
-     }];
+    if([(UIPanGestureRecognizer *)a_gestureRecognizer state] == UIGestureRecognizerStateBegan)
+    {
+        m_pictureDragY = picture.frame.origin.y;
+	}
+	
+	translatedPoint = CGPointMake(picture.frame.origin.x, m_pictureDragY + translatedPoint.y);
+	
+    if(translatedPoint.y < kPictureYOffset)
+    {
+        [picture setFrame:CGRectMake(translatedPoint.x, kPictureYOffset, picture.frame.size.width, picture.frame.size.height)];
+    }
+    else
+    {
+        [picture setFrame:CGRectMake(translatedPoint.x, translatedPoint.y, picture.frame.size.width, picture.frame.size.height)];
+    }
+	
+	if([(UIPanGestureRecognizer*)a_gestureRecognizer state] == UIGestureRecognizerStateEnded)
+    {
+        float velocity = [(UIPanGestureRecognizer*)a_gestureRecognizer velocityInView:self.view].y;
+        
+        float finalY = translatedPoint.y;
+        
+        if(velocity < 0) //moving up
+        {
+            finalY = kPictureYOffset;
+        }
+        else // moving down
+        {
+            if(translatedPoint.y > kPictureYOffset + (([picture superview].frame.size.height - kPictureYOffset)*.3))
+            {
+                finalY = [picture superview].frame.size.height;
+            }
+            else
+            {
+                finalY = kPictureYOffset;
+            }
+		}
+
+		[UIView commitAnimations];
+        [UIView animateWithDuration:0.2 animations:^
+         {
+             [picture setFrame:CGRectMake(translatedPoint.x, finalY, picture.frame.size.width, picture.frame.size.height)];
+         }completion:^(BOOL finished)
+         {
+             //If the picture is off the screen, delete it
+             if(picture.frame.origin.y >= [picture superview].frame.size.height)
+             {
+                 for(int i = 0; i < [m_photoArray count]; i++)
+                 {
+                     if([picture isEqual:[m_photoArray objectAtIndex:i]])
+                     {
+                         [picture removeFromSuperview];
+                         [m_photoArray removeObjectAtIndex:i];
+                         [m_imagePostArray removeObjectAtIndex:i];
+                         [self updatePhotosFromIndex:i];
+                         break;
+                     }
+                 }
+             }
+         }];
+    }
 }
 
 - (void)updatePhotosFromIndex:(NSInteger)a_index
@@ -227,6 +303,12 @@ static const float kKeyboardOffset = 120.0;
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
+    //don't open picture when it's being dragged off screen
+    if(([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && [otherGestureRecognizer isKindOfClass:[UITapGestureRecognizer class]])
+        || ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]] && [otherGestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]))
+    {
+        return NO;
+    }
     return YES;
 }
 
@@ -246,9 +328,22 @@ static const float kKeyboardOffset = 120.0;
 {
     for(ImagePost * imagePost in m_imagePostArray)
     {
+        
         [m_event addPost:imagePost];
     }
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)switchCameraViewPressed:(id)sender
+{
+    if([self cameraDevice] == UIImagePickerControllerCameraDeviceFront)
+    {
+        [self setCameraDevice:UIImagePickerControllerCameraDeviceRear];
+    }
+    else
+    {
+        [self setCameraDevice:UIImagePickerControllerCameraDeviceFront];
+    }
 }
 
 #pragma mark - UIImagePickerController Delegate Methods
@@ -256,7 +351,36 @@ static const float kKeyboardOffset = 120.0;
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage * picture = [info objectForKey:UIImagePickerControllerOriginalImage];
+    CGRect cropRect;
+    
+    //landscape
+    if(picture.imageOrientation == UIImageOrientationDown || picture.imageOrientation == UIImageOrientationUp)
+    {
+        float pictureScale = picture.size.height/[UIScreen mainScreen].bounds.size.width;
+        //@todo(jdiprete): don't hardcode these numbers, grab them from the overlay
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 300 * pictureScale, 300 * pictureScale);
+    }
+    //portrait
+    else
+    {
+        float pictureScale = picture.size.width/[UIScreen mainScreen].bounds.size.width;
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 300 * pictureScale, 300 * pictureScale);
+    }
+    CGImageRef pictureRef = CGImageCreateWithImageInRect([picture CGImage], cropRect);
+    picture = [UIImage imageWithCGImage:pictureRef scale:picture.scale orientation:picture.imageOrientation];
+    
+    //scale this down to save memory
+    //@todo(jdiprete): If we want to give the option of saving to camera roll, do that before scaling the images down
+    float deviceResolution = [[UIScreen mainScreen] scale];
+    picture = [self resizeImage:picture toSize:CGSizeMake(300 * deviceResolution, 300 * deviceResolution)];
+    
     [self addPhotoToView:picture];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

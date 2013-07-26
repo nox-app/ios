@@ -10,7 +10,6 @@
 
 @implementation ImagePost
 
-@synthesize caption = m_caption;
 @synthesize image = m_image;
 
 - (id)init

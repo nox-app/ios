@@ -14,7 +14,6 @@
     UIImage * m_image;
 }
 
-@property NSString * caption;
 @property UIImage * image;
 
 @end

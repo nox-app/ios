@@ -20,6 +20,7 @@
     NSString * m_assetDir;
     
     NSMutableArray * m_posts;
+    NSMutableArray * m_images;
 }
 
 @property NSInteger id;
@@ -30,6 +31,7 @@
 @property NSString * assetDir;
 
 @property NSMutableArray * posts;
+@property NSMutableArray * images;
 
 - (id)initWithDictionary:(NSDictionary *)a_dictionary;
 

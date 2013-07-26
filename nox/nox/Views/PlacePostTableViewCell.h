@@ -10,6 +10,13 @@
 
 @interface PlacePostTableViewCell : UITableViewCell
 
+@property IBOutlet UIImageView * iconImageView;
+@property IBOutlet UILabel * placeNameLabel;
+@property IBOutlet UILabel * cityStateLabel;
+@property IBOutlet UILabel * timeLabel;
+@property IBOutlet UIView * backgroundBorderView;
+@property IBOutlet UIView * commentsView;
+
 + (CGFloat)height;
 
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kVenueIconDidDownloadNotification;
+
 @class Location;
 
 @interface Venue : NSObject

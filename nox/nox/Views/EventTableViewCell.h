@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class OutlinedLabel;
+
 @interface EventTableViewCell : UITableViewCell
 
-@property IBOutlet UILabel * eventTitleLabel;
+@property IBOutlet OutlinedLabel * eventTitleLabel;
+@property IBOutlet OutlinedLabel * timeLabel;
+@property IBOutlet UIScrollView * scrollView;
 
 + (CGFloat)height;
 

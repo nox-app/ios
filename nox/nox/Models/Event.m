@@ -8,6 +8,7 @@
 
 #import "Event.h"
 
+#import "ImagePost.h"
 #import "Post.h"
 
 @implementation Event
@@ -19,15 +20,31 @@
 @synthesize updatedAt = m_updatedAt;
 @synthesize assetDir = m_assetDir;
 @synthesize posts = m_posts;
+@synthesize images = m_images;
 
 - (id)initWithDictionary:(NSDictionary *)a_dictionary
 {
     if(self = [super init])
     {
         [self setPropertiesFromDictionary:a_dictionary];
-        m_posts = [[NSMutableArray alloc] init];
+        [self initialize];
     }
     return self;
+}
+
+- (id)init
+{
+    if(self = [super init])
+    {
+        [self initialize];
+    }
+    return self;
+}
+
+- (void)initialize
+{
+    m_posts = [[NSMutableArray alloc] init];
+    m_images = [[NSMutableArray alloc] init];
 }
 
 - (void)setPropertiesFromDictionary:(NSDictionary *)a_dictionary
@@ -47,6 +64,11 @@
 - (void)addPost:(Post *)a_post
 {
     [m_posts addObject:a_post];
+    
+    if([a_post isKindOfClass:[ImagePost class]])
+    {
+        [m_images addObject:[(ImagePost *)a_post image]];
+    }
     
     //sort the array by time - is this necessary? Maybe just read from the array backwards...
     m_posts = [NSMutableArray arrayWithArray:[m_posts sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {

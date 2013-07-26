@@ -10,6 +10,9 @@
 
 #import "Event.h"
 #import "JSONKit.h"
+#import "Location.h"
+#import "PlacePost.h"
+#import "RoundedView.h"
 #import "Venue.h"
 
 @interface CheckInViewController ()
@@ -36,6 +39,19 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
 {
     [super viewDidLoad];
     [self setupMap];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iconDidDownload:) name:kVenueIconDidDownloadNotification object:nil];
+}
+
+- (void)iconDidDownload:(NSNotification *)a_notification
+{
+    Venue * venue = [a_notification object];
+    
+    //todo(jdiprete): Is this better than just reloading every time?
+    NSUInteger index = [m_venues indexOfObject:venue];
+    if(index != NSNotFound)
+    {
+        [m_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -177,7 +193,41 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    Venue * venue = [m_venues objectAtIndex:indexPath.row];
+    [m_confirmPlaceName setText:[venue name]];
+    [m_confirmIconView setImage:[venue iconImage]];
+    [m_confirmAddressLabel setText:[[venue location] address]];
+    [m_confirmCityStateLabel setText:[NSString stringWithFormat:@"%@, %@", [[venue location] city], [[venue location] state]]];
+    
+    [m_confirmView setCenter:self.view.center];
+    [m_confirmView setHidden:YES];
+    [self.view addSubview:m_confirmView];
+    [m_confirmView attachPopUpAnimation];
+    [m_confirmView setHidden:NO];
+    
+    m_currentVenue = venue;
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
+- (IBAction)confirmPressed:(id)sender
+{
+    PlacePost * post = [[PlacePost alloc] init];
+    [post setVenue:m_currentVenue];
+    [post setTime:[NSDate date]];
+    [m_event addPost:post];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cancelConfirmPressed:(id)sender
+{
+    [m_confirmView removeFromSuperview];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

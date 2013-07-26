@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 
 @class Event;
+@class RoundedView;
+@class Venue;
 
 @interface CheckInViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 {
@@ -25,10 +27,21 @@
     BOOL m_hasUpdatedVenues;
     
     Event * m_event;
+    
+    IBOutlet RoundedView * m_confirmView;
+    IBOutlet UIImageView * m_confirmIconView;
+    IBOutlet UILabel * m_confirmPlaceName;
+    IBOutlet UILabel * m_confirmAddressLabel;
+    IBOutlet UILabel * m_confirmCityStateLabel;
+    
+    Venue * m_currentVenue;
 }
 
 - (id)initWithEvent:(Event *)a_event;
 
 - (IBAction)cancelPressed;
+
+- (IBAction)cancelConfirmPressed:(id)sender;
+- (IBAction)confirmPressed:(id)sender;
 
 @end

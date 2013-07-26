@@ -112,7 +112,7 @@ static Profile * g_sharedProfile;
             for(NSDictionary * event in events)
             {
                 Event * newEvent = [[Event alloc] initWithDictionary:event];
-                [m_events addObject:newEvent];
+                [self addEvent:newEvent];
             }
         }
     }
@@ -122,6 +122,19 @@ static Profile * g_sharedProfile;
 - (void)connection:(NSURLConnection *)a_connection didFailWithError:(NSError *)a_error
 {
     m_downloadBuffer = nil;
+}
+
+- (void)addEvent:(Event *)a_event
+{
+    [m_events addObject:a_event];
+    
+    //sort the array by time - is this necessary? Maybe just read from the array backwards...
+    //or sort some other way?
+    m_events = [NSMutableArray arrayWithArray:[m_events sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        NSDate * first = [(Event *)a startedAt];
+        NSDate * second = [(Event *)b startedAt];
+        return [second compare:first];
+    }]];
 }
 
 @end

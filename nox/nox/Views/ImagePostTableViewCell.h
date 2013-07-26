@@ -13,8 +13,8 @@
 @property IBOutlet UIImageView * userPicture;
 @property IBOutlet UILabel * userName;
 @property IBOutlet UIImageView * postImageView;
-@property IBOutlet UITextView * captionTextView;
-
+@property IBOutlet UILabel * timeLabel;
+@property IBOutlet UIView * commentsView;
 
 + (CGFloat)height;
 

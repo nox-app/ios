@@ -22,7 +22,7 @@
 - (void)drawRect:(CGRect)rect
 {
     //Set Camera View Background Color
-    [[UIColor colorWithRed:64.0/255.0 green:103.0/255.0 blue:158.0/255.0 alpha:0.8] setFill];
+    [[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1.0] setFill];
     UIRectFill(rect);
     
     //Make photo area transparent
