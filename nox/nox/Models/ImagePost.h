@@ -8,10 +8,14 @@
 
 #import "Post.h"
 
+extern NSString * const kImagePostDidDownloadNotification;
+
 @interface ImagePost : Post
 {
     NSString * m_caption;
     UIImage * m_image;
+    
+    NSString * m_imageURL;
 }
 
 @property UIImage * image;

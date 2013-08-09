@@ -57,6 +57,8 @@
     [textPost setTime:[NSDate date]];
     [textPost setLocation:[[Profile sharedProfile] lastLocation]];
     [textPost setUser:[[Profile sharedProfile] user]];
+    [textPost setEvent:[m_event resourceURI]];
+    [textPost setType:kTextType];
     
     [m_event addPost:textPost];
     [self dismissViewControllerAnimated:YES completion:nil];

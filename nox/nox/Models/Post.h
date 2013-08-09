@@ -27,6 +27,9 @@ typedef enum PostType
     User * m_user;
     
     PostType m_type;
+    NSString * m_resourceURI;
+    
+    NSString * m_event;
 }
 
 @property NSInteger id;
@@ -34,5 +37,8 @@ typedef enum PostType
 @property CLLocation * location;
 @property User * user;
 @property PostType type;
+@property NSString * event;
+
+- (id)initWithDictionary:(NSDictionary *)a_dictionary;
 
 @end

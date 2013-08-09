@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const kEventsURL;
+extern NSString * const kNoxBase;
+extern NSString * const kAPIBase;
+extern NSString * const kAPIEvents;
+extern NSString * const kAPILogin;
+extern NSString * const kAPIPosts;
+extern NSString * const kAPITextPost;
+extern NSString * const kAPIImagePost;
+extern NSString * const kAPIPlacePost;
 
 extern NSString * const kEventsDownloadFinishedNotification;
+extern NSString * const kEventCreationSucceededNotification;
+extern NSString * const kEventCreationFailedNotification;
 
 extern NSInteger const kMaxCharacterLimit;
 

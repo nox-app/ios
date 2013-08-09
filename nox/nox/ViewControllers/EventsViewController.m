@@ -47,12 +47,15 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
                                              selector:@selector(eventsDownloadFinished)
                                                  name:kEventsDownloadFinishedNotification
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDidDownload:) name:kEventDidDownloadImageNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController.sideMenu setHidesRightSideMenu:YES];
     [m_eventsTableView reloadData];
+    
+    //[[Profile sharedProfile] downloadEvents];
 }
 
 - (void)setupNavigationBar
@@ -70,6 +73,17 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
 }
 
 #pragma mark - Notifications
+
+- (void)imageDidDownload:(NSNotification *)a_notification
+{
+    Event * event = [a_notification object];
+    NSUInteger index = [[[Profile sharedProfile] events] indexOfObject:event];
+
+    if(index != NSNotFound)
+    {
+        [m_eventsTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 
 - (void)eventsDownloadFinished
 {
@@ -95,11 +109,16 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
     [event setName:dateString];
     [event setStartedAt:[NSDate date]];
     
-    NSDate * endDate = [NSDate dateWithTimeIntervalSinceNow:60*60*24];
-    [event setEndedAt:endDate]; //@todo(jdiprete): should we auto have an end date? or make it ongoing?
-    
     [[Profile sharedProfile] addEvent:event];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createdEvent:) name:kEventCreationSucceededNotification object:nil];
     
+    //@todo(jdiprete): add a spiny thing and a timer to make sure the event gets created...
+}
+
+- (void)createdEvent:(NSNotification *)a_notification
+{
+    Event * event = [a_notification object];
+    NSLog(@"Event name: %@ for event: %@", [event name], event);
     EventViewController * eventViewController = [[EventViewController alloc] initWithEvent:event];
     [self.navigationController pushViewController:eventViewController animated:NO];
 }
@@ -185,6 +204,9 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
             NSIndexPath * indexPath = [m_eventsTableView indexPathForCell:cell];
             [m_eventsTableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionBottom];
             Event * event = [[[Profile sharedProfile] events] objectAtIndex:[indexPath row]];
+            
+            //@todo(jdiprete): pre-download some then update here?
+            //[event downloadPosts];
             EventViewController * eventViewController = [[EventViewController alloc] initWithEvent:event];
             [self.navigationController pushViewController:eventViewController animated:YES];
         }

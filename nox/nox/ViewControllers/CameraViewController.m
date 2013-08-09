@@ -182,6 +182,8 @@ static const float kKeyboardOffset = 120.0;
     [imagePost setTime:[NSDate date]];
     [imagePost setLocation:[[Profile sharedProfile] lastLocation]];
     [imagePost setUser:[[Profile sharedProfile] user]];
+    [imagePost setEvent:[m_event resourceURI]];
+    [imagePost setType:kImageType];
     [imagePost setImage:a_picture];
     [m_imagePostArray addObject:imagePost];
     
@@ -328,7 +330,6 @@ static const float kKeyboardOffset = 120.0;
 {
     for(ImagePost * imagePost in m_imagePostArray)
     {
-        
         [m_event addPost:imagePost];
     }
     [self dismissViewControllerAnimated:YES completion:nil];

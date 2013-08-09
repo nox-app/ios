@@ -20,6 +20,7 @@
 #import "PlacePost.h"
 #import "PlacePostTableViewCell.h"
 #import "Post.h"
+#import "Profile.h"
 #import "TextPost.h"
 #import "TextPostTableViewCell.h"
 #import "Venue.h"
@@ -58,6 +59,26 @@ static NSString * const kPlacePostCellReuseIdentifier = @"PlacePostCellReuseIden
     [self setTitle:[m_event name]];
     
     [self addSettingsView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDidDownload:) name:kImagePostDidDownloadNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postsDidDownload) name:kPostsDidDownloadNotification object:nil];
+}
+
+- (void)postsDidDownload
+{
+    [m_tableView reloadData];
+}
+
+- (void)imageDidDownload:(NSNotification *)a_notification
+{
+    ImagePost * imagePost = [a_notification object];
+    
+    //todo(jdiprete): Is this better than just reloading every time?
+    NSUInteger index = [[m_event posts] indexOfObject:imagePost];
+    if(index != NSNotFound)
+    {
+        [m_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -75,7 +96,14 @@ static NSString * const kPlacePostCellReuseIdentifier = @"PlacePostCellReuseIden
     //The date picker is slow as fuck. Create it here, so it doesn't slow down the VC presentation...
     m_endDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 120, m_endDatePicker.frame.size.width, m_endDatePicker.frame.size.height)];
     [m_settingsView addSubview:m_endDatePicker];
-    [m_endDatePicker setDate:[m_event endedAt]];
+//    if([m_event endedAt])
+//    {
+//        [m_endDatePicker setDate:[m_event endedAt]];
+//    }
+//    else
+//    {
+//        [m_endDatePicker setDate:[m_event startedAt]];
+//    }
 }
 
 - (void)setupNavigationBar
@@ -363,13 +391,25 @@ static NSString * const kPlacePostCellReuseIdentifier = @"PlacePostCellReuseIden
     //@todo(jdiprete):send this info to the server to update
     [m_event setName:[m_eventNameTextField text]];
     [self setTitle:[m_event name]];
-    [m_event setEndedAt:[m_endDatePicker date]];
+    
+    if([[m_endDatePicker date] compare:[NSDate date]] == NSOrderedDescending)
+    {
+        [m_event setEndedAt:[m_endDatePicker date]];   
+    }
+    
+    [[Profile sharedProfile] updateEvent:m_event];
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.35];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     [m_settingsView setFrame:CGRectMake(m_settingsView.frame.origin.x, m_settingsMaximumY, m_settingsView.frame.size.width, m_settingsView.frame.size.height)];
     [UIView commitAnimations];
+}
+
+- (IBAction)deletePressed:(id)sender
+{
+    [[Profile sharedProfile] deleteEvent:m_event];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)homePressed

@@ -38,14 +38,15 @@
     [self.window makeKeyAndVisible];
     
     KeychainItemWrapper * keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"NoxLogin" accessGroup:nil];
-    NSString * password = [keychainItem objectForKey:(__bridge id)kSecValueData];
+    NSString * apiKey = [keychainItem objectForKey:(__bridge id)kSecValueData];
     NSString * email = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
     
-    NSLog(@"Logged in with email: %@ and password: %@", email, password);
+    NSLog(@"Logged in with email: %@ and API key: %@", email, apiKey);
     //@todo(jdiprete): Send username and password to server to verify that password is still correct before continuing
     
-    User * user = [[User alloc] init];
+    User * user = [[User alloc] initWithEmail:email];
     [[Profile sharedProfile] setUser:user];
+    [[Profile sharedProfile] setApiKey:apiKey];
     
     if([email isEqualToString:@""])
     {

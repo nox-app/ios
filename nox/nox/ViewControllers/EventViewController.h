@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Justine DiPrete. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
 @class Event;
@@ -35,5 +36,5 @@
 - (IBAction)checkInPressed:(id)sender;
 - (IBAction)statusUpdatePressed:(id)sender;
 - (IBAction)saveSettingsPressed:(id)sender;
-
+- (IBAction)deletePressed:(id)sender;
 @end

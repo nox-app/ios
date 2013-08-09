@@ -12,6 +12,7 @@
 #import "JSONKit.h"
 #import "Location.h"
 #import "PlacePost.h"
+#import "Profile.h"
 #import "RoundedView.h"
 #import "Venue.h"
 
@@ -215,6 +216,10 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
     PlacePost * post = [[PlacePost alloc] init];
     [post setVenue:m_currentVenue];
     [post setTime:[NSDate date]];
+    [post setLocation:[[Profile sharedProfile] lastLocation]];
+    [post setUser:[[Profile sharedProfile] user]];
+    [post setEvent:[m_event resourceURI]];
+    [post setType:kPlaceType];
     [m_event addPost:post];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

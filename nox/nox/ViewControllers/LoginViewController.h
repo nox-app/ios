@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASIHTTPRequestDelegate.h"
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate>
+@interface LoginViewController : UIViewController <UITextFieldDelegate, ASIHTTPRequestDelegate>
 {
     IBOutlet UITextField * m_emailTextField;
     IBOutlet UITextField * m_passwordTextField;
+    
+    NSMutableData * m_downloadBuffer;
+    
+    NSString * m_email;
+    BOOL m_success;
 }
 
 - (IBAction)loginPressed:(id)sender;

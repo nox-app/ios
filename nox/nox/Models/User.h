@@ -29,4 +29,6 @@
 @property BOOL hasIcon;
 @property UIImage * icon;
 
+- (id)initWithEmail:(NSString *)a_email;
+
 @end

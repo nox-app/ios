@@ -24,4 +24,13 @@
     return self;
 }
 
+- (id)initWithDictionary:(NSDictionary *)a_dictionary
+{
+    if(self = [super initWithDictionary:a_dictionary])
+    {
+        m_type = kPlaceType;
+    }
+    return self;
+}
+
 @end

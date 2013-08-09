@@ -19,4 +19,13 @@
 @synthesize hasIcon = m_hasIcon;
 @synthesize icon = m_icon;
 
+- (id)initWithEmail:(NSString *)a_email
+{
+    if(self = [super init])
+    {
+        m_email = a_email;
+    }
+    return self;
+}
+
 @end
