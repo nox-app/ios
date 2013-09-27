@@ -8,12 +8,14 @@
 
 #import "AppDelegate.h"
 
+#import "CRNavigationController.h"
 #import "EventsViewController.h"
 #import "FriendsMenuViewController.h"
 #import "KeychainItemWrapper.h"
 #import "LoginViewController.h"
 #import "MFSideMenu.h"
 #import "Profile.h"
+#import "SplashScreenViewController.h"
 #import "User.h"
 
 @implementation AppDelegate
@@ -25,14 +27,14 @@
     
     EventsViewController * eventsViewController = [[EventsViewController alloc] init];
     
-    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:eventsViewController];
+    self.navigationController = [[CRNavigationController alloc] initWithRootViewController:eventsViewController];
     
     FriendsMenuViewController * friendsMenuViewController = [[FriendsMenuViewController alloc] init];
     
-    MFSideMenu * sideMenu = [MFSideMenu menuWithNavigationController:navigationController leftSideMenuController:nil rightSideMenuController:friendsMenuViewController];
+    MFSideMenu * sideMenu = [MFSideMenu menuWithNavigationController:self.navigationController leftSideMenuController:nil rightSideMenuController:friendsMenuViewController];
     [friendsMenuViewController setSideMenu:sideMenu];
     
-    [self.window setRootViewController:navigationController];
+    [self.window setRootViewController:self.navigationController];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -40,21 +42,51 @@
     KeychainItemWrapper * keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"NoxLogin" accessGroup:nil];
     NSString * apiKey = [keychainItem objectForKey:(__bridge id)kSecValueData];
     NSString * email = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
-    
-    NSLog(@"Logged in with email: %@ and API key: %@", email, apiKey);
-    //@todo(jdiprete): Send username and password to server to verify that password is still correct before continuing
-    
-    User * user = [[User alloc] initWithEmail:email];
-    [[Profile sharedProfile] setUser:user];
-    [[Profile sharedProfile] setApiKey:apiKey];
+    NSString * resourceURI = [keychainItem objectForKey:(__bridge id)kSecAttrDescription];
+    NSLog(@"API: %@ EMAIL: %@ RESOURCE: %@", apiKey, email, resourceURI);
     
     if([email isEqualToString:@""])
     {
         LoginViewController * loginViewController = [[LoginViewController alloc] init];
-        [navigationController presentViewController:loginViewController animated:NO completion:nil];
+        [self.navigationController presentViewController:loginViewController animated:NO completion:nil];
+    }
+    else
+    {
+        SplashScreenViewController * splashScreenViewController = [[SplashScreenViewController alloc] init];
+        [self.navigationController presentViewController:splashScreenViewController animated:NO completion:nil];
+        
+        [[Profile sharedProfile] setApiKey:apiKey];
+        
+        User * user = [[User alloc] initWithEmail:email];
+        [[Profile sharedProfile] setUser:user];
+        
+        [user downloadUserWithResourceURI:resourceURI];
+        [self performSelector:@selector(dismissSplashScreen) withObject:nil afterDelay:3.0];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidDownload) name:kUserDownloadDidSucceedNotification object:nil];
+        
     }
     
     return YES;
+}
+
+- (void)dismissSplashScreen
+{
+    m_splashTimerDidComplete = YES;
+    if(m_userDidDownload)
+    {
+        [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+    }
+}
+
+- (void)userDidDownload
+{
+    m_userDidDownload = YES;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kUserDownloadDidSucceedNotification object:nil];
+    if(m_splashTimerDidComplete)
+    {
+        [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+    }
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

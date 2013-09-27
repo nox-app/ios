@@ -16,6 +16,7 @@ NSString * const kImagePostDidDownloadNotification = @"ImagePostDidDownloadNotif
 @implementation ImagePost
 
 @synthesize image = m_image;
+@synthesize imageIsDownloading = m_imageIsDownloading;
 
 - (id)init
 {
@@ -32,20 +33,31 @@ NSString * const kImagePostDidDownloadNotification = @"ImagePostDidDownloadNotif
     {
         m_type = kImageType;
         m_imageURL = [a_dictionary objectForKeyNotNull:@"image"];
-        [self performSelectorInBackground:@selector(downloadImage) withObject:nil];
     }
     return self;
 }
 
 - (void)imageDownloadDidFinish
 {
+    m_imageIsDownloading = NO;
     [[NSNotificationCenter defaultCenter] postNotificationName:kImagePostDidDownloadNotification object:self];
 }
 
 - (void)downloadImage
 {
-    m_image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[kNoxBase stringByAppendingString:m_imageURL]]]];
-    [self performSelectorOnMainThread:@selector(imageDownloadDidFinish) withObject:self waitUntilDone:NO];
+    m_imageIsDownloading = YES;
+    [self performSelectorInBackground:@selector(startImageDownload) withObject:nil];
+}
+
+- (void)startImageDownload
+{
+    if(m_imageURL)
+    {
+        //UNCOMMENT FOR DEV
+        //m_image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[kNoxBase stringByAppendingString:m_imageURL]]]];
+        m_image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:m_imageURL]]];
+        [self performSelectorOnMainThread:@selector(imageDownloadDidFinish) withObject:self waitUntilDone:NO];
+    }
 }
 
 @end

@@ -14,6 +14,8 @@ typedef enum {
     MFSideMenuPanDirectionRight
 } MFSideMenuPanDirection;
 
+NSString * const MFSideMenuStateNotificationEvent = @"MFSideMenuStateNotificationEvent";
+
 
 @interface MFSideMenu()
 @property (nonatomic, assign, readwrite) UINavigationController *navigationController;
@@ -596,6 +598,11 @@ typedef enum {
 
 - (void) sendMenuStateEventNotification:(MFSideMenuStateEvent)event {
     if(self.menuStateEventBlock) self.menuStateEventBlock(event);
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:event]
+                                                         forKey:@"eventType"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MFSideMenuStateNotificationEvent
+                                                        object:self
+                                                      userInfo:userInfo];
 }
 
 #pragma mark -

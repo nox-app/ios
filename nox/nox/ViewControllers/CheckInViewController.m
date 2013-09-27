@@ -41,6 +41,10 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
     [super viewDidLoad];
     [self setupMap];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iconDidDownload:) name:kVenueIconDidDownloadNotification object:nil];
+    
+    m_confirmView.layer.cornerRadius = 8.0;
+    m_confirmView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    m_confirmView.layer.borderWidth = 1.0;
 }
 
 - (void)iconDidDownload:(NSNotification *)a_notification
@@ -53,6 +57,7 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
     {
         [m_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kVenueIconDidDownloadNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -233,6 +238,11 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

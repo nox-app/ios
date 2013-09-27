@@ -8,6 +8,8 @@
 
 #import "EventTableViewCell.h"
 
+#import "OutlinedLabel.h"
+
 @implementation EventTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -29,7 +31,7 @@
 + (CGFloat)height
 {
     //return the height of the cell
-    return 116;
+    return 160;
 }
 
 @end

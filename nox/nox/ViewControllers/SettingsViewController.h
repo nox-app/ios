@@ -8,8 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+#import "SettingViewControllerDelegate.h"
 
+@class  Switchy;
+
+@interface SettingsViewController : UIViewController
+{
+    id<SettingViewControllerDelegate> m_delegate;
+    
+    Switchy * m_publicPrivateSwitch;
+    Switchy * m_saveOriginalImagesSwitch;
+    Switchy * m_saveProcessedImagesSwitch;
+}
+
+@property id<SettingViewControllerDelegate> delegate;
+
+- (IBAction)donePressed:(id)sender;
 - (IBAction)logoutPressed:(id)sender;
 
 @end

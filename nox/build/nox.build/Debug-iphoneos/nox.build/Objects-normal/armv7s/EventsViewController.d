@@ -1,11 +1,19 @@
 dependencies: \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.m \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventsViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Delegates/SettingViewControllerDelegate.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/Constants.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Event.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/ASIHTTPRequest/ASIHTTPRequestDelegate.h \
   /Users/jdiprete/nox/ios/nox/nox/Views/EventTableViewCell.h \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Delegates/CommentsViewDelegate.h \
+  /Users/jdiprete/nox/ios/nox/nox/Delegates/EventSettingsViewControllerDelegate.h \
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/FriendsMenuViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/Post.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/Invite.h \
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.h \
   /Users/jdiprete/nox/ios/nox/nox/UIElements/OutlinedLabel.h \

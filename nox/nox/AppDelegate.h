@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class CRNavigationController;
 
-@property (strong, nonatomic) UIWindow *window;
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    BOOL m_userDidDownload;
+    BOOL m_splashTimerDidComplete;
+}
+
+@property (strong, nonatomic) UIWindow * window;
+@property CRNavigationController * navigationController;
 
 @end

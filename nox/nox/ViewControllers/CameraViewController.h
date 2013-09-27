@@ -31,6 +31,9 @@
     IBOutlet UIImageView * m_pictureImageView;
     IBOutlet UIButton * m_cameraButton;
     IBOutlet UIButton * m_postButton;
+    
+    IBOutlet UIButton * m_flashButton;
+    UIImagePickerControllerCameraFlashMode m_flashMode;
 }
 
 - (id)initWithEvent:(Event *)a_event;
@@ -41,5 +44,6 @@
 - (IBAction)postPressed:(id)sender;
 - (IBAction)switchCameraViewPressed:(id)sender;
 - (IBAction)switchToCameraPressed:(id)sender;
+- (IBAction)toggleFlash:(id)sender;
 
 @end

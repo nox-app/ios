@@ -9,17 +9,28 @@
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequestDelegate.h"
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate, ASIHTTPRequestDelegate>
+typedef enum LoginField
 {
-    IBOutlet UITextField * m_emailTextField;
-    IBOutlet UITextField * m_passwordTextField;
+    kLoginEmailField = 0,
+    kLoginPasswordField
+} LoginField;
+
+@interface LoginViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, ASIHTTPRequestDelegate>
+{
+    IBOutlet UITableView * m_tableView;
+    
+    NSArray * m_loginPlaceholderArray;
+    UITextField * m_currentFirstResponder;
     
     NSMutableData * m_downloadBuffer;
     
     NSString * m_email;
     BOOL m_success;
+    
+    LoginField m_selectedLoginField;
 }
 
 - (IBAction)loginPressed:(id)sender;
+- (IBAction)signUpPressed:(id)sender;
 
 @end

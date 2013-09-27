@@ -6,6 +6,8 @@
 
 #import "UINavigationController+MFSideMenu.h"
 
+extern NSString * const MFSideMenuStateNotificationEvent;
+
 static const CGFloat kMFSideMenuSidebarWidth = 270.0f; // size of the side menu(s)
 static const CGFloat kMFSideMenuShadowRadius = 10.0f; // radius of the shadow
 static const CGFloat kMFSideMenuAnimationDuration = 0.2f; // default duration for the open/close animation
@@ -42,6 +44,8 @@ typedef void (^MFSideMenuStateEventBlock)(MFSideMenuStateEvent);
 @property (nonatomic, assign) MFSideMenuState menuState;
 @property (nonatomic, assign) MFSideMenuPanMode panMode;
 @property (nonatomic, assign) BOOL shadowEnabled;
+@property (nonatomic, strong) UIViewController *leftSideMenuViewController;
+@property (nonatomic, strong) UIViewController *rightSideMenuViewController;
 
 // this can be used to observe all MFSideMenuStateEvents
 @property (copy) MFSideMenuStateEventBlock menuStateEventBlock;

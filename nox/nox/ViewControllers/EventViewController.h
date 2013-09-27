@@ -9,24 +9,48 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
-@class Event;
+#import "CommentsViewDelegate.h"
+#import "EventSettingsViewControllerDelegate.h"
 
-@interface EventViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
+@class CommentTableViewDelegate;
+@class Event;
+@class Post;
+@class UIPlaceHolderTextView;
+
+@interface EventViewController : UIViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, UIScrollViewDelegate, CommentsViewDelegate, EventSettingsViewControllerDelegate>
 {
     Event * m_event;
     
+    Post * m_currentPost;
     IBOutlet UITableView * m_tableView;
     IBOutlet UIToolbar * m_postToolbar;
     
-    IBOutlet UIView * m_settingsView;
-    IBOutlet UIImageView * m_settingsTabView;
-    float m_settingsMaximumY;
-    float m_settingsMinimumY;
-    float m_settingsStartY;
+    IBOutlet UIActivityIndicatorView * m_activityIndicator;
     
-    IBOutlet UITextField * m_eventNameTextField;
-    UIDatePicker * m_endDatePicker;
+    //Comment Elements
+    IBOutlet UIView * m_commentsView;
+    IBOutlet UIView * m_commentsBorderView;
+    IBOutlet UITableView * m_commentsTableView;
     
+    CommentTableViewDelegate * m_commentTableViewDelegate;
+    IBOutlet UIPlaceHolderTextView * m_addCommentTextView;
+    IBOutlet UIButton * m_postCommentButton;
+    
+    //Refresh Elements
+    UIView * m_refreshHeaderView;
+    UILabel * m_refreshLabel;
+    UIActivityIndicatorView * m_refreshSpinner;
+    BOOL m_isDragging;
+    BOOL m_isLoading;
+    
+    float m_startingContentOffsetY;
+    
+    //Set Up Elements
+    IBOutlet UIView * m_setUpView;
+    IBOutlet UITextField * m_titleTextField;
+    IBOutlet UITextField * m_startTimeTextField;
+    IBOutlet UITextField * m_endTimeTextField;
+    IBOutlet UITextField * m_locationTextField;
 }
 
 
@@ -35,6 +59,9 @@
 - (IBAction)photoPressed:(id)sender;
 - (IBAction)checkInPressed:(id)sender;
 - (IBAction)statusUpdatePressed:(id)sender;
-- (IBAction)saveSettingsPressed:(id)sender;
 - (IBAction)deletePressed:(id)sender;
+- (IBAction)closeCommentsPressed:(id)sender;
+- (IBAction)postCommentPressed:(id)sender;
+- (IBAction)settingsPressed:(id)sender;
+
 @end

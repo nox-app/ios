@@ -8,14 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
+@class Event;
 @class MFSideMenu;
+@class User;
 
-@interface FriendsMenuViewController : UIViewController
+@interface FriendsMenuViewController : UIViewController <UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 {
     IBOutlet UISearchBar * m_searchBar;
-    IBOutlet UITableView * m_tableView;
+    IBOutlet UITableView * m_membersTableView;
+    IBOutlet UITableView * m_inviteTableView;
+    
+    NSString * m_lastSearchQuery;
+    
+    NSMutableArray * m_originalInviteUsersArray;
+    NSMutableArray * m_inviteUsersArray;
+    NSMutableArray * m_inviteContactsArray;
+    
+    Event * m_event;
+    User * m_currentInvitationUser;
 }
 
 @property (nonatomic, assign) MFSideMenu * sideMenu;
+
+- (void)setEvent:(Event *)a_event;
 
 @end

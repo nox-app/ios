@@ -8,15 +8,24 @@
 
 #import "CommentsView.h"
 
+#import "Comment.h"
+#import "CommentTableViewCell.h"
+#import "Post.h"
+
+float kCommentViewHeight = 40.0;
+
 @implementation CommentsView
 
 @synthesize view = m_view;
+@synthesize post = m_post;
+@synthesize delegate = m_delegate;
 
-- (id)initWithFrame:(CGRect)frame
+#pragma mark - Initialization
+
+- (id)init
 {
-    if(self = [super initWithFrame:frame])
+    if(self = [super init])
     {
-        // Initialization code.
         [[NSBundle mainBundle] loadNibNamed:@"CommentsView" owner:self options:nil];
         [self addSubview:self.view];
     }
@@ -26,16 +35,25 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    [[NSBundle mainBundle] loadNibNamed:@"CommentsView" owner:self options:nil];
     [self addSubview:self.view];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+#pragma mark - IBActions
+
+- (IBAction)expandCommentsPressed:(id)sender
 {
-    // Drawing code
+    [m_delegate expandCommentsPressedForPost:m_post];
 }
-*/
+
+- (IBAction)likePressed:(id)sender
+{
+    [m_delegate likePressedForPost:m_post];
+}
+
+- (IBAction)dislikePressed:(id)sender
+{
+    [m_delegate dislikePressedForPost:m_post];
+}
 
 @end

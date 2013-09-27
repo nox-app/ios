@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class CommentsView;
+@class FirstCommentView;
+
 @interface TextPostTableViewCell : UITableViewCell
 {
     UITextView * m_textView;
@@ -15,9 +18,7 @@
 
 @property IBOutlet UIImageView * userPicture;
 @property IBOutlet UILabel * userName;
-@property IBOutlet UITextView * textView;
 @property IBOutlet UILabel * timeLabel;
-@property IBOutlet UIView * commentsView;
 
 + (CGFloat)height;
 

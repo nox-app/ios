@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330A938917B4A737002B9436 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330A938817B4A720002B9436 /* CommentTableViewCell.xib */; };
+		330A938C17B4A753002B9436 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A938B17B4A753002B9436 /* CommentTableViewCell.m */; };
 		330E245F177FB0C900AA1913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E245E177FB0C900AA1913 /* UIKit.framework */; };
 		330E2461177FB0C900AA1913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E2460177FB0C900AA1913 /* Foundation.framework */; };
 		330E2463177FB0C900AA1913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E2462177FB0C900AA1913 /* CoreGraphics.framework */; };
@@ -45,14 +47,52 @@
 		330E24F1178155ED00AA1913 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 330E24F0178155ED00AA1913 /* 19-gear.png */; };
 		330E24F61781622700AA1913 /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F31781622700AA1913 /* MFSideMenu.m */; };
 		330E24F71781622700AA1913 /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */; };
-		339B5EE517950D0B007DD626 /* CameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5EE417950CD4007DD626 /* CameraOverlayView.xib */; };
+		331F05C917F18B8900FADE96 /* InviteUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 331F05C817F18B8900FADE96 /* InviteUserTableViewCell.m */; };
+		331F05CB17F18BA400FADE96 /* InviteUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331F05CA17F18BA400FADE96 /* InviteUserTableViewCell.xib */; };
+		331F05CE17F18FE500FADE96 /* InviteContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 331F05CD17F18FE500FADE96 /* InviteContactTableViewCell.m */; };
+		331F05D017F1900500FADE96 /* InviteContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331F05CF17F1900500FADE96 /* InviteContactTableViewCell.xib */; };
+		331F05D217F1905100FADE96 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 331F05D117F1905100FADE96 /* envelope.png */; };
+		3352205817F51776003D264A /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3352205717F51776003D264A /* Invite.m */; };
+		3352206017F5676C003D264A /* EventMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3352205F17F5676C003D264A /* EventMemberTableViewCell.xib */; };
+		3352206317F567C5003D264A /* EventMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3352206217F567C5003D264A /* EventMemberTableViewCell.m */; };
+		3352206617F568F3003D264A /* memberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3352206417F568F3003D264A /* memberIcon.png */; };
+		3352206717F568F3003D264A /* viewIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3352206517F568F3003D264A /* viewIcon.png */; };
+		338392B617E547CC002A333A /* EventDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 338392B517E547CC002A333A /* EventDetailsTableViewCell.m */; };
+		3388DC6017E68D2D008271B0 /* 187-pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC5F17E68D22008271B0 /* 187-pencil.png */; };
+		3388DC6717E69322008271B0 /* EventSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388DC6517E69322008271B0 /* EventSettingsViewController.m */; };
+		3388DC6A17E697BC008271B0 /* EventSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC6917E69363008271B0 /* EventSettingsViewController.xib */; };
+		3388DC6F17E7A644008271B0 /* flashOffButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC6C17E7A62F008271B0 /* flashOffButton.png */; };
+		3388DC7017E7A644008271B0 /* flashOnButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC6D17E7A62F008271B0 /* flashOnButton.png */; };
+		3388DC7117E7A644008271B0 /* rotateCameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC6E17E7A62F008271B0 /* rotateCameraButton.png */; };
+		3388DC7317E7ABF6008271B0 /* flashAutoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC7217E7ABE6008271B0 /* flashAutoButton.png */; };
+		3388DC7517E7AEBE008271B0 /* cameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC7417E7AEAA008271B0 /* cameraButton.png */; };
+		3388DC7717E7C62E008271B0 /* cameraTextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC7617E7C61C008271B0 /* cameraTextButton.png */; };
+		3396B7D417E9639C00D80C24 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3396B7D217E9639C00D80C24 /* SplashScreenViewController.m */; };
+		3396B7DE17E963FA00D80C24 /* CameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7D617E963FA00D80C24 /* CameraOverlayView.xib */; };
+		3396B7DF17E963FA00D80C24 /* CommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7D717E963FA00D80C24 /* CommentsView.xib */; };
+		3396B7E017E963FA00D80C24 /* EventDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7D817E963FA00D80C24 /* EventDetailsTableViewCell.xib */; };
+		3396B7E117E963FA00D80C24 /* FirstCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7D917E963FA00D80C24 /* FirstCommentView.xib */; };
+		3396B7E217E963FA00D80C24 /* PictureNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7DA17E963FA00D80C24 /* PictureNameTableViewCell.xib */; };
+		3396B7E317E963FA00D80C24 /* PlacePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7DB17E963FA00D80C24 /* PlacePostTableViewCell.xib */; };
+		3396B7E417E963FA00D80C24 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7DC17E963FA00D80C24 /* SplashScreenViewController.xib */; };
+		3396B7E517E963FA00D80C24 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7DD17E963FA00D80C24 /* TextViewCell.xib */; };
+		3396B7E717E9651400D80C24 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7E617E9651400D80C24 /* splashscreen.png */; };
+		3396B7EA17EA5BC400D80C24 /* thumbsdownred.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7E817EA5BC400D80C24 /* thumbsdownred.png */; };
+		3396B7EB17EA5BC400D80C24 /* thumbsupblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7E917EA5BC400D80C24 /* thumbsupblue.png */; };
+		3396B7EF17F00C3200D80C24 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7EE17F00C3200D80C24 /* gradient.png */; };
+		3396B7F217F017CD00D80C24 /* darkbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7F017F017CD00D80C24 /* darkbutton.png */; };
+		3396B7F317F017CD00D80C24 /* lightbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7F117F017CD00D80C24 /* lightbutton.png */; };
+		3396B7F517F01F5700D80C24 /* closebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7F417F01F5700D80C24 /* closebutton.png */; };
+		3396B7F817F0387F00D80C24 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3396B7F717F0387F00D80C24 /* CRNavigationBar.m */; };
+		3396B7FB17F038EB00D80C24 /* CRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3396B7FA17F038EB00D80C24 /* CRNavigationController.m */; };
+		3396B7FE17F0C7E000D80C24 /* Switchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3396B7FD17F0C7E000D80C24 /* Switchy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3396B80017F178EA00D80C24 /* purplebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396B7FF17F178EA00D80C24 /* purplebutton.png */; };
 		339B5EF117975B3E007DD626 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EF017975ADF007DD626 /* UIPlaceHolderTextView.m */; };
 		339B5EF51797A1FC007DD626 /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EF41797A198007DD626 /* CameraOverlayView.m */; };
 		339B5EF71797A7CE007DD626 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 339B5EF61797A7BE007DD626 /* camera.png */; };
 		339B5F041797BBEC007DD626 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F001797B9F1007DD626 /* EventTableViewCell.xib */; };
 		339B5F051797BBEC007DD626 /* TextPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F011797BA0B007DD626 /* TextPostTableViewCell.xib */; };
 		339B5F061797BBEC007DD626 /* ImagePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */; };
-		339B5F071797BBEC007DD626 /* PlacePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F031797BA2F007DD626 /* PlacePostTableViewCell.xib */; };
 		339B5F081797BBFB007DD626 /* ImagePostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EF91797B965007DD626 /* ImagePostTableViewCell.m */; };
 		339B5F091797BBFB007DD626 /* TextPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EFB1797B97D007DD626 /* TextPostTableViewCell.m */; };
 		339B5F0A1797BBFB007DD626 /* PlacePostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5EFD1797B991007DD626 /* PlacePostTableViewCell.m */; };
@@ -73,7 +113,6 @@
 		339B5F33179E7111007DD626 /* thumbsup.png in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F31179E70FD007DD626 /* thumbsup.png */; };
 		339B5F35179E7334007DD626 /* downarrrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F34179E7329007DD626 /* downarrrow.png */; };
 		339B5F3E179E7D16007DD626 /* CommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5F3D179E7CD6007DD626 /* CommentsView.m */; };
-		339B5F3F179E7D20007DD626 /* CommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B5F3B179E7C3E007DD626 /* CommentsView.xib */; };
 		339B5F4417A23B00007DD626 /* NSDictionary+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5F4317A23A81007DD626 /* NSDictionary+Util.m */; };
 		339B5F9817A244A2007DD626 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5F4717A24429007DD626 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		339B5F9917A244A2007DD626 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B5F4A17A24429007DD626 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -111,9 +150,21 @@
 		33E0F0281794BBE6003CE1E5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E0F0271794BA99003CE1E5 /* CameraViewController.xib */; };
 		33E0F0291794BBF4003CE1E5 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F0251794BA4A003CE1E5 /* CameraViewController.m */; };
 		33E0F02C1794D19F003CE1E5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0F02B1794D14A003CE1E5 /* Constants.m */; };
+		33F25A0B17BB09D100AB6682 /* bart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33F25A0A17BB094300AB6682 /* bart.jpg */; };
+		33F25A0E17BEEFAB00AB6682 /* CommentTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F25A0D17BEEFAB00AB6682 /* CommentTableViewDelegate.m */; };
+		33F25A4C17C3268C00AB6682 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F25A4B17C3268C00AB6682 /* TextFieldCell.m */; };
+		33F25A5217C3355A00AB6682 /* PictureNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F25A5117C3355A00AB6682 /* PictureNameTableViewCell.m */; };
+		33F25A5717C36A7900AB6682 /* mysteryphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F25A5617C36A6C00AB6682 /* mysteryphoto.png */; };
+		33F25A5A17C6CC2200AB6682 /* FirstCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F25A5917C6CC2200AB6682 /* FirstCommentView.m */; };
+		33F25A5F17C6FA5400AB6682 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F25A5E17C6FA5400AB6682 /* Util.m */; };
+		33F25A6117D0415700AB6682 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F25A6017D0415700AB6682 /* AddressBook.framework */; };
+		33F25A6417D066E000AB6682 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F25A6317D066E000AB6682 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330A938817B4A720002B9436 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = Interfaces/CommentTableViewCell.xib; sourceTree = "<group>"; };
+		330A938A17B4A753002B9436 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentTableViewCell.h; path = Views/CommentTableViewCell.h; sourceTree = "<group>"; };
+		330A938B17B4A753002B9436 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentTableViewCell.m; path = Views/CommentTableViewCell.m; sourceTree = "<group>"; };
 		330E245A177FB0C900AA1913 /* nox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		330E245E177FB0C900AA1913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		330E2460177FB0C900AA1913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -175,7 +226,59 @@
 		330E24F31781622700AA1913 /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFSideMenu.m; path = Util/MFSideMenu.m; sourceTree = "<group>"; };
 		330E24F41781622700AA1913 /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+MFSideMenu.h"; path = "Util/UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
 		330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+MFSideMenu.m"; path = "Util/UINavigationController+MFSideMenu.m"; sourceTree = "<group>"; };
-		339B5EE417950CD4007DD626 /* CameraOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraOverlayView.xib; sourceTree = "<group>"; };
+		3314288D17E821D900F746D1 /* SettingViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingViewControllerDelegate.h; path = Delegates/SettingViewControllerDelegate.h; sourceTree = "<group>"; };
+		331F05C717F18B8900FADE96 /* InviteUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InviteUserTableViewCell.h; path = Views/InviteUserTableViewCell.h; sourceTree = "<group>"; };
+		331F05C817F18B8900FADE96 /* InviteUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InviteUserTableViewCell.m; path = Views/InviteUserTableViewCell.m; sourceTree = "<group>"; };
+		331F05CA17F18BA400FADE96 /* InviteUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteUserTableViewCell.xib; sourceTree = "<group>"; };
+		331F05CC17F18FE500FADE96 /* InviteContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InviteContactTableViewCell.h; path = Views/InviteContactTableViewCell.h; sourceTree = "<group>"; };
+		331F05CD17F18FE500FADE96 /* InviteContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InviteContactTableViewCell.m; path = Views/InviteContactTableViewCell.m; sourceTree = "<group>"; };
+		331F05CF17F1900500FADE96 /* InviteContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteContactTableViewCell.xib; sourceTree = "<group>"; };
+		331F05D117F1905100FADE96 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope.png; path = Resources/envelope.png; sourceTree = "<group>"; };
+		3352205617F51776003D264A /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Invite.h; path = Models/Invite.h; sourceTree = "<group>"; };
+		3352205717F51776003D264A /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Invite.m; path = Models/Invite.m; sourceTree = "<group>"; };
+		3352205F17F5676C003D264A /* EventMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventMemberTableViewCell.xib; sourceTree = "<group>"; };
+		3352206117F567C5003D264A /* EventMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventMemberTableViewCell.h; path = Views/EventMemberTableViewCell.h; sourceTree = "<group>"; };
+		3352206217F567C5003D264A /* EventMemberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventMemberTableViewCell.m; path = Views/EventMemberTableViewCell.m; sourceTree = "<group>"; };
+		3352206417F568F3003D264A /* memberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = memberIcon.png; path = Resources/memberIcon.png; sourceTree = "<group>"; };
+		3352206517F568F3003D264A /* viewIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewIcon.png; path = Resources/viewIcon.png; sourceTree = "<group>"; };
+		338392B217D720BE002A333A /* CommentsViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommentsViewDelegate.h; path = Delegates/CommentsViewDelegate.h; sourceTree = "<group>"; };
+		338392B417E547CC002A333A /* EventDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDetailsTableViewCell.h; path = Views/EventDetailsTableViewCell.h; sourceTree = "<group>"; };
+		338392B517E547CC002A333A /* EventDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventDetailsTableViewCell.m; path = Views/EventDetailsTableViewCell.m; sourceTree = "<group>"; };
+		3388DC5F17E68D22008271B0 /* 187-pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "187-pencil.png"; path = "Resources/187-pencil.png"; sourceTree = "<group>"; };
+		3388DC6417E69322008271B0 /* EventSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventSettingsViewController.h; path = ViewControllers/EventSettingsViewController.h; sourceTree = "<group>"; };
+		3388DC6517E69322008271B0 /* EventSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventSettingsViewController.m; path = ViewControllers/EventSettingsViewController.m; sourceTree = "<group>"; };
+		3388DC6917E69363008271B0 /* EventSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventSettingsViewController.xib; path = Interfaces/EventSettingsViewController.xib; sourceTree = "<group>"; };
+		3388DC6B17E69D64008271B0 /* EventSettingsViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EventSettingsViewControllerDelegate.h; path = Delegates/EventSettingsViewControllerDelegate.h; sourceTree = "<group>"; };
+		3388DC6C17E7A62F008271B0 /* flashOffButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flashOffButton.png; path = Resources/flashOffButton.png; sourceTree = "<group>"; };
+		3388DC6D17E7A62F008271B0 /* flashOnButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flashOnButton.png; path = Resources/flashOnButton.png; sourceTree = "<group>"; };
+		3388DC6E17E7A62F008271B0 /* rotateCameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rotateCameraButton.png; path = Resources/rotateCameraButton.png; sourceTree = "<group>"; };
+		3388DC7217E7ABE6008271B0 /* flashAutoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flashAutoButton.png; path = Resources/flashAutoButton.png; sourceTree = "<group>"; };
+		3388DC7417E7AEAA008271B0 /* cameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cameraButton.png; path = Resources/cameraButton.png; sourceTree = "<group>"; };
+		3388DC7617E7C61C008271B0 /* cameraTextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cameraTextButton.png; path = Resources/cameraTextButton.png; sourceTree = "<group>"; };
+		3396B7D117E9639C00D80C24 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreenViewController.h; path = ViewControllers/SplashScreenViewController.h; sourceTree = "<group>"; };
+		3396B7D217E9639C00D80C24 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreenViewController.m; path = ViewControllers/SplashScreenViewController.m; sourceTree = "<group>"; };
+		3396B7D617E963FA00D80C24 /* CameraOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CameraOverlayView.xib; path = Interfaces/CameraOverlayView.xib; sourceTree = "<group>"; };
+		3396B7D717E963FA00D80C24 /* CommentsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentsView.xib; path = Interfaces/CommentsView.xib; sourceTree = "<group>"; };
+		3396B7D817E963FA00D80C24 /* EventDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventDetailsTableViewCell.xib; path = Interfaces/EventDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		3396B7D917E963FA00D80C24 /* FirstCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FirstCommentView.xib; path = Interfaces/FirstCommentView.xib; sourceTree = "<group>"; };
+		3396B7DA17E963FA00D80C24 /* PictureNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PictureNameTableViewCell.xib; path = Interfaces/PictureNameTableViewCell.xib; sourceTree = "<group>"; };
+		3396B7DB17E963FA00D80C24 /* PlacePostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlacePostTableViewCell.xib; path = Interfaces/PlacePostTableViewCell.xib; sourceTree = "<group>"; };
+		3396B7DC17E963FA00D80C24 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashScreenViewController.xib; path = Interfaces/SplashScreenViewController.xib; sourceTree = "<group>"; };
+		3396B7DD17E963FA00D80C24 /* TextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewCell.xib; path = Interfaces/TextViewCell.xib; sourceTree = "<group>"; };
+		3396B7E617E9651400D80C24 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashscreen.png; path = Resources/splashscreen.png; sourceTree = "<group>"; };
+		3396B7E817EA5BC400D80C24 /* thumbsdownred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsdownred.png; path = Resources/thumbsdownred.png; sourceTree = "<group>"; };
+		3396B7E917EA5BC400D80C24 /* thumbsupblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsupblue.png; path = Resources/thumbsupblue.png; sourceTree = "<group>"; };
+		3396B7EE17F00C3200D80C24 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gradient.png; path = Resources/gradient.png; sourceTree = "<group>"; };
+		3396B7F017F017CD00D80C24 /* darkbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = darkbutton.png; path = Resources/darkbutton.png; sourceTree = "<group>"; };
+		3396B7F117F017CD00D80C24 /* lightbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightbutton.png; path = Resources/lightbutton.png; sourceTree = "<group>"; };
+		3396B7F417F01F5700D80C24 /* closebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = closebutton.png; path = Resources/closebutton.png; sourceTree = "<group>"; };
+		3396B7F617F0387F00D80C24 /* CRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRNavigationBar.h; path = Util/CRNavigationBar.h; sourceTree = "<group>"; };
+		3396B7F717F0387F00D80C24 /* CRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRNavigationBar.m; path = Util/CRNavigationBar.m; sourceTree = "<group>"; };
+		3396B7F917F038EB00D80C24 /* CRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRNavigationController.h; path = Util/CRNavigationController.h; sourceTree = "<group>"; };
+		3396B7FA17F038EB00D80C24 /* CRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRNavigationController.m; path = Util/CRNavigationController.m; sourceTree = "<group>"; };
+		3396B7FC17F0C7E000D80C24 /* Switchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Switchy.h; path = Util/Switchy.h; sourceTree = "<group>"; };
+		3396B7FD17F0C7E000D80C24 /* Switchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Switchy.m; path = Util/Switchy.m; sourceTree = "<group>"; };
+		3396B7FF17F178EA00D80C24 /* purplebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purplebutton.png; path = Resources/purplebutton.png; sourceTree = "<group>"; };
 		339B5EEF17975ADF007DD626 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIPlaceHolderTextView.h; path = Views/UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		339B5EF017975ADF007DD626 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIPlaceHolderTextView.m; path = Views/UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		339B5EF31797A198007DD626 /* CameraOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraOverlayView.h; path = Views/CameraOverlayView.h; sourceTree = "<group>"; };
@@ -192,7 +295,6 @@
 		339B5F001797B9F1007DD626 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventTableViewCell.xib; path = Interfaces/EventTableViewCell.xib; sourceTree = "<group>"; };
 		339B5F011797BA0B007DD626 /* TextPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextPostTableViewCell.xib; path = Interfaces/TextPostTableViewCell.xib; sourceTree = "<group>"; };
 		339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ImagePostTableViewCell.xib; path = Interfaces/ImagePostTableViewCell.xib; sourceTree = "<group>"; };
-		339B5F031797BA2F007DD626 /* PlacePostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacePostTableViewCell.xib; sourceTree = "<group>"; };
 		339B5F0C1797C26B007DD626 /* homer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = homer.jpg; path = Resources/homer.jpg; sourceTree = "<group>"; };
 		339B5F111797D770007DD626 /* RoundedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RoundedView.h; path = Views/RoundedView.h; sourceTree = "<group>"; };
 		339B5F121797D770007DD626 /* RoundedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RoundedView.m; path = Views/RoundedView.m; sourceTree = "<group>"; };
@@ -211,7 +313,6 @@
 		339B5F30179E70FD007DD626 /* thumbsdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsdown.png; path = Resources/thumbsdown.png; sourceTree = "<group>"; };
 		339B5F31179E70FD007DD626 /* thumbsup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsup.png; path = Resources/thumbsup.png; sourceTree = "<group>"; };
 		339B5F34179E7329007DD626 /* downarrrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = downarrrow.png; path = Resources/downarrrow.png; sourceTree = "<group>"; };
-		339B5F3B179E7C3E007DD626 /* CommentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsView.xib; sourceTree = "<group>"; };
 		339B5F3C179E7CD6007DD626 /* CommentsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommentsView.h; path = Views/CommentsView.h; sourceTree = "<group>"; };
 		339B5F3D179E7CD6007DD626 /* CommentsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CommentsView.m; path = Views/CommentsView.m; sourceTree = "<group>"; };
 		339B5F4217A23A81007DD626 /* NSDictionary+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Util.h"; path = "Util/NSDictionary+Util.h"; sourceTree = "<group>"; };
@@ -272,6 +373,21 @@
 		33E0F0271794BA99003CE1E5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraViewController.xib; path = Interfaces/CameraViewController.xib; sourceTree = "<group>"; };
 		33E0F02A1794D14A003CE1E5 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Util/Constants.h; sourceTree = "<group>"; };
 		33E0F02B1794D14A003CE1E5 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Util/Constants.m; sourceTree = "<group>"; };
+		33F25A0A17BB094300AB6682 /* bart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bart.jpg; path = Resources/bart.jpg; sourceTree = "<group>"; };
+		33F25A0C17BEEFAB00AB6682 /* CommentTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentTableViewDelegate.h; path = Models/CommentTableViewDelegate.h; sourceTree = "<group>"; };
+		33F25A0D17BEEFAB00AB6682 /* CommentTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentTableViewDelegate.m; path = Models/CommentTableViewDelegate.m; sourceTree = "<group>"; };
+		33F25A4A17C3268C00AB6682 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldCell.h; path = Views/TextFieldCell.h; sourceTree = "<group>"; };
+		33F25A4B17C3268C00AB6682 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldCell.m; path = Views/TextFieldCell.m; sourceTree = "<group>"; };
+		33F25A5017C3355A00AB6682 /* PictureNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureNameTableViewCell.h; path = Views/PictureNameTableViewCell.h; sourceTree = "<group>"; };
+		33F25A5117C3355A00AB6682 /* PictureNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureNameTableViewCell.m; path = Views/PictureNameTableViewCell.m; sourceTree = "<group>"; };
+		33F25A5617C36A6C00AB6682 /* mysteryphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mysteryphoto.png; path = Resources/mysteryphoto.png; sourceTree = "<group>"; };
+		33F25A5817C6CC2200AB6682 /* FirstCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstCommentView.h; path = Views/FirstCommentView.h; sourceTree = "<group>"; };
+		33F25A5917C6CC2200AB6682 /* FirstCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstCommentView.m; path = Views/FirstCommentView.m; sourceTree = "<group>"; };
+		33F25A5D17C6FA5400AB6682 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Util.h; path = Util/Util.h; sourceTree = "<group>"; };
+		33F25A5E17C6FA5400AB6682 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Util.m; path = Util/Util.m; sourceTree = "<group>"; };
+		33F25A6017D0415700AB6682 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		33F25A6217D066E000AB6682 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = Models/Contact.h; sourceTree = "<group>"; };
+		33F25A6317D066E000AB6682 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = Models/Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +395,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F25A6117D0415700AB6682 /* AddressBook.framework in Frameworks */,
 				339B5FB917A2492C007DD626 /* libz.dylib in Frameworks */,
 				339B5FB717A24904007DD626 /* SystemConfiguration.framework in Frameworks */,
 				339B5FB517A248F7007DD626 /* MobileCoreServices.framework in Frameworks */,
@@ -320,6 +437,7 @@
 		330E245D177FB0C900AA1913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33F25A6017D0415700AB6682 /* AddressBook.framework */,
 				339B5FB817A2492C007DD626 /* libz.dylib */,
 				339B5FB617A24904007DD626 /* SystemConfiguration.framework */,
 				339B5FB417A248F7007DD626 /* MobileCoreServices.framework */,
@@ -337,12 +455,13 @@
 		330E2464177FB0C900AA1913 /* nox */ = {
 			isa = PBXGroup;
 			children = (
+				338392B017D7200C002A333A /* Delegates */,
 				339B5F29179E522E007DD626 /* UIElements */,
 				339B5EE917974560007DD626 /* Views */,
 				330E24EC17813ECB00AA1913 /* Util */,
 				330E24CB177FD52D00AA1913 /* Resources */,
-				330E24B0177FCBC700AA1913 /* Interfaces */,
 				330E247C177FC83300AA1913 /* Models */,
+				330E24B0177FCBC700AA1913 /* Interfaces */,
 				330E247B177FC80100AA1913 /* ViewControllers */,
 				330E246D177FB0C900AA1913 /* AppDelegate.h */,
 				330E246E177FB0C900AA1913 /* AppDelegate.m */,
@@ -390,6 +509,10 @@
 				33E0F01D1788F1A0003CE1E5 /* CommentViewController.m */,
 				33E0F0241794BA4A003CE1E5 /* CameraViewController.h */,
 				33E0F0251794BA4A003CE1E5 /* CameraViewController.m */,
+				3388DC6417E69322008271B0 /* EventSettingsViewController.h */,
+				3388DC6517E69322008271B0 /* EventSettingsViewController.m */,
+				3396B7D117E9639C00D80C24 /* SplashScreenViewController.h */,
+				3396B7D217E9639C00D80C24 /* SplashScreenViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -417,6 +540,12 @@
 				33E0F0011787FF34003CE1E5 /* Venue.m */,
 				33E0F0021787FF89003CE1E5 /* Location.h */,
 				33E0F0031787FF89003CE1E5 /* Location.m */,
+				33F25A0C17BEEFAB00AB6682 /* CommentTableViewDelegate.h */,
+				33F25A0D17BEEFAB00AB6682 /* CommentTableViewDelegate.m */,
+				33F25A6217D066E000AB6682 /* Contact.h */,
+				33F25A6317D066E000AB6682 /* Contact.m */,
+				3352205617F51776003D264A /* Invite.h */,
+				3352205717F51776003D264A /* Invite.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -424,6 +553,16 @@
 		330E24B0177FCBC700AA1913 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				3396B7D617E963FA00D80C24 /* CameraOverlayView.xib */,
+				3396B7D717E963FA00D80C24 /* CommentsView.xib */,
+				3396B7D817E963FA00D80C24 /* EventDetailsTableViewCell.xib */,
+				3396B7D917E963FA00D80C24 /* FirstCommentView.xib */,
+				3396B7DA17E963FA00D80C24 /* PictureNameTableViewCell.xib */,
+				3396B7DB17E963FA00D80C24 /* PlacePostTableViewCell.xib */,
+				3396B7DC17E963FA00D80C24 /* SplashScreenViewController.xib */,
+				3396B7DD17E963FA00D80C24 /* TextViewCell.xib */,
+				3388DC6917E69363008271B0 /* EventSettingsViewController.xib */,
+				330A938817B4A720002B9436 /* CommentTableViewCell.xib */,
 				33E0F0271794BA99003CE1E5 /* CameraViewController.xib */,
 				33E0F01F1788F1DF003CE1E5 /* CommentViewController.xib */,
 				33E0F015178809D9003CE1E5 /* FriendsMenuViewController.xib */,
@@ -435,12 +574,12 @@
 				330E24C0177FCC5600AA1913 /* LoginViewController.xib */,
 				330E24C1177FCC5600AA1913 /* SettingsViewController.xib */,
 				330E24C2177FCC5600AA1913 /* SignUpViewController.xib */,
-				339B5EE417950CD4007DD626 /* CameraOverlayView.xib */,
 				339B5F001797B9F1007DD626 /* EventTableViewCell.xib */,
 				339B5F011797BA0B007DD626 /* TextPostTableViewCell.xib */,
 				339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */,
-				339B5F031797BA2F007DD626 /* PlacePostTableViewCell.xib */,
-				339B5F3B179E7C3E007DD626 /* CommentsView.xib */,
+				331F05CA17F18BA400FADE96 /* InviteUserTableViewCell.xib */,
+				331F05CF17F1900500FADE96 /* InviteContactTableViewCell.xib */,
+				3352205F17F5676C003D264A /* EventMemberTableViewCell.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -448,6 +587,26 @@
 		330E24CB177FD52D00AA1913 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3352206417F568F3003D264A /* memberIcon.png */,
+				3352206517F568F3003D264A /* viewIcon.png */,
+				331F05D117F1905100FADE96 /* envelope.png */,
+				3396B7FF17F178EA00D80C24 /* purplebutton.png */,
+				3396B7F417F01F5700D80C24 /* closebutton.png */,
+				3396B7F017F017CD00D80C24 /* darkbutton.png */,
+				3396B7F117F017CD00D80C24 /* lightbutton.png */,
+				3396B7EE17F00C3200D80C24 /* gradient.png */,
+				3396B7E817EA5BC400D80C24 /* thumbsdownred.png */,
+				3396B7E917EA5BC400D80C24 /* thumbsupblue.png */,
+				3396B7E617E9651400D80C24 /* splashscreen.png */,
+				3388DC7617E7C61C008271B0 /* cameraTextButton.png */,
+				3388DC7417E7AEAA008271B0 /* cameraButton.png */,
+				3388DC7217E7ABE6008271B0 /* flashAutoButton.png */,
+				3388DC6C17E7A62F008271B0 /* flashOffButton.png */,
+				3388DC6D17E7A62F008271B0 /* flashOnButton.png */,
+				3388DC6E17E7A62F008271B0 /* rotateCameraButton.png */,
+				3388DC5F17E68D22008271B0 /* 187-pencil.png */,
+				33F25A5617C36A6C00AB6682 /* mysteryphoto.png */,
+				33F25A0A17BB094300AB6682 /* bart.jpg */,
 				339B5F34179E7329007DD626 /* downarrrow.png */,
 				339B5F30179E70FD007DD626 /* thumbsdown.png */,
 				339B5F31179E70FD007DD626 /* thumbsup.png */,
@@ -476,6 +635,8 @@
 		330E24EC17813ECB00AA1913 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				3396B7FC17F0C7E000D80C24 /* Switchy.h */,
+				3396B7FD17F0C7E000D80C24 /* Switchy.m */,
 				339B5FAF17A24803007DD626 /* Reachability.h */,
 				339B5FB017A24803007DD626 /* Reachability.m */,
 				339B5F4517A24417007DD626 /* ASIHTTPRequest */,
@@ -491,8 +652,24 @@
 				33E0F02B1794D14A003CE1E5 /* Constants.m */,
 				339B5F4217A23A81007DD626 /* NSDictionary+Util.h */,
 				339B5F4317A23A81007DD626 /* NSDictionary+Util.m */,
+				33F25A5D17C6FA5400AB6682 /* Util.h */,
+				33F25A5E17C6FA5400AB6682 /* Util.m */,
+				3396B7F617F0387F00D80C24 /* CRNavigationBar.h */,
+				3396B7F717F0387F00D80C24 /* CRNavigationBar.m */,
+				3396B7F917F038EB00D80C24 /* CRNavigationController.h */,
+				3396B7FA17F038EB00D80C24 /* CRNavigationController.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		338392B017D7200C002A333A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				338392B217D720BE002A333A /* CommentsViewDelegate.h */,
+				3388DC6B17E69D64008271B0 /* EventSettingsViewControllerDelegate.h */,
+				3314288D17E821D900F746D1 /* SettingViewControllerDelegate.h */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		339B5EE917974560007DD626 /* Views */ = {
@@ -516,6 +693,22 @@
 				339B5F151798BDB4007DD626 /* CellScrollView.m */,
 				339B5F3C179E7CD6007DD626 /* CommentsView.h */,
 				339B5F3D179E7CD6007DD626 /* CommentsView.m */,
+				330A938A17B4A753002B9436 /* CommentTableViewCell.h */,
+				330A938B17B4A753002B9436 /* CommentTableViewCell.m */,
+				33F25A4A17C3268C00AB6682 /* TextFieldCell.h */,
+				33F25A4B17C3268C00AB6682 /* TextFieldCell.m */,
+				33F25A5017C3355A00AB6682 /* PictureNameTableViewCell.h */,
+				33F25A5117C3355A00AB6682 /* PictureNameTableViewCell.m */,
+				33F25A5817C6CC2200AB6682 /* FirstCommentView.h */,
+				33F25A5917C6CC2200AB6682 /* FirstCommentView.m */,
+				338392B417E547CC002A333A /* EventDetailsTableViewCell.h */,
+				338392B517E547CC002A333A /* EventDetailsTableViewCell.m */,
+				331F05C717F18B8900FADE96 /* InviteUserTableViewCell.h */,
+				331F05C817F18B8900FADE96 /* InviteUserTableViewCell.m */,
+				331F05CC17F18FE500FADE96 /* InviteContactTableViewCell.h */,
+				331F05CD17F18FE500FADE96 /* InviteContactTableViewCell.m */,
+				3352206117F567C5003D264A /* EventMemberTableViewCell.h */,
+				3352206217F567C5003D264A /* EventMemberTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -607,50 +800,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				339B5F3F179E7D20007DD626 /* CommentsView.xib in Resources */,
+				3388DC7717E7C62E008271B0 /* cameraTextButton.png in Resources */,
+				3388DC7517E7AEBE008271B0 /* cameraButton.png in Resources */,
+				3388DC7317E7ABF6008271B0 /* flashAutoButton.png in Resources */,
+				3388DC6F17E7A644008271B0 /* flashOffButton.png in Resources */,
+				3388DC7017E7A644008271B0 /* flashOnButton.png in Resources */,
+				3396B7E217E963FA00D80C24 /* PictureNameTableViewCell.xib in Resources */,
+				3388DC7117E7A644008271B0 /* rotateCameraButton.png in Resources */,
+				3388DC6A17E697BC008271B0 /* EventSettingsViewController.xib in Resources */,
+				3388DC6017E68D2D008271B0 /* 187-pencil.png in Resources */,
+				3352206717F568F3003D264A /* viewIcon.png in Resources */,
+				33F25A5717C36A7900AB6682 /* mysteryphoto.png in Resources */,
+				3396B7E017E963FA00D80C24 /* EventDetailsTableViewCell.xib in Resources */,
+				33F25A0B17BB09D100AB6682 /* bart.jpg in Resources */,
+				330A938917B4A737002B9436 /* CommentTableViewCell.xib in Resources */,
+				3396B80017F178EA00D80C24 /* purplebutton.png in Resources */,
 				339B5F35179E7334007DD626 /* downarrrow.png in Resources */,
 				339B5F32179E7111007DD626 /* thumbsdown.png in Resources */,
 				339B5F33179E7111007DD626 /* thumbsup.png in Resources */,
 				339B5F27179D01E0007DD626 /* icon114.png in Resources */,
+				3396B7F317F017CD00D80C24 /* lightbutton.png in Resources */,
+				3396B7F217F017CD00D80C24 /* darkbutton.png in Resources */,
 				339B5F28179D01E0007DD626 /* icon144.png in Resources */,
+				331F05D217F1905100FADE96 /* envelope.png in Resources */,
 				339B5F24179CC9AE007DD626 /* bluecirclebutton.png in Resources */,
 				339B5F22179A45D1007DD626 /* xbutton.png in Resources */,
 				339B5F1C179A06E6007DD626 /* 02-redo.png in Resources */,
 				339B5F1A179A0612007DD626 /* whitebutton.png in Resources */,
 				339B5F1817990F6E007DD626 /* blackbutton.png in Resources */,
+				3396B7EF17F00C3200D80C24 /* gradient.png in Resources */,
+				3396B7DF17E963FA00D80C24 /* CommentsView.xib in Resources */,
 				339B5F0D1797C27A007DD626 /* homer.jpg in Resources */,
+				3396B7F517F01F5700D80C24 /* closebutton.png in Resources */,
+				331F05D017F1900500FADE96 /* InviteContactTableViewCell.xib in Resources */,
+				3396B7EA17EA5BC400D80C24 /* thumbsdownred.png in Resources */,
 				339B5F041797BBEC007DD626 /* EventTableViewCell.xib in Resources */,
 				339B5F051797BBEC007DD626 /* TextPostTableViewCell.xib in Resources */,
+				331F05CB17F18BA400FADE96 /* InviteUserTableViewCell.xib in Resources */,
 				339B5F061797BBEC007DD626 /* ImagePostTableViewCell.xib in Resources */,
-				339B5F071797BBEC007DD626 /* PlacePostTableViewCell.xib in Resources */,
 				339B5EF71797A7CE007DD626 /* camera.png in Resources */,
-				339B5EE517950D0B007DD626 /* CameraOverlayView.xib in Resources */,
 				33E0F0281794BBE6003CE1E5 /* CameraViewController.xib in Resources */,
 				33E0F0221788F502003CE1E5 /* CommentViewController.xib in Resources */,
 				33E0F01617880A9E003CE1E5 /* FriendsMenuViewController.xib in Resources */,
 				33E0F010178806D9003CE1E5 /* FriendsViewController.xib in Resources */,
+				3396B7E417E963FA00D80C24 /* SplashScreenViewController.xib in Resources */,
+				3396B7EB17EA5BC400D80C24 /* thumbsupblue.png in Resources */,
 				33E0F00E17880604003CE1E5 /* CheckInViewController.xib in Resources */,
 				33E0EFF81787F8FF003CE1E5 /* 07-map-marker.png in Resources */,
+				3396B7E717E9651400D80C24 /* splashscreen.png in Resources */,
 				33E0EFF91787F8FF003CE1E5 /* 08-chat.png in Resources */,
 				33E0EFFA1787F8FF003CE1E5 /* 70-tv.png in Resources */,
 				33E0EFFB1787F8FF003CE1E5 /* 86-camera.png in Resources */,
 				33E0EFF217817A50003CE1E5 /* menu-icon.png in Resources */,
 				33E0EFF317817A50003CE1E5 /* menu-icon@2x.png in Resources */,
+				3352206617F568F3003D264A /* memberIcon.png in Resources */,
 				33E0EFEA17817688003CE1E5 /* 53-house.png in Resources */,
 				33E0EFE8178172E4003CE1E5 /* greybutton.png in Resources */,
 				330E2469177FB0C900AA1913 /* InfoPlist.strings in Resources */,
 				330E2471177FB0C900AA1913 /* Default.png in Resources */,
 				330E2473177FB0C900AA1913 /* Default@2x.png in Resources */,
+				3396B7E117E963FA00D80C24 /* FirstCommentView.xib in Resources */,
 				330E2475177FB0C900AA1913 /* Default-568h@2x.png in Resources */,
 				330E24C3177FCC5600AA1913 /* AddFriendsViewController.xib in Resources */,
 				330E24C5177FCC5600AA1913 /* EventsViewController.xib in Resources */,
 				330E24C6177FCC5600AA1913 /* EventViewController.xib in Resources */,
+				3396B7E517E963FA00D80C24 /* TextViewCell.xib in Resources */,
 				330E24C8177FCC5600AA1913 /* LoginViewController.xib in Resources */,
 				330E24C9177FCC5600AA1913 /* SettingsViewController.xib in Resources */,
+				3396B7E317E963FA00D80C24 /* PlacePostTableViewCell.xib in Resources */,
 				330E24CA177FCC5600AA1913 /* SignUpViewController.xib in Resources */,
+				3352206017F5676C003D264A /* EventMemberTableViewCell.xib in Resources */,
 				330E24D0177FD53D00AA1913 /* logo.png in Resources */,
 				330E24D1177FD53D00AA1913 /* splash1136.png in Resources */,
 				330E24D3177FD55300AA1913 /* Default-Portrait@2x~ipad.png in Resources */,
+				3396B7DE17E963FA00D80C24 /* CameraOverlayView.xib in Resources */,
 				330E24F1178155ED00AA1913 /* 19-gear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,9 +888,12 @@
 				339B5FB117A24814007DD626 /* Reachability.m in Sources */,
 				339B5F9817A244A2007DD626 /* ASIAuthenticationDialog.m in Sources */,
 				339B5F9917A244A2007DD626 /* ASIDataCompressor.m in Sources */,
+				33F25A4C17C3268C00AB6682 /* TextFieldCell.m in Sources */,
 				339B5F9A17A244A2007DD626 /* ASIDataDecompressor.m in Sources */,
 				339B5F9B17A244A2007DD626 /* ASIDownloadCache.m in Sources */,
+				3388DC6717E69322008271B0 /* EventSettingsViewController.m in Sources */,
 				339B5F9C17A244A2007DD626 /* ASIFormDataRequest.m in Sources */,
+				33F25A6417D066E000AB6682 /* Contact.m in Sources */,
 				339B5F9D17A244A2007DD626 /* ASIHTTPRequest.m in Sources */,
 				339B5F9E17A244A2007DD626 /* ASIInputStream.m in Sources */,
 				339B5F9F17A244A2007DD626 /* ASINetworkQueue.m in Sources */,
@@ -677,18 +903,24 @@
 				339B5F161798BF9B007DD626 /* CellScrollView.m in Sources */,
 				339B5F131797D794007DD626 /* RoundedView.m in Sources */,
 				339B5F081797BBFB007DD626 /* ImagePostTableViewCell.m in Sources */,
+				3352205817F51776003D264A /* Invite.m in Sources */,
 				339B5F091797BBFB007DD626 /* TextPostTableViewCell.m in Sources */,
+				33F25A5F17C6FA5400AB6682 /* Util.m in Sources */,
 				339B5F0A1797BBFB007DD626 /* PlacePostTableViewCell.m in Sources */,
 				339B5F0B1797BBFB007DD626 /* EventTableViewCell.m in Sources */,
 				339B5EF51797A1FC007DD626 /* CameraOverlayView.m in Sources */,
 				339B5EF117975B3E007DD626 /* UIPlaceHolderTextView.m in Sources */,
 				33E0F02C1794D19F003CE1E5 /* Constants.m in Sources */,
+				331F05C917F18B8900FADE96 /* InviteUserTableViewCell.m in Sources */,
 				33E0F0291794BBF4003CE1E5 /* CameraViewController.m in Sources */,
+				338392B617E547CC002A333A /* EventDetailsTableViewCell.m in Sources */,
 				33E0F0211788F4FA003CE1E5 /* CommentViewController.m in Sources */,
+				331F05CE17F18FE500FADE96 /* InviteContactTableViewCell.m in Sources */,
 				33E0F01717880AA8003CE1E5 /* FriendsMenuViewController.m in Sources */,
 				33E0F00D178801EE003CE1E5 /* JSONKit.m in Sources */,
 				33E0F00917880167003CE1E5 /* Venue.m in Sources */,
 				33E0F00A17880167003CE1E5 /* Location.m in Sources */,
+				33F25A5A17C6CC2200AB6682 /* FirstCommentView.m in Sources */,
 				33E0F00817880156003CE1E5 /* CheckInViewController.m in Sources */,
 				330E246B177FB0C900AA1913 /* main.m in Sources */,
 				330E246F177FB0C900AA1913 /* AppDelegate.m in Sources */,
@@ -700,15 +932,23 @@
 				330E248E177FCA8D00AA1913 /* TextPost.m in Sources */,
 				330E2491177FCB0A00AA1913 /* PlacePost.m in Sources */,
 				330E2495177FCB3A00AA1913 /* LoginViewController.m in Sources */,
+				3396B7FB17F038EB00D80C24 /* CRNavigationController.m in Sources */,
+				33F25A0E17BEEFAB00AB6682 /* CommentTableViewDelegate.m in Sources */,
+				3396B7F817F0387F00D80C24 /* CRNavigationBar.m in Sources */,
+				330A938C17B4A753002B9436 /* CommentTableViewCell.m in Sources */,
 				330E249A177FCB5300AA1913 /* SignUpViewController.m in Sources */,
+				3396B7D417E9639C00D80C24 /* SplashScreenViewController.m in Sources */,
 				330E249F177FCB7400AA1913 /* EventsViewController.m in Sources */,
+				3396B7FE17F0C7E000D80C24 /* Switchy.m in Sources */,
 				330E24A4177FCB8500AA1913 /* EventViewController.m in Sources */,
 				330E24AE177FCBBA00AA1913 /* SettingsViewController.m in Sources */,
+				33F25A5217C3355A00AB6682 /* PictureNameTableViewCell.m in Sources */,
 				330E24B4177FCBFE00AA1913 /* FriendsViewController.m in Sources */,
 				330E24B9177FCC1400AA1913 /* AddFriendsViewController.m in Sources */,
 				330E24E417801B0700AA1913 /* Profile.m in Sources */,
 				330E24EF17813EFB00AA1913 /* KeychainItemWrapper.m in Sources */,
 				330E24F61781622700AA1913 /* MFSideMenu.m in Sources */,
+				3352206317F567C5003D264A /* EventMemberTableViewCell.m in Sources */,
 				330E24F71781622700AA1913 /* UINavigationController+MFSideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

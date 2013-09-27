@@ -16,8 +16,13 @@ extern NSString * const kImagePostDidDownloadNotification;
     UIImage * m_image;
     
     NSString * m_imageURL;
+    
+    BOOL m_imageIsDownloading;
 }
 
 @property UIImage * image;
+@property BOOL imageIsDownloading;
+
+- (void)downloadImage;
 
 @end

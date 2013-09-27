@@ -61,7 +61,26 @@
     [textPost setType:kTextType];
     
     [m_event addPost:textPost];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addPostDidSucceed:) name:kAddPostDidSucceedNotification object:textPost];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addPostDidFail:) name:kAddPostDidFailNotification object:textPost];
+}
+
+- (void)addPostDidSucceed:(NSNotification *)a_notification
+{
+    TextPost * textPost = [a_notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidSucceedNotification object:textPost];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidFailNotification object:textPost];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addPostDidFail:(NSNotification *)a_notification
+{
+    //@todo(jdiprete): do something to tell them why it failed...
+    TextPost * textPost = [a_notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidSucceedNotification object:textPost];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidFailNotification object:textPost];
 }
 
 #pragma mark - UITextView Delegate  Methods
@@ -79,6 +98,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

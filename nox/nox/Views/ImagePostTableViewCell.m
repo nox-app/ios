@@ -8,6 +8,9 @@
 
 #import "ImagePostTableViewCell.h"
 
+#import "CommentsView.h"
+#import "FirstCommentView.h"
+
 @implementation ImagePostTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -26,9 +29,10 @@
     // Configure the view for the selected state
 }
 
+
 + (CGFloat)height
 {
-    return 441;
+    return 380;
 }
 
 @end

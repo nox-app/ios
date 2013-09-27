@@ -18,8 +18,8 @@
 
 @end
 
-static const float kPictureYOffset = 20.0;
-static const float kPictureXOffset = 20.0;
+static const float kPictureYOffset = 10.0;
+static const float kPictureXOffset = 10.0;
 
 static const float kKeyboardOffset = 120.0;
 
@@ -40,6 +40,8 @@ static const float kKeyboardOffset = 120.0;
     
     m_photoArray = [[NSMutableArray alloc] init];
     m_imagePostArray = [[NSMutableArray alloc] init];
+    
+    m_flashMode = UIImagePickerControllerCameraFlashModeAuto;
     
     [self setSourceType:UIImagePickerControllerSourceTypeCamera];
     [self setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto];
@@ -79,6 +81,12 @@ static const float kKeyboardOffset = 120.0;
 
 - (void)switchToCameraPressed:(id)sender
 {
+    [self switchToCamera];
+}
+
+- (void)switchToCamera
+{
+    m_currentImagePost = nil;
     [m_pictureDetailView removeFromSuperview];
 }
 
@@ -277,6 +285,11 @@ static const float kKeyboardOffset = 120.0;
                  {
                      if([picture isEqual:[m_photoArray objectAtIndex:i]])
                      {
+                         //if we delete the one we're editing, go back to the camera
+                         if([[(ImagePost *)[m_imagePostArray objectAtIndex:i] image] isEqual:[m_currentImagePost image]])
+                         {
+                             [self switchToCamera];
+                         }
                          [picture removeFromSuperview];
                          [m_photoArray removeObjectAtIndex:i];
                          [m_imagePostArray removeObjectAtIndex:i];
@@ -316,6 +329,27 @@ static const float kKeyboardOffset = 120.0;
 
 #pragma mark - IBActions
 
+- (IBAction)toggleFlash:(id)sender
+{
+    switch (m_flashMode) {
+        case UIImagePickerControllerCameraFlashModeAuto:
+            m_flashMode = UIImagePickerControllerCameraFlashModeOff;
+            [m_flashButton setBackgroundImage:[UIImage imageNamed:@"flashOffButton.png"] forState:UIControlStateNormal];
+            break;
+        case UIImagePickerControllerCameraFlashModeOff:
+            m_flashMode = UIImagePickerControllerCameraFlashModeOn;
+            [m_flashButton setBackgroundImage:[UIImage imageNamed:@"flashOnButton.png"] forState:UIControlStateNormal];
+            break;
+        case UIImagePickerControllerCameraFlashModeOn:
+            m_flashMode = UIImagePickerControllerCameraFlashModeAuto;
+            [m_flashButton setBackgroundImage:[UIImage imageNamed:@"flashAutoButton.png"] forState:UIControlStateNormal];
+            break;
+        default:
+            break;
+    }
+    [self setCameraFlashMode:m_flashMode];
+}
+
 - (IBAction)cameraDonePressed:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -326,13 +360,49 @@ static const float kKeyboardOffset = 120.0;
     [self takePicture];
 }
 
+- (void)disableView
+{
+    [self.view setUserInteractionEnabled:NO];
+}
+
+- (void)enableView
+{
+    [self.view setUserInteractionEnabled:YES];
+}
+
 - (IBAction)postPressed:(id)sender
 {
+    [self disableView];
+
     for(ImagePost * imagePost in m_imagePostArray)
     {
         [m_event addPost:imagePost];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addPostDidSucceed:) name:kAddPostDidSucceedNotification object:imagePost];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addPostDidFail:) name:kAddPostDidFailNotification object:imagePost];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addPostDidSucceed:(NSNotification *)a_notification
+{
+    ImagePost * imagePost = [a_notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidSucceedNotification object:imagePost];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidFailNotification object:imagePost];
+    
+    [m_imagePostArray removeObject:imagePost];
+    //dismiss the view when all images have been successfully posted
+    if([m_imagePostArray count] == 0)
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+- (void)addPostDidFail:(NSNotification *)a_notification
+{
+    //@todo(jdiprete): do something to tell them why it failed...
+    ImagePost * imagePost = [a_notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidSucceedNotification object:imagePost];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kAddPostDidFailNotification object:imagePost];
+    [self enableView];
 }
 
 - (IBAction)switchCameraViewPressed:(id)sender
@@ -359,13 +429,13 @@ static const float kKeyboardOffset = 120.0;
     {
         float pictureScale = picture.size.height/[UIScreen mainScreen].bounds.size.width;
         //@todo(jdiprete): don't hardcode these numbers, grab them from the overlay
-        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 300 * pictureScale, 300 * pictureScale);
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 310 * pictureScale, 310 * pictureScale);
     }
     //portrait
     else
     {
         float pictureScale = picture.size.width/[UIScreen mainScreen].bounds.size.width;
-        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 300 * pictureScale, 300 * pictureScale);
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 310 * pictureScale, 310 * pictureScale);
     }
     CGImageRef pictureRef = CGImageCreateWithImageInRect([picture CGImage], cropRect);
     picture = [UIImage imageWithCGImage:pictureRef scale:picture.scale orientation:picture.imageOrientation];
@@ -373,7 +443,7 @@ static const float kKeyboardOffset = 120.0;
     //scale this down to save memory
     //@todo(jdiprete): If we want to give the option of saving to camera roll, do that before scaling the images down
     float deviceResolution = [[UIScreen mainScreen] scale];
-    picture = [self resizeImage:picture toSize:CGSizeMake(300 * deviceResolution, 300 * deviceResolution)];
+    picture = [self resizeImage:picture toSize:CGSizeMake(310 * deviceResolution, 310 * deviceResolution)];
     
     [self addPhotoToView:picture];
 }
@@ -382,6 +452,11 @@ static const float kKeyboardOffset = 120.0;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

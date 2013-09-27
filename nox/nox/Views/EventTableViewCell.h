@@ -15,6 +15,8 @@
 @property IBOutlet OutlinedLabel * eventTitleLabel;
 @property IBOutlet OutlinedLabel * timeLabel;
 @property IBOutlet UIScrollView * scrollView;
+@property IBOutlet UIActivityIndicatorView * activityIndicator;
+@property IBOutlet UIView * borderBackgroundView;
 
 + (CGFloat)height;
 

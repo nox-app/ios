@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SettingViewControllerDelegate.h"
+
 @class Event;
 
-@interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface EventsViewController : UIViewController <UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate, SettingViewControllerDelegate>
 {
     IBOutlet UITableView * m_eventsTableView;
+    IBOutlet UIActivityIndicatorView * m_startEventSpinner;
+    IBOutlet UIButton * m_startEventButton;
 }
 
 - (IBAction)startEventPressed:(id)sender;

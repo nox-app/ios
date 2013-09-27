@@ -8,7 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+#import "ASIHTTPRequestDelegate.h"
+
+extern NSString * const kUserCreationDidSucceedNotification;
+extern NSString * const kUserCreationDidFailNotification;
+extern NSString * const kUserDownloadDidSucceedNotification;
+
+typedef enum UserRequestTag
+{
+    kRequestCreateUserTag = 1,
+    kRequestGetUserTag
+} UserRequestTag;
+
+@interface User : NSObject<ASIHTTPRequestDelegate>
 {
     NSInteger m_id;
     NSString * m_firstName;
@@ -18,6 +30,10 @@
     NSDate * m_createdAt;
     BOOL m_hasIcon;
     UIImage * m_icon;
+    
+    NSString * m_resourceURI;
+    
+    NSMutableData * m_downloadBuffer;
 }
 
 @property NSInteger id;
@@ -28,7 +44,12 @@
 @property NSDate * createdAt;
 @property BOOL hasIcon;
 @property UIImage * icon;
+@property NSString * resourceURI;
 
 - (id)initWithEmail:(NSString *)a_email;
+- (id)initWithDictionary:(NSDictionary *)a_dictionary;
+- (void)saveWithPassword:(NSString *)a_password;
+
+- (void)downloadUserWithResourceURI:(NSString *)a_resourceURI;
 
 @end

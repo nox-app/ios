@@ -8,18 +8,10 @@
 
 #import "TextPostTableViewCell.h"
 
+#import "CommentsView.h"
+#import "FirstCommentView.h"
+
 @implementation TextPostTableViewCell
-
-@synthesize textView = m_textView;
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
-    {
-
-    }
-    return self;
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -30,7 +22,7 @@
 
 + (CGFloat)height
 {
-    return 230;
+    return 120;
 }
 
 @end

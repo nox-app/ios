@@ -6,9 +6,14 @@
 //  Copyright (c) 2013 Justine DiPrete. All rights reserved.
 //
 
+#import <AddressBook/AddressBook.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+
 #import "ASIHTTPRequestDelegate.h"
+
+extern NSString * const kContactFilterDidFinishNotification;
 
 @class Event;
 @class User;
@@ -18,7 +23,8 @@ typedef enum RequestTag
     kRequestDownloadEventsTag = 1,
     kRequestAddEventTag,
     kRequestUpdateEventTag,
-    kRequestDeleteEventTag
+    kRequestDeleteEventTag,
+    kRequestUserSearchTag
 } RequestTag;
 
 @interface Profile : NSObject <NSURLConnectionDelegate, CLLocationManagerDelegate, ASIHTTPRequestDelegate>
@@ -27,17 +33,28 @@ typedef enum RequestTag
     NSString * m_apiKey;
     NSMutableArray * m_events;
     
-    NSMutableData * m_downloadBuffer;
+    NSMutableData * m_downloadEventsBuffer;
+    NSMutableData * m_downloadUsersBuffer;
+    NSMutableData * m_downloadAddEventBuffer;
     
     CLLocationManager * m_locationManager;
     
     CLLocation * m_lastLocation;
+    
+    NSMutableArray * m_contacts;
+    
+    NSMutableArray * m_userFriends;
+    
+    NSString * m_currentCity;
 }
 
 @property (readonly) NSMutableArray * events;
 @property (nonatomic) User * user;
 @property CLLocation * lastLocation;
 @property NSString * apiKey;
+@property NSMutableArray * contacts;
+@property NSMutableArray * userFriends;
+@property NSString * currentCity;
 
 + (Profile *)sharedProfile;
 
@@ -45,5 +62,9 @@ typedef enum RequestTag
 - (void)updateEvent:(Event *)a_event;
 - (void)downloadEvents;
 - (void)deleteEvent:(Event *)a_event;
+
+- (void)logout;
+
+- (User *)userFriendWithResourceURI:(NSString *)a_resourceURI;
 
 @end

@@ -26,7 +26,7 @@
     UIRectFill(rect);
     
     //Make photo area transparent
-    CGRect photoRect = CGRectMake(10, 60, 300, 300);
+    CGRect photoRect = CGRectMake(5, 50, 310, 310);
     [[UIColor clearColor] setFill];
     UIRectFill(photoRect);
 }
