@@ -25,5 +25,6 @@
 
 - (IBAction)donePressed:(id)sender;
 - (IBAction)logoutPressed:(id)sender;
+- (IBAction)editProfilePressed:(id)sender;
 
 @end

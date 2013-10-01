@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="m_activityIndicator" destination="tSl-N8-GsV" id="UyD-ue-0g4"/>
                 <outlet property="m_tableView" destination="wU4-aY-068" id="8gO-8x-mEe"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -69,6 +70,10 @@
                         <outlet property="delegate" destination="-1" id="63I-rb-u79"/>
                     </connections>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="tSl-N8-GsV">
+                    <rect key="frame" x="150" y="338" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.10902168709248498" green="0.19347934144278453" blue="0.31649116847826086" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -77,6 +82,6 @@
     </objects>
     <resources>
         <image name="darkbutton.png" width="600" height="120"/>
-        <image name="logo.png" width="1212" height="382"/>
+        <image name="logo.png" width="500" height="191"/>
     </resources>
 </document>

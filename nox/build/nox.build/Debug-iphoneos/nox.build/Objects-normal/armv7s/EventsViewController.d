@@ -14,8 +14,11 @@ dependencies: \
   /Users/jdiprete/nox/ios/nox/nox/Models/Post.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Invite.h \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.h \
-  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.h \
-  /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/MFSideMenu.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/MFSideMenuContainerViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/MFSideMenuShadow.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/UIViewController+MFSideMenuAdditions.h \
   /Users/jdiprete/nox/ios/nox/nox/UIElements/OutlinedLabel.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Profile.h \
-  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SettingsViewController.h
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SettingsViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/User.h

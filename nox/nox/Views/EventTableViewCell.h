@@ -17,6 +17,10 @@
 @property IBOutlet UIScrollView * scrollView;
 @property IBOutlet UIActivityIndicatorView * activityIndicator;
 @property IBOutlet UIView * borderBackgroundView;
+@property IBOutlet UIImageView * creatorImageView;
+@property IBOutlet UIImageView * memberOneImageView;
+@property IBOutlet UIImageView * memberTwoImageView;
+@property IBOutlet UILabel * ellipsisLabel;
 
 + (CGFloat)height;
 

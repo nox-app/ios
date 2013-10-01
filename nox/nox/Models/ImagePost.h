@@ -8,9 +8,10 @@
 
 #import "Post.h"
 
-extern NSString * const kImagePostDidDownloadNotification;
+extern NSString * const kImagePostDownloadDidSucceedNotification;
+extern NSString * const kImagePostDownloadDidFailNotification;
 
-@interface ImagePost : Post
+@interface ImagePost : Post <NSURLConnectionDelegate>
 {
     NSString * m_caption;
     UIImage * m_image;
@@ -18,6 +19,8 @@ extern NSString * const kImagePostDidDownloadNotification;
     NSString * m_imageURL;
     
     BOOL m_imageIsDownloading;
+    
+    NSMutableData * m_imageDownloadBuffer;
 }
 
 @property UIImage * image;

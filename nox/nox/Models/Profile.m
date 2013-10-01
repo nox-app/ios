@@ -146,7 +146,11 @@ NSString * const kContactFilterDidFinishNotification = @"ContactFilterDidFinishN
                 [contact mergeInfoFromContactRef:linkedPerson];
             }
         }
-        [m_contacts addObject:contact];
+        //make sure the contact has a name
+        if([contact firstName] || [contact lastName])
+        {
+            [m_contacts addObject:contact];
+        }
     }
 }
 
@@ -331,8 +335,6 @@ NSString * const kContactFilterDidFinishNotification = @"ContactFilterDidFinishN
     {
         if(m_downloadEventsBuffer)
         {
-            NSLog(@"REQUEST FINISHED: %@", [[request url] absoluteString]);
-            NSLog(@"RESPONSE: %@", [decoder objectWithData:m_downloadEventsBuffer]);
             NSDictionary * events = [[decoder objectWithData:m_downloadEventsBuffer] objectForKey:@"objects"];
             m_downloadEventsBuffer = nil;
             if(events)
@@ -390,8 +392,8 @@ NSString * const kContactFilterDidFinishNotification = @"ContactFilterDidFinishN
             NSLog(@"USER ARRAY: %@", userArray);
             for(NSDictionary * userDictionary in userArray)
             {
-                NSLog(@"USER DICTIONARY: %@", userDictionary);
                 User * user = [[User alloc] initWithDictionary:userDictionary];
+                [user downloadIcon];
                 [m_userFriends addObject:user];
             }
             [self filterContacts];

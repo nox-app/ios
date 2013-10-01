@@ -19,8 +19,6 @@ NSString * const MFSideMenuStateNotificationEvent = @"MFSideMenuStateNotificatio
 
 @interface MFSideMenu()
 @property (nonatomic, assign, readwrite) UINavigationController *navigationController;
-@property (nonatomic, strong) UIViewController *leftSideMenuViewController;
-@property (nonatomic, strong) UIViewController *rightSideMenuViewController;
 @property (nonatomic, strong) UIView *menuContainerView;
 
 @property (nonatomic, assign) CGPoint panGestureOrigin;

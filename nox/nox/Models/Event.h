@@ -38,6 +38,7 @@ typedef enum PostRequestTag
     NSDate * m_endedAt;
     NSDate * m_updatedAt;
     NSString * m_resourceURI;
+    User * m_creator;
     
     NSMutableArray * m_posts;
     
@@ -69,6 +70,7 @@ typedef enum PostRequestTag
 @property BOOL imagesAreDownloading;
 @property BOOL postsAreDownloading;
 @property NSMutableArray * invites;
+@property User * creator;
 
 - (id)initWithDictionary:(NSDictionary *)a_dictionary;
 

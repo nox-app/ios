@@ -20,6 +20,7 @@
 #import "OutlinedLabel.h"
 #import "Profile.h"
 #import "SettingsViewController.h"
+#import "User.h"
 
 @interface EventsViewController ()
 
@@ -56,7 +57,7 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController.sideMenu setHidesRightSideMenu:YES];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
     [m_eventsTableView reloadData];
     
     //[[Profile sharedProfile] downloadEvents];
@@ -144,7 +145,8 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
     [[event invites] addObject:invite];
     
     EventViewController * eventViewController = [[EventViewController alloc] initWithEvent:event];
-    [(FriendsMenuViewController *)self.navigationController.sideMenu.rightSideMenuViewController setEvent:event];
+    [(FriendsMenuViewController *)self.menuContainerViewController.rightMenuViewController setEvent:event];
+    
     [self.navigationController pushViewController:eventViewController animated:NO];
 }
 
@@ -247,6 +249,46 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
         }
     }
     
+    [cell.creatorImageView setHidden:YES];
+    [cell.creatorImageView.layer setBorderColor:[UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1.0].CGColor];
+    [cell.creatorImageView.layer setBorderWidth:1.0];
+    [cell.memberOneImageView setHidden:YES];
+    [cell.memberOneImageView.layer setBorderColor:[UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1.0].CGColor];
+    [cell.memberOneImageView.layer setBorderWidth:1.0];
+    [cell.memberTwoImageView setHidden:YES];
+    [cell.memberTwoImageView.layer setBorderColor:[UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1.0].CGColor];
+    [cell.memberTwoImageView.layer setBorderWidth:1.0];
+    [cell.ellipsisLabel setHidden:YES];
+    
+    //@todo(jdiprete): Invites should be returned in best friend order. Can I count on the first user being the creator? Blah do some validation...
+    if([[event creator] icon])
+    {
+        [cell.creatorImageView setHidden:NO];
+        [cell.creatorImageView setImage:[[event creator] icon]];
+    }
+    if([[event invites] count] > 1)
+    {
+        User * user = [(Invite *)[[event invites] objectAtIndex:1] user];
+        if([user icon])
+        {
+            [cell.memberOneImageView setHidden:NO];
+            [cell.memberOneImageView setImage:[user icon]];
+        }
+    }
+    if([[event invites] count] > 2)
+    {
+        User * user = [(Invite *)[[event invites] objectAtIndex:2] user];
+        if([user icon])
+        {
+            [cell.memberTwoImageView setHidden:NO];
+            [cell.memberTwoImageView setImage:[user icon]];
+        }
+    }
+    if([[event invites] count] > 3)
+    {
+        [cell.ellipsisLabel setHidden:NO];
+    }
+    
     return cell;
 }
 
@@ -262,7 +304,7 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
 
             [event downloadPosts];
             EventViewController * eventViewController = [[EventViewController alloc] initWithEvent:event];
-            [(FriendsMenuViewController *)self.navigationController.sideMenu.rightSideMenuViewController setEvent:event];
+            [(FriendsMenuViewController *)self.menuContainerViewController.rightMenuViewController setEvent:event];
             [self.navigationController pushViewController:eventViewController animated:YES];
         }
     }
@@ -282,7 +324,7 @@ static NSString * const kEventCellReuseIdentifier = @"EventCellReuseIdentifier";
     
     Event * event = [[[Profile sharedProfile] events] objectAtIndex:[indexPath row]];
     EventViewController * eventViewController = [[EventViewController alloc] initWithEvent:event];
-    [(FriendsMenuViewController *)self.navigationController.sideMenu.rightSideMenuViewController setEvent:event];
+    [(FriendsMenuViewController *)self.menuContainerViewController.rightMenuViewController setEvent:event];
     [self.navigationController pushViewController:eventViewController animated:YES];
 }
 

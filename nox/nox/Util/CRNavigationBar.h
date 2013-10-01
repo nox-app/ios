@@ -10,4 +10,6 @@
 
 @interface CRNavigationBar : UINavigationBar
 
+- (void)setBarTintColor:(UIColor *)barTintColor;
+
 @end

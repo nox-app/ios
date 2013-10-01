@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 
 #import "Constants.h"
+#import "EditProfileViewController.h"
 #import "KeychainItemWrapper.h"
 #import "LoginViewController.h"
 #import "Profile.h"
@@ -71,6 +72,12 @@
     [[Profile sharedProfile] logout];
     
     [m_delegate logoutFromSettings];
+}
+
+- (IBAction)editProfilePressed:(id)sender
+{
+    EditProfileViewController * editProfileViewController = [[EditProfileViewController alloc] init];
+    [self presentViewController:editProfileViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

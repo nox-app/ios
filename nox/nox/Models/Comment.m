@@ -34,6 +34,7 @@
         m_resourceURI = [a_dictionary objectForKeyNotNull:@"resource_uri"];
         m_postURI = [a_dictionary objectForKeyNotNull:@"post"];
         m_user = [[User alloc] initWithDictionary:[a_dictionary objectForKeyNotNull:@"user"]];
+        [m_user downloadIcon];
     }
     return self;
 }

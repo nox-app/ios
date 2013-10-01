@@ -180,7 +180,15 @@ static NSString * const kEventMemberTableViewCellReuseIdentifier = @"EventMember
         }
         Invite * invite = [[m_event invites] objectAtIndex:indexPath.row];
         NSString * userName = [NSString stringWithFormat:@"%@ %@",[[invite user] firstName], [[invite user] lastName]];
-        if([invite rsvp])
+        cell.nameLabel.text = userName;
+        
+        [cell.userIcon setImage:[[invite user] icon]];
+        if([[invite user] id] == [[m_event creator] id])
+        {
+            NSLog(@"USER ID: %d CREATOR ID: %d", [[invite user] id], [[m_event creator] id]);
+            [cell.rsvpIcon setImage:[UIImage imageNamed:@"creatorIcon.png"]];
+        }
+        else if([invite rsvp])
         {
             [cell.rsvpIcon setImage:[UIImage imageNamed:@"memberIcon.png"]];
         }
@@ -188,7 +196,6 @@ static NSString * const kEventMemberTableViewCellReuseIdentifier = @"EventMember
         {
             [cell.rsvpIcon setImage:[UIImage imageNamed:@"viewIcon.png"]];
         }
-        cell.nameLabel.text = userName;
         return cell;
     }
     else
@@ -203,6 +210,7 @@ static NSString * const kEventMemberTableViewCellReuseIdentifier = @"EventMember
             
             User * user = [m_inviteUsersArray objectAtIndex:indexPath.row];
             cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
+            [cell.userIcon setImage:[user icon]];
             [cell.inviteButton addTarget:self action:@selector(inviteButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
             return cell;
         }
@@ -214,7 +222,7 @@ static NSString * const kEventMemberTableViewCellReuseIdentifier = @"EventMember
                 cell = [[InviteContactTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kInviteContactTableViewCellReuseIdentifier];
             }
             Contact * contact = [m_inviteContactsArray objectAtIndex:indexPath.row];
-            cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", contact.firstName, contact.lastName];
+            cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", contact.firstName ? contact.firstName:@"", contact.lastName ? contact.lastName:@""];
             return cell;
         }
     }
@@ -225,8 +233,11 @@ static NSString * const kEventMemberTableViewCellReuseIdentifier = @"EventMember
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.sideMenu toggleRightSideMenu];
     [m_searchBar resignFirstResponder];
+    [self.menuContainerViewController toggleRightSideMenuCompletion:^(void)
+     {
+         
+     }];
 }
 
 #pragma mark - UISearchBarDelegate

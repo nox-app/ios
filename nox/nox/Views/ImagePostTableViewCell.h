@@ -8,17 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PostTableViewCell.h"
+
 @class CommentsView;
 @class FirstCommentView;
 
-@interface ImagePostTableViewCell : UITableViewCell
+@interface ImagePostTableViewCell : PostTableViewCell
 
-@property IBOutlet UIImageView * userPicture;
-@property IBOutlet UILabel * userName;
 @property IBOutlet UIImageView * postImageView;
-@property IBOutlet UILabel * timeLabel;
 @property IBOutlet UIActivityIndicatorView * activityIndicator;
-
-+ (CGFloat)height;
 
 @end

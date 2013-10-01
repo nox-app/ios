@@ -33,6 +33,8 @@ extern NSString * const kEventCreationFailedNotification;
 
 extern NSInteger const kMaxCharacterLimit;
 
+extern NSInteger const kImageDimension;
+
 @interface Constants : NSObject
 
 + (UIColor *)noxColor;

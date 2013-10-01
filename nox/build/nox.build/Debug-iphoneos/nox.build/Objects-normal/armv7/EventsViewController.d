@@ -9,8 +9,10 @@ dependencies: \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EventViewController.h \
   /Users/jdiprete/nox/ios/nox/nox/Delegates/CommentsViewDelegate.h \
   /Users/jdiprete/nox/ios/nox/nox/Delegates/EventSettingsViewControllerDelegate.h \
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/FriendsMenuViewController.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Post.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/Invite.h \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.h \

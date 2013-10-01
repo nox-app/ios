@@ -12,5 +12,6 @@
 
 @property IBOutlet UILabel * nameLabel;
 @property IBOutlet UIImageView * rsvpIcon;
+@property IBOutlet UIImageView * userIcon;
 
 @end

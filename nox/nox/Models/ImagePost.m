@@ -8,10 +8,12 @@
 
 #import "ImagePost.h"
 
+#import "ASIHTTPRequest.h"
 #import "Constants.h"
 #import "NSDictionary+Util.h"
 
-NSString * const kImagePostDidDownloadNotification = @"ImagePostDidDownloadNotification";
+NSString * const kImagePostDownloadDidSucceedNotification = @"ImagePostDownloadDidSucceedNotification";
+NSString * const kImagePostDownloadDidFailNotification = @"ImagePostDownloadDidFailNotification";
 
 @implementation ImagePost
 
@@ -37,27 +39,61 @@ NSString * const kImagePostDidDownloadNotification = @"ImagePostDidDownloadNotif
     return self;
 }
 
-- (void)imageDownloadDidFinish
+- (void)imageDownloadDidSucceed
 {
     m_imageIsDownloading = NO;
-    [[NSNotificationCenter defaultCenter] postNotificationName:kImagePostDidDownloadNotification object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kImagePostDownloadDidSucceedNotification object:self];
+}
+
+- (void)imageDownloadDidFail
+{
+    m_imageIsDownloading = NO;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kImagePostDownloadDidFailNotification object:self];
 }
 
 - (void)downloadImage
 {
     m_imageIsDownloading = YES;
-    [self performSelectorInBackground:@selector(startImageDownload) withObject:nil];
-}
-
-- (void)startImageDownload
-{
     if(m_imageURL)
     {
-        //UNCOMMENT FOR DEV
-        //m_image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[kNoxBase stringByAppendingString:m_imageURL]]]];
-        m_image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:m_imageURL]]];
-        [self performSelectorOnMainThread:@selector(imageDownloadDidFinish) withObject:self waitUntilDone:NO];
+        //@todo(jdiprete): do something with the timeout interval
+        NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:m_imageURL] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60.0];
+        NSURLConnection * connection = [NSURLConnection connectionWithRequest:request delegate:self];
+        [connection start];
     }
+}
+
+#pragma mark - NSURLConnection delegate methods
+- (void)connection:(NSURLConnection *)a_connection didReceiveResponse:(NSURLResponse *)a_response
+{
+    m_imageDownloadBuffer = nil;
+    if([a_response expectedContentLength] == NSURLResponseUnknownLength)
+    {
+        m_imageDownloadBuffer = [[NSMutableData alloc] init];
+    }
+    else
+    {
+        m_imageDownloadBuffer = [[NSMutableData alloc] initWithCapacity:[a_response expectedContentLength]];
+    }
+}
+
+- (void)connection:(NSURLConnection *)a_connection didReceiveData:(NSData *)a_data
+{
+    [m_imageDownloadBuffer appendData:a_data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)a_connection
+{
+    m_image = [UIImage imageWithData:m_imageDownloadBuffer];
+    [self imageDownloadDidSucceed];
+    m_imageDownloadBuffer = nil;
+}
+
+- (void)connection:(NSURLConnection *)a_connection didFailWithError:(NSError *)a_error
+{
+    m_imageDownloadBuffer = nil;
+    [self imageDownloadDidFail];
+    NSLog(@"Request Failed with Error: %@", a_error);
 }
 
 @end

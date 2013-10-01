@@ -8,6 +8,7 @@
 
 #import "CheckInViewController.h"
 
+#import "Constants.h"
 #import "Event.h"
 #import "JSONKit.h"
 #import "Location.h"
@@ -15,6 +16,7 @@
 #import "Profile.h"
 #import "RoundedView.h"
 #import "Venue.h"
+#import "VenueTableViewCell.h"
 
 @interface CheckInViewController ()
 
@@ -23,6 +25,8 @@
 static NSString * const kFourSquareRequestURL = @"https://api.foursquare.com/v2/venues/search?ll=%f,%f&client_id=Z4HWIUCCIRTBNVAZI4D3L0ESIKAVSBUW0P3OULS4Y45O5BDZ&client_secret=T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDYZVCVRYX0W1&v=%@&query=%@";
 static NSString * const kClientID = @"Z4HWIUCCIRTBNVAZI4D3L0ESIKAVSBUW0P3OULS4Y45O5BDZ";
 static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDYZVCVRYX0W1";
+
+static NSString * const kVenueTableViewCellReuseIdentifier = @"VenueTableViewCellReuseIdentifier";
 
 @implementation CheckInViewController
 
@@ -39,8 +43,10 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [m_tableView registerNib:[UINib nibWithNibName:@"VenueTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kVenueTableViewCellReuseIdentifier];
+    
     [self setupMap];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iconDidDownload:) name:kVenueIconDidDownloadNotification object:nil];
     
     m_confirmView.layer.cornerRadius = 8.0;
     m_confirmView.layer.borderColor = [UIColor darkGrayColor].CGColor;
@@ -57,7 +63,7 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
     {
         [m_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kVenueIconDidDownloadNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kVenueIconDidDownloadNotification object:venue];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -152,6 +158,7 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
             for(NSDictionary * venue in venues)
             {
                 Venue * newVenue = [[Venue alloc] initWithDictionary:venue];
+                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iconDidDownload:) name:kVenueIconDidDownloadNotification object:newVenue];
                 [m_venues addObject:newVenue];
             }
         }
@@ -180,17 +187,18 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * identifier = @"Identifier";
-    
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    VenueTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kVenueTableViewCellReuseIdentifier];
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
+        cell = [[VenueTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kVenueTableViewCellReuseIdentifier];
     }
     
     Venue * venue = [m_venues objectAtIndex:indexPath.row];
-    [cell.textLabel setText:venue.name];
-    [cell.imageView setImage:venue.iconImage];
+    [cell.nameLabel setText:venue.name];
+    [cell.distanceLabel setText:[NSString stringWithFormat:@"%d meters away", [[venue location] distance]]];
+    [cell.addressLabel setText:[[venue location] address]];
+    [cell.icon setImage:venue.iconImage ? venue.iconImage : [UIImage imageNamed:@"defaultvenue.png"]];
+    [cell.icon setBackgroundColor:[Constants noxColor]];
     
     return cell;
 }
@@ -202,8 +210,9 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
     Venue * venue = [m_venues objectAtIndex:indexPath.row];
     [m_confirmPlaceName setText:[venue name]];
     [m_confirmIconView setImage:[venue iconImage]];
+    [m_confirmIconView setBackgroundColor:[Constants noxColor]];
     [m_confirmAddressLabel setText:[[venue location] address]];
-    [m_confirmCityStateLabel setText:[NSString stringWithFormat:@"%@, %@", [[venue location] city], [[venue location] state]]];
+    [m_confirmCityStateLabel setText:[NSString stringWithFormat:@"%@, %@", [[venue location] city] ? [[venue location] city] : @"", [[venue location] state] ? [[venue location] state] : @""]];
     
     [m_confirmView setCenter:self.view.center];
     [m_confirmView setHidden:YES];
@@ -214,6 +223,11 @@ static NSString * const kClientSecret = @"T1KVOWISOYXRIMEB3FPC2W5RIJ4ZJDXJPD2RDY
     m_currentVenue = venue;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [VenueTableViewCell height];
 }
 
 - (IBAction)confirmPressed:(id)sender

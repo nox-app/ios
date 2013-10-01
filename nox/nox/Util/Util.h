@@ -11,5 +11,6 @@
 @interface Util : NSObject
 
 + (NSString *)stringFromDate:(NSDate *)a_date;
++ (UIImage *)resizeImage:(UIImage *)a_image toSize:(CGSize)a_size;
 
 @end

@@ -9,7 +9,7 @@
 #import "Constants.h"
 
 NSString * const kNoxBase = @"http://www.nox-app.com/";
-//NSString * const kNoxBase = @"http://192.168.1.16:8000/";
+//NSString * const kNoxBase = @"http://192.168.1.102:8000/";
 NSString * const kAPIBase = @"api/v1/";
 NSString * const kAPIEvents = @"event/";
 NSString * const kAPIPosts = @"post/";
@@ -35,6 +35,8 @@ NSString * const kEventCreationFailedNotification = @"EventCreationFailedNotific
 
 //@todo(jdiprete): Do we want some kind of max?
 NSInteger const kMaxCharacterLimit = 1000;
+
+NSInteger const kImageDimension = 310;
 
 @implementation Constants
 

@@ -13,6 +13,7 @@
 #import "Profile.h"
 #import "TextPost.h"
 #import "UIPlaceHolderTextView.h"
+#import "User.h"
 
 @interface CommentViewController ()
 

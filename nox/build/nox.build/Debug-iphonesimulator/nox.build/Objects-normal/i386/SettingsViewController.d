@@ -3,6 +3,8 @@ dependencies: \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/SettingsViewController.h \
   /Users/jdiprete/nox/ios/nox/nox/Delegates/SettingViewControllerDelegate.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/Constants.h \
+  /Users/jdiprete/nox/ios/nox/nox/ViewControllers/EditProfileViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Delegates/ProfileCameraViewControllerDelegate.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/KeychainItemWrapper.h \
   /Users/jdiprete/nox/ios/nox/nox/ViewControllers/LoginViewController.h \
   /Users/jdiprete/nox/ios/nox/nox/Util/ASIHTTPRequest/ASIHTTPRequestDelegate.h \

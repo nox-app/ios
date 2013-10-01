@@ -52,6 +52,7 @@ static NSString * const kTextFieldCellReuseIdentifier = @"TextFieldCellReuseIden
 
 - (void)login
 {
+    [m_activityIndicator startAnimating];
     m_email = ((TextFieldCell *)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:kLoginEmailField inSection:0]]).textField.text;
     NSString * password = ((TextFieldCell *)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:kLoginPasswordField inSection:0]]).textField.text;
     
@@ -76,6 +77,7 @@ static NSString * const kTextFieldCellReuseIdentifier = @"TextFieldCellReuseIden
 - (void)loginWithUserDictionary:(NSDictionary *)a_dictionary apiKey:(NSString *)a_apiKey
 {
     User * user = [[User alloc] initWithDictionary:a_dictionary];
+    [user downloadIcon];
     [[Profile sharedProfile] setApiKey:a_apiKey];
     [[Profile sharedProfile] setUser:user];
     
@@ -84,6 +86,7 @@ static NSString * const kTextFieldCellReuseIdentifier = @"TextFieldCellReuseIden
     [keychainItem setObject:m_email forKey:(__bridge id)kSecAttrAccount];
     [keychainItem setObject:[user resourceURI] forKey:(__bridge id)kSecAttrDescription];
     
+    [m_activityIndicator stopAnimating];
     [self dismissViewControllerAnimated:NO completion:nil];
 
 }
@@ -144,6 +147,7 @@ static NSString * const kTextFieldCellReuseIdentifier = @"TextFieldCellReuseIden
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
+    [m_activityIndicator stopAnimating];
     NSLog(@"Request Failed With Error: %@", [request error]);
     [self displayErrorMessage:@"Oops. There was an error. Try again!"];
     m_downloadBuffer = nil;

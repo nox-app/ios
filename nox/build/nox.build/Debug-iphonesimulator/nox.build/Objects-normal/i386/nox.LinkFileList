@@ -7,6 +7,7 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventSettingsViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ASIFormDataRequest.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Contact.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EditProfileViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ASIHTTPRequest.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ASIInputStream.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ASINetworkQueue.o
@@ -16,6 +17,7 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/CellScrollView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/RoundedView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ImagePostTableViewCell.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Invite.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/TextPostTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Util.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/PlacePostTableViewCell.o
@@ -50,6 +52,7 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/CommentTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SignUpViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/SplashScreenViewController.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/ProfileCameraViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventsViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Switchy.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventViewController.o
@@ -60,4 +63,5 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/Profile.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/KeychainItemWrapper.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/MFSideMenu.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/EventMemberTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphonesimulator/nox.build/Objects-normal/i386/UINavigationController+MFSideMenu.o

@@ -27,6 +27,7 @@
 #import "PlacePost.h"
 #import "PlacePostTableViewCell.h"
 #import "Post.h"
+#import "PostTableViewCell.h"
 #import "Profile.h"
 #import "TextPost.h"
 #import "TextPostTableViewCell.h"
@@ -79,13 +80,13 @@ static const int kCommentsViewTag = 4;
     [m_tableView registerNib:[UINib nibWithNibName:@"PlacePostTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kPlacePostCellReuseIdentifier];
     [m_tableView registerNib:[UINib nibWithNibName:@"EventDetailsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kEventDetailsCellReuseIdentifier];
     
-    [self.navigationController.sideMenu setHidesRightSideMenu:NO];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeCenterViewController | MFSideMenuPanModeSideMenu];
     [self setupNavigationBar];
     [self setTitle:[m_event name]];
     
     //[self addSettingsView];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDidDownload:) name:kImagePostDidDownloadNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDidDownload:) name:kImagePostDownloadDidSucceedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postsDidDownload) name:kPostsDidDownloadNotification object:nil];
     
     m_commentTableViewDelegate = [[CommentTableViewDelegate alloc] initWithTableView:m_commentsTableView];
@@ -117,11 +118,8 @@ static const int kCommentsViewTag = 4;
     [m_commentsView addGestureRecognizer:tapGestureRecognizer];
     
     [self addPullToRefreshHeader];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    m_startingContentOffsetY = m_tableView.contentOffset.y;
+    
+    m_startingContentOffsetY = -(self.navigationController.navigationBar.frame.size.height+[UIApplication sharedApplication].statusBarFrame.size.height);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -141,8 +139,16 @@ static const int kCommentsViewTag = 4;
     UIBarButtonItem * homeButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"53-house.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(homePressed)];
     [self.navigationItem setLeftBarButtonItem:homeButton];
     
-    UIBarButtonItem * friendsMenuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon.png"] style:UIBarButtonItemStyleBordered target:self.navigationController.sideMenu action:@selector(toggleRightSideMenu)];
+    UIBarButtonItem * friendsMenuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(toggleFriendsMenu)];
     [self.navigationItem setRightBarButtonItem:friendsMenuButton];
+}
+
+- (void)toggleFriendsMenu
+{
+    [self.menuContainerViewController toggleRightSideMenuCompletion:^(void)
+     {
+         
+     }];
 }
 
 - (void)viewDidTap:(UIGestureRecognizer *)a_gestureRecognizer
@@ -221,13 +227,27 @@ static const int kCommentsViewTag = 4;
 
 - (void)likePressedForPost:(Post *)a_post
 {
-    [a_post addLike];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePost:) name:kLikeAddDidSucceedNotification object:nil];
+    if([a_post opinion] != kLiked)
+    {
+        [a_post addLike];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePost:) name:kLikeAddDidSucceedNotification object:nil];
+    }
+    else
+    {
+
+    }
 }
 - (void)dislikePressedForPost:(Post *)a_post
 {
-    [a_post addDislike];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePost:) name:kDislikeAddDidSucceedNotification object:nil];
+    if([a_post opinion] != kDisliked)
+    {
+        [a_post addDislike];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePost:) name:kDislikeAddDidSucceedNotification object:nil];
+    }
+    else
+    {
+        
+    }
 }
 
 
@@ -292,13 +312,66 @@ static const int kCommentsViewTag = 4;
 
 - (void)commentsDidDownload:(NSNotification *)a_notification
 {
+    Post * post = [a_notification object];
+    for(Comment * comment in [post comments])
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iconDidDownload:) name:kIconDownloadDidSucceedNotification object:[comment user]];
+    }
+    [m_commentsTableView reloadData];
+}
+
+- (void)iconDidDownload:(NSNotification *)a_notification
+{
+    //@todo(jdiprete):this is kinda dumb, don't reload everything for every download
     [m_commentsTableView reloadData];
 }
 
 - (void)postsDidDownload
 {
+    for(Post * post in [m_event posts])
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userIconDidDownload:) name:kIconDownloadDidSucceedNotification object:[post user]];
+        if([post firstComment])
+        {
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userIconDidDownloadForFirstComment:) name:kIconDownloadDidSucceedNotification object:[[post firstComment] user]];
+        }
+    }
+    
     [m_activityIndicator stopAnimating];
     [m_tableView reloadData];
+    
+}
+
+- (void)userIconDidDownloadForFirstComment:(NSNotification *)a_notification
+{
+    User * user = [a_notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kIconDownloadDidSucceedNotification object:user];
+    int postCount = [[m_event posts] count];
+    for(int i = 0; i < postCount; i++)
+    {
+        Post * post = [[m_event posts] objectAtIndex:i];
+        if([[[post firstComment] user] isEqual:user])
+        {
+            [m_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:i inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        }
+    }
+}
+
+- (void)userIconDidDownload:(NSNotification *)a_notification
+{
+    User * user = [a_notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kIconDownloadDidSucceedNotification object:user];
+    int postCount = [[m_event posts] count];
+    for(int i = 0; i < postCount; i++)
+    {
+        Post * post = [[m_event posts] objectAtIndex:i];
+        if([[post user] isEqual:user])
+        {
+            [m_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:i inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        }
+    }
 }
 
 - (void)imageDidDownload:(NSNotification *)a_notification
@@ -457,79 +530,48 @@ static const int kCommentsViewTag = 4;
         Post * post = [[m_event posts] objectAtIndex:indexPath.row];
         PostType type = [post type];
         
+        PostTableViewCell * cell;
+        
         if(type == kImageType)
         {
             ImagePost * post = [[m_event posts] objectAtIndex:indexPath.row];
             
-            ImagePostTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kImagePostCellReuseIdentifier];
+            cell = [tableView dequeueReusableCellWithIdentifier:kImagePostCellReuseIdentifier];
             if(cell == nil)
             {
                 cell = [[ImagePostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kImagePostCellReuseIdentifier];
             }
-            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
             
-            [cell.userName setText:[NSString stringWithFormat:@"%@ %@", [[post user] firstName], [[post user] lastName]]];
-            [cell.postImageView setImage:[post image]];
-            [[cell timeLabel] setText:[Util stringFromDate:[post time]]];
-            
+            [[(ImagePostTableViewCell *) cell postImageView] setImage:[post image]];
             if([post imageIsDownloading])
             {
-                [cell.activityIndicator startAnimating];
+                [[(ImagePostTableViewCell *) cell activityIndicator] startAnimating];
             }
             else
             {
-                [cell.activityIndicator stopAnimating];
+                [[(ImagePostTableViewCell *) cell activityIndicator] stopAnimating];
             }
-            
+
             [[cell viewWithTag:kCommentsViewTag] removeFromSuperview];
             [[cell viewWithTag:kFirstCommentTag] removeFromSuperview];
-            CommentsView * commentsView = [[CommentsView alloc] init];
-            [commentsView setFrame:CGRectMake(0, [ImagePostTableViewCell height], 320, kCommentViewHeight)];
+            CommentsView * commentsView = [self commentsViewForPost:post atPosition:CGPointMake(0, [ImagePostTableViewCell height])];
             [cell.contentView addSubview:commentsView];
-            
-            [commentsView setTag:kCommentsViewTag];
-            
-            [commentsView setDelegate:self];
-            [commentsView setPost:post];
-            [[commentsView likeNumberLabel] setText:[NSString stringWithFormat:@"%d", [post likeCount]]];
-            [[commentsView dislikeNumberLabel] setText:[NSString stringWithFormat:@"%d", [post dislikeCount]]];
-            
-            if([post opinion] == kLiked)
-            {
-                [[commentsView likeButton] setHighlighted:YES];
-            }
-            else if([post opinion] == kDisliked)
-            {
-                [[commentsView dislikeButton] setHighlighted:YES];
-            }
-            
-            if([post commentCount] == 1)
-            {
-                [[commentsView commentsButton] setTitle:@"1 Comment" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [[commentsView commentsButton] setTitle:[NSString stringWithFormat:@"%d Comments", [post commentCount]] forState:UIControlStateNormal];
-            }
             
             if([post commentCount] > 0)
             {
                 FirstCommentView * firstCommentView = [self firstCommentViewForPost:post atPosition:CGPointMake(0, [ImagePostTableViewCell height] + kCommentViewHeight)];
                 [cell.contentView addSubview:firstCommentView];
             }
-            return cell;
-            
         }
         else if(type == kTextType)
         {
             TextPost * post = [[m_event posts] objectAtIndex:indexPath.row];
             
-            TextPostTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kTextPostCellReuseIdentifier];
+            cell = [tableView dequeueReusableCellWithIdentifier:kTextPostCellReuseIdentifier];
             if(cell == nil)
             {
                 cell = [[TextPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kTextPostCellReuseIdentifier];
             }
-            [cell setSelectionStyle:UITableViewCellEditingStyleNone];
             
             [[cell viewWithTag:kTextViewTag] removeFromSuperview];
             [[cell viewWithTag:kTextBorderViewTag] removeFromSuperview];
@@ -558,7 +600,6 @@ static const int kCommentsViewTag = 4;
             {
                 heightDifference = commentSize.height - 32 + 20;
             }
-            NSLog(@"HEIGHT DIFFERENCE: %d", heightDifference);
             
             CGRect textViewFrame = textView.frame;
             textViewFrame.size.height += heightDifference;
@@ -568,96 +609,97 @@ static const int kCommentsViewTag = 4;
             borderFrame.size.height += heightDifference;
             [borderView setFrame:borderFrame];
             
-            [cell.userName setText:[NSString stringWithFormat:@"%@ %@", [[post user] firstName], [[post user] lastName]]];
-            [[cell timeLabel] setText:[Util stringFromDate:[post time]]];
-            
             [[cell viewWithTag:kCommentsViewTag] removeFromSuperview];
             [[cell viewWithTag:kFirstCommentTag] removeFromSuperview];
-            CommentsView * commentsView = [[CommentsView alloc] init];
-            [commentsView setTag:kCommentsViewTag];
-            
-            CGRect commentsViewFrame = CGRectMake(0, 120 + heightDifference, 320, 40);
-            [commentsView setFrame:commentsViewFrame];
+            CommentsView * commentsView = [self commentsViewForPost:post atPosition:CGPointMake(0, [TextPostTableViewCell height] + heightDifference)];
             [cell.contentView addSubview:commentsView];
-            
-            [commentsView setDelegate:self];
-            [commentsView setPost:post];
-            [commentsView setBackgroundColor:[UIColor greenColor]];
-            [[commentsView likeNumberLabel] setText:[NSString stringWithFormat:@"%d", [post likeCount]]];
-            [[commentsView dislikeNumberLabel] setText:[NSString stringWithFormat:@"%d", [post dislikeCount]]];
-            
-            if([post opinion] == kLiked)
-            {
-                [[commentsView likeButton] setHighlighted:YES];
-            }
-            else if([post opinion] == kDisliked)
-            {
-                [[commentsView dislikeButton] setHighlighted:YES];
-            }
-            
-            if([post commentCount] == 1)
-            {
-                [[commentsView commentsButton] setTitle:@"1 Comment" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [[commentsView commentsButton] setTitle:[NSString stringWithFormat:@"%d Comments", [post commentCount]] forState:UIControlStateNormal];
-            }
             
             if([post commentCount] > 0)
             {
                 FirstCommentView * firstCommentView = [self firstCommentViewForPost:post atPosition:CGPointMake(0, [TextPostTableViewCell height] + heightDifference + kCommentViewHeight)];
                 [cell.contentView addSubview:firstCommentView];
             }
-            
-            return cell;
         }
         else //type is place
         {
             PlacePost * post = [[m_event posts] objectAtIndex:indexPath.row];
             
-            PlacePostTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlacePostCellReuseIdentifier];
+            cell = [tableView dequeueReusableCellWithIdentifier:kPlacePostCellReuseIdentifier];
             if(cell == nil)
             {
                 cell = [[PlacePostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kPlacePostCellReuseIdentifier];
             }
             [cell setSelectionStyle:UITableViewCellEditingStyleNone];
             
-            [[cell placeNameLabel] setText:[[post venue] name]];
-            [[cell cityStateLabel] setText:[NSString stringWithFormat:@"%@, %@", [[[post venue] location] city], [[[post venue] location] state]]];
+            [[(PlacePostTableViewCell *)cell placeNameLabel] setText:[[post venue] name]];
+            [[(PlacePostTableViewCell *)cell cityStateLabel] setText:[NSString stringWithFormat:@"%@, %@", [[[post venue] location] city], [[[post venue] location] state]]];
             
             [[cell timeLabel] setText:[Util stringFromDate:[post time]]];
             
-            [[cell iconImageView] setImage:[[post venue] iconImage]];
+            [[(PlacePostTableViewCell *)cell iconImageView] setImage:[[post venue] iconImage]];
+            [[(PlacePostTableViewCell *)cell iconImageView] setBackgroundColor:[Constants noxColor]];
             
-            [[cell backgroundBorderView].layer setBorderColor:[UIColor darkGrayColor].CGColor];
-            [[cell backgroundBorderView].layer setBorderWidth:2.0];
-            [[cell backgroundBorderView].layer setCornerRadius:5.0];
+            [[(PlacePostTableViewCell *) cell backgroundBorderView].layer setBorderColor:[UIColor darkGrayColor].CGColor];
+            [[(PlacePostTableViewCell *)cell backgroundBorderView].layer setBorderWidth:2.0];
+            [[(PlacePostTableViewCell *)cell backgroundBorderView].layer setCornerRadius:5.0];
             
-            [cell.commentsView setDelegate:self];
-            [cell.commentsView setPost:post];
-            [[cell.commentsView likeNumberLabel] setText:[NSString stringWithFormat:@"%d", [post likeCount]]];
-            [[cell.commentsView dislikeNumberLabel] setText:[NSString stringWithFormat:@"%d", [post dislikeCount]]];
-            if([post commentCount] == 1)
-            {
-                [[cell.commentsView commentsButton] setTitle:@"1 Comment" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [[cell.commentsView commentsButton] setTitle:[NSString stringWithFormat:@"%d Comments", [post commentCount]] forState:UIControlStateNormal];
-            }
+            [[cell viewWithTag:kCommentsViewTag] removeFromSuperview];
+            [[cell viewWithTag:kFirstCommentTag] removeFromSuperview];
+            CommentsView * commentsView = [self commentsViewForPost:post atPosition:CGPointMake(0, [PlacePostTableViewCell height])];
+            [cell.contentView addSubview:commentsView];
             
             if([post commentCount] > 0)
             {
-                [cell.firstCommentView.timeLabel setText:[Util stringFromDate:[post firstComment].time]];
+                FirstCommentView * firstCommentView = [self firstCommentViewForPost:post atPosition:CGPointMake(0, [PlacePostTableViewCell height] + kCommentViewHeight)];
+                [cell.contentView addSubview:firstCommentView];
             }
-            else
-            {
-                [cell setShowsFirstComment:NO];
-            }
-            return cell;
+            
         }
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        [cell.userName setText:[NSString stringWithFormat:@"%@ %@", [[post user] firstName], [[post user] lastName]]];
+        [cell.userPicture setImage:[[post user] icon] ? [[post user] icon] : [UIImage imageNamed:@"default.jpg"]];
+        [[cell timeLabel] setText:[Util stringFromDate:[post time]]];
+
+        return cell;
     }
+}
+
+- (CommentsView *)commentsViewForPost:(Post *)a_post atPosition:(CGPoint)a_position
+{
+    CommentsView * commentsView = [[CommentsView alloc] init];
+    [commentsView setFrame:CGRectMake(a_position.x, a_position.y, 320, kCommentViewHeight)];
+    [commentsView setDelegate:self];
+    [commentsView setTag:kCommentsViewTag];
+    [commentsView setPost:a_post];
+    [[commentsView likeNumberLabel] setText:[NSString stringWithFormat:@"%d", [a_post likeCount]]];
+    [[commentsView dislikeNumberLabel] setText:[NSString stringWithFormat:@"%d", [a_post dislikeCount]]];
+    
+    if([a_post opinion] == kLiked)
+    {
+        [[commentsView likeButton] setBackgroundImage:[UIImage imageNamed:@"thumbsupblue.png"] forState:UIControlStateNormal];
+        [[commentsView dislikeButton] setBackgroundImage:[UIImage imageNamed:@"thumbsdown.png"] forState:UIControlStateNormal];
+    }
+    else if([a_post opinion] == kDisliked)
+    {
+        [[commentsView likeButton] setBackgroundImage:[UIImage imageNamed:@"thumbsup.png"] forState:UIControlStateNormal];
+        [[commentsView dislikeButton] setBackgroundImage:[UIImage imageNamed:@"thumbsdownred.png"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [[commentsView likeButton] setBackgroundImage:[UIImage imageNamed:@"thumbsup.png"] forState:UIControlStateNormal];
+        [[commentsView dislikeButton] setBackgroundImage:[UIImage imageNamed:@"thumbsdown.png"] forState:UIControlStateNormal];
+    }
+    
+    if([a_post commentCount] == 1)
+    {
+        [[commentsView commentsButton] setTitle:@"1 Comment" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [[commentsView commentsButton] setTitle:[NSString stringWithFormat:@"%d Comments", [a_post commentCount]] forState:UIControlStateNormal];
+    }
+    return commentsView;
 }
 
 - (FirstCommentView *)firstCommentViewForPost:(Post *)a_post atPosition:(CGPoint)a_position
@@ -688,7 +730,7 @@ static const int kCommentsViewTag = 4;
     
     [firstCommentView.timeLabel setText:[Util stringFromDate:[a_post firstComment].time]];
     [firstCommentView.userName setText:[NSString stringWithFormat:@"%@ %@", [[a_post firstComment] user].firstName, [[a_post firstComment] user].lastName]];
-    
+    [firstCommentView.userPicture setImage:[[[a_post firstComment] user] icon] ? [[[a_post firstComment] user] icon] : [UIImage imageNamed:@"default.jpg"]];
     return firstCommentView;
 }
 

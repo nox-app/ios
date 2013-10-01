@@ -92,6 +92,7 @@ static const int kCommentTextViewOffset = 20;
     {
         [[cell userName] setText:@""];
     }
+    [[cell userPicture] setImage:[[comment user] icon] ? [[comment user] icon] : [UIImage imageNamed:@"default.jpg"]];
     
     return cell;
 }

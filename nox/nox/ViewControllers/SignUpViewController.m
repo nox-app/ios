@@ -11,8 +11,10 @@
 #import "Constants.h"
 #import "PictureNameTableViewCell.h"
 #import "Profile.h"
+#import "ProfileCameraViewController.h"
 #import "TextFieldCell.h"
 #import "User.h"
+#import "Util.h"
 
 @interface SignUpViewController ()
 
@@ -85,6 +87,7 @@ static NSString * const kTextFieldCellReuseIdentifier = @"TextFieldCellReuseIden
     [m_user setLastName:lastName];
     [m_user setEmail:email];
     [m_user setPhoneNumber:phoneNumber];
+    [m_user setIcon:m_profilePicture];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userCreationDidSucceed:) name:kUserCreationDidSucceedNotification object:m_user];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userCreationDidFail:) name:kUserCreationDidFailNotification object:m_user];
     [m_user saveWithPassword:password];
@@ -120,30 +123,61 @@ static NSString * const kTextFieldCellReuseIdentifier = @"TextFieldCellReuseIden
 {
     if(buttonIndex < 2)
     {
-        UIImagePickerController * imagePickerController = [[UIImagePickerController alloc] init];
-        [imagePickerController setDelegate:self];
         if(buttonIndex == 0)
         {
-            [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
-            [imagePickerController setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto];
-            [imagePickerController setCameraDevice:UIImagePickerControllerCameraDeviceFront];
+            ProfileCameraViewController * profileCameraViewController = [[ProfileCameraViewController alloc] init];
+            [profileCameraViewController setProfileDelegate:self];
+            [self presentViewController:profileCameraViewController animated:YES completion:nil];
         }
         else if(buttonIndex == 1)
         {
+            //@todo(jdiprete): make this better
+            UIImagePickerController * imagePickerController = [[UIImagePickerController alloc] init];
+            [imagePickerController setDelegate:self];
             [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            [self presentViewController:imagePickerController animated:YES completion:nil];
         }
-        [self presentViewController:imagePickerController animated:YES completion:nil];
     }
 }
 
+- (void)setProfilePicture:(UIImage *)a_image
+{
+    m_profilePicture = a_image;
+    
+    PictureNameTableViewCell * cell = (PictureNameTableViewCell *)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [cell.pictureImageView setImage:m_profilePicture];
+}
+
+#pragma mark - UIImagePickerControllerDelegate Methods
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    //@todo(jdiprete): handle all the crop stuff
-    UIImage * image = [info objectForKey:UIImagePickerControllerOriginalImage];
-
+    UIImage * picture = [info objectForKey:UIImagePickerControllerOriginalImage];
+    CGRect cropRect;
+    
+    //landscape
+    if(picture.imageOrientation == UIImageOrientationDown || picture.imageOrientation == UIImageOrientationUp)
+    {
+        float pictureScale = picture.size.height/[UIScreen mainScreen].bounds.size.width;
+        //@todo(jdiprete): don't hardcode these numbers, grab them from the overlay
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 310 * pictureScale, 310 * pictureScale);
+    }
+    //portrait
+    else
+    {
+        float pictureScale = picture.size.width/[UIScreen mainScreen].bounds.size.width;
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 310 * pictureScale, 310 * pictureScale);
+    }
+    CGImageRef pictureRef = CGImageCreateWithImageInRect([picture CGImage], cropRect);
+    picture = [UIImage imageWithCGImage:pictureRef scale:picture.scale orientation:picture.imageOrientation];
+    
+    float deviceResolution = [[UIScreen mainScreen] scale];
+    picture = [Util resizeImage:picture toSize:CGSizeMake(kImageDimension * deviceResolution, kImageDimension * deviceResolution)];
+    
+    m_profilePicture = picture;
+    
     PictureNameTableViewCell * cell = (PictureNameTableViewCell *)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    [cell.pictureImageView setImage:image];
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    [cell.pictureImageView setImage:m_profilePicture];
 }
 
 #pragma mark - UITableView methods

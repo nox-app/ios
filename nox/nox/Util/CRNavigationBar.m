@@ -18,13 +18,16 @@ static CGFloat const kDefaultColorLayerOpacity = 0.6f;
 static CGFloat const kSpaceToCoverStatusBars = 20.0f;
 
 - (void)setBarTintColor:(UIColor *)barTintColor {
-    [super setBarTintColor:barTintColor];
-    if (self.colorLayer == nil) {
-        self.colorLayer = [CALayer layer];
-        self.colorLayer.opacity = kDefaultColorLayerOpacity;
-        [self.layer addSublayer:self.colorLayer];
+    if([[self superclass] instancesRespondToSelector:@selector(setBarTintColor:)])
+    {
+        [super setBarTintColor:barTintColor];
+        if (self.colorLayer == nil) {
+            self.colorLayer = [CALayer layer];
+            self.colorLayer.opacity = kDefaultColorLayerOpacity;
+            [self.layer addSublayer:self.colorLayer];
+        }
+        self.colorLayer.backgroundColor = barTintColor.CGColor;
     }
-    self.colorLayer.backgroundColor = barTintColor.CGColor;
 }
 
 - (void)layoutSubviews {

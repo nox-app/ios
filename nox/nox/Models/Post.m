@@ -56,6 +56,7 @@ static NSString * const kCommentKey = @"commentKey";
     if(self = [super init])
     {
         [self setPropertiesFromDictionary:a_dictionary];
+        m_user = [[User alloc] initWithDictionary:[a_dictionary objectForKeyNotNull:@"user"]];
         m_comments = [[NSMutableArray alloc] init];
     }
     return self;
@@ -82,8 +83,6 @@ static NSString * const kCommentKey = @"commentKey";
     m_likeCount = [[a_dictionary objectForKeyNotNull:@"like_count"] intValue];
     
     m_opinion = [[a_dictionary objectForKeyNotNull:@"opinion"] intValue];
-    
-    m_user = [[User alloc] initWithDictionary:[a_dictionary objectForKeyNotNull:@"user"]];
     
     //temp until first comment returns the whole comment
     NSDictionary * firstComment = [a_dictionary objectForKeyNotNull:@"first_comment"];

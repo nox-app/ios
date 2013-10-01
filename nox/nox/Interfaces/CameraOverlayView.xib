@@ -35,8 +35,8 @@
                         <action selector="takePicturePressed:" destination="-1" eventType="touchUpInside" id="DMe-XF-OgB"/>
                     </connections>
                 </button>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NRE-n4-mBi">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.79999999999999982" contentMode="scaleToFill" id="NRE-n4-mBi">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem systemItem="cancel" id="BW0-hS-usE">
@@ -65,7 +65,7 @@
                     <color key="backgroundColor" red="0.92605723510000004" green="0.92605723510000004" blue="0.92605723510000004" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <button opaque="NO" alpha="0.59999999999999964" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4gb-Js-4T2">
-                    <rect key="frame" x="245" y="55" width="66" height="30"/>
+                    <rect key="frame" x="245" y="72" width="66" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="rotateCameraButton.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,7 +75,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" alpha="0.64999999999999969" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KUf-lP-lHI">
-                    <rect key="frame" x="10" y="55" width="66" height="30"/>
+                    <rect key="frame" x="8" y="72" width="66" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="flashAutoButton.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,15 +90,15 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="RFk-g8-Zad">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="402"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="o5t-e1-JPu">
-                    <rect key="frame" x="5" y="10" width="310" height="310"/>
+                    <rect key="frame" x="5" y="70" width="310" height="310"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YGC-yY-A2B">
-                    <rect key="frame" x="244" y="333" width="64" height="55"/>
+                    <rect key="frame" x="244" y="388" width="64" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="cameraTextButton.png">
@@ -112,8 +112,28 @@
                         <action selector="switchToCameraPressed:" destination="-1" eventType="touchUpInside" id="YGH-dy-LEU"/>
                     </connections>
                 </button>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.80000001192092896" contentMode="scaleToFill" id="Nvf-Xh-SE5">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem systemItem="cancel" id="MBF-1o-JKV">
+                            <connections>
+                                <action selector="cameraDonePressed:" destination="-1" id="IZL-CS-60A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="194" style="plain" systemItem="fixedSpace" id="Pva-95-QBD"/>
+                        <barButtonItem title="Post" id="mZt-nC-Gx0">
+                            <connections>
+                                <action selector="postPressed:" destination="-1" id="Ag1-12-NPc"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
             </subviews>
-            <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>

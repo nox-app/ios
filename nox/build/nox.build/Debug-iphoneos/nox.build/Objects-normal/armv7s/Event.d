@@ -15,4 +15,5 @@ dependencies: /Users/jdiprete/nox/ios/nox/nox/Models/Event.m \
   /Users/jdiprete/nox/ios/nox/nox/Models/PlacePost.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Profile.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/TextPost.h \
-  /Users/jdiprete/nox/ios/nox/nox/Models/User.h
+  /Users/jdiprete/nox/ios/nox/nox/Models/User.h \
+  /Users/jdiprete/nox/ios/nox/nox/Models/Venue.h

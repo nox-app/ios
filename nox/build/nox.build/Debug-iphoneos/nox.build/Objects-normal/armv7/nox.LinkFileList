@@ -16,6 +16,7 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/CellScrollView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/RoundedView.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/ImagePostTableViewCell.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/Invite.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/TextPostTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/Util.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/PlacePostTableViewCell.o
@@ -27,6 +28,7 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/CameraViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/EventDetailsTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/CommentViewController.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/InviteContactTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/FriendsMenuViewController.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/JSONKit.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/Venue.o
@@ -59,4 +61,5 @@
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/Profile.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/KeychainItemWrapper.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/MFSideMenu.o
+/Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/EventMemberTableViewCell.o
 /Users/jdiprete/nox/ios/nox/build/nox.build/Debug-iphoneos/nox.build/Objects-normal/armv7/UINavigationController+MFSideMenu.o

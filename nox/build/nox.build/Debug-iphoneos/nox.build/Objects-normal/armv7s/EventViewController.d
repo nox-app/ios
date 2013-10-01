@@ -19,9 +19,12 @@ dependencies: \
   /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Post.h \
   /Users/jdiprete/nox/ios/nox/nox/Views/ImagePostTableViewCell.h \
+  /Users/jdiprete/nox/ios/nox/nox/Views/PostTableViewCell.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Location.h \
-  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu.h \
-  /Users/jdiprete/nox/ios/nox/nox/Util/UINavigationController+MFSideMenu.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/MFSideMenu.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/MFSideMenuContainerViewController.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/MFSideMenuShadow.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/MFSideMenu/UIViewController+MFSideMenuAdditions.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/PlacePost.h \
   /Users/jdiprete/nox/ios/nox/nox/Views/PlacePostTableViewCell.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Profile.h \

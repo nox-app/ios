@@ -40,9 +40,12 @@ NSString * const kVenueIconDidDownloadNotification = @"VenueIconDidDownloadNotif
         NSDictionary * category = [categories objectAtIndex:0];
         NSDictionary * icon = [category objectForKey:@"icon"];
         NSString * prefix = [icon objectForKey:@"prefix"];
-        prefix = [prefix substringToIndex:[prefix length] - 1];
-        m_iconURL = [prefix stringByAppendingString:[icon objectForKey:@"suffix"]];
+        m_iconURL = [[prefix stringByAppendingString:@"88"] stringByAppendingString:[icon objectForKey:@"suffix"]];
         [self performSelectorInBackground:@selector(downloadIcon) withObject:nil];
+    }
+    else
+    {
+        m_iconImage = [UIImage imageNamed:@"defaultvenue.png"];
     }
     
     m_id = [a_dictionary objectForKey:@"id"];
@@ -59,11 +62,17 @@ NSString * const kVenueIconDidDownloadNotification = @"VenueIconDidDownloadNotif
 
 - (void)iconDownloadDidFinish
 {
+    if(!m_iconImage)
+    {
+        m_iconImage = [UIImage imageNamed:@"defaultvenue.png"];
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:kVenueIconDidDownloadNotification object:self];
 }
 
 - (void)downloadIcon
 {
+    //@todo(jdiprete):Use NSURLConnection so you can cache these
+    NSLog(@"ICON: %@", m_iconURL);
     m_iconImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:m_iconURL]]];
     [self performSelectorOnMainThread:@selector(iconDownloadDidFinish) withObject:nil waitUntilDone:NO];
 }

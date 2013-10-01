@@ -12,5 +12,6 @@
 
 @property IBOutlet UILabel * nameLabel;
 @property IBOutlet UIButton * inviteButton;
+@property IBOutlet UIImageView * userIcon;
 
 @end

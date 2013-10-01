@@ -20,6 +20,7 @@
 #import "Profile.h"
 #import "TextPost.h"
 #import "User.h"
+#import "Venue.h"
 
 NSString * const kPostsDidDownloadNotification = @"PostsDidDownloadNotification";
 NSString * const kEventFinishedImageDownloadsNotification = @"EventFinishedImageDownloadsNotification";
@@ -43,6 +44,7 @@ static NSString * const kInviteKey = @"inviteKey";
 @synthesize imagesAreDownloading = m_imagesAreDownloading;
 @synthesize postsAreDownloading = m_postsAreDownloading;
 @synthesize invites = m_invites;
+@synthesize creator = m_creator;
 
 #pragma mark - Initialization
 
@@ -84,6 +86,12 @@ static NSString * const kInviteKey = @"inviteKey";
     m_updatedAt = [formatter dateFromString:[[[a_dictionary objectForKeyNotNull:@"updated_at"] componentsSeparatedByString:@"."] objectAtIndex:0]];
     
     m_resourceURI = [a_dictionary objectForKeyNotNull:@"resource_uri"];
+    
+    NSString * userResourceURI = [a_dictionary objectForKeyNotNull:@"creator"];
+    m_creator = [[User alloc] init];
+    [m_creator downloadUserWithResourceURI:userResourceURI];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(creatorDidDownload) name:kUserDownloadDidSucceedNotification object:m_creator];
+    
 }
 
 - (void)updateWithDictionary:(NSDictionary *)a_dictionary
@@ -92,6 +100,11 @@ static NSString * const kInviteKey = @"inviteKey";
 }
 
 #pragma mark - Event Members
+
+- (void)creatorDidDownload
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kUserDownloadDidSucceedNotification object:m_creator];
+}
 
 - (void)downloadEventMembers
 {
@@ -139,7 +152,6 @@ static NSString * const kInviteKey = @"inviteKey";
 
 - (void)saveTextPost:(TextPost *)a_textPost
 {
-    //download events for the user
     NSString * textPostURLString = [kNoxBase stringByAppendingString:[kAPIBase stringByAppendingString:kAPITextPost]];
     NSURL * textPostURL = [NSURL URLWithString:textPostURLString];
     
@@ -181,7 +193,7 @@ static NSString * const kInviteKey = @"inviteKey";
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     [request setPostValue:[formatter stringFromDate:[a_imagePost time]] forKey:@"created_at"];
     
-    NSData * imageData = UIImageJPEGRepresentation([a_imagePost image], 1.0);
+    NSData * imageData = UIImageJPEGRepresentation([a_imagePost image], 0.8);
     [request setData:imageData withFileName:@"image.jpg" andContentType:@"image/jpeg" forKey:@"image"];
     
     [request setDelegate:self];
@@ -193,7 +205,29 @@ static NSString * const kInviteKey = @"inviteKey";
 
 - (void)savePlacePost:(PlacePost *)a_placePost
 {
+    //download events for the user
+    NSString * placePostURLString = [kNoxBase stringByAppendingString:[kAPIBase stringByAppendingString:kAPIPlacePost]];
+    NSURL * placePostURL = [NSURL URLWithString:placePostURLString];
     
+    NSMutableDictionary * postDictionary = [NSMutableDictionary dictionary];
+    [postDictionary setValue:[a_placePost event] forKey:@"event"];
+    [postDictionary setValue:[NSNumber numberWithFloat:[a_placePost location].coordinate.latitude] forKey:@"latitude"];
+    [postDictionary setValue:[NSNumber numberWithFloat:[a_placePost location].coordinate.longitude] forKey:@"longitude"];
+    [postDictionary setValue:[[a_placePost venue] id] forKey:@"venue"];
+    
+    NSString * postJSON = [postDictionary JSONString];
+    NSLog(@"URL: %@", placePostURLString);
+    NSLog(@"POST JSON: %@", postJSON);
+    
+    ASIHTTPRequest * request = [ASIHTTPRequest requestWithURL:placePostURL];
+    [request addRequestHeader:@"Content-Type" value:@"application/json"];
+    [request addRequestHeader:@"Authorization" value:[NSString stringWithFormat:kAPIKeyFormat, [[[Profile sharedProfile] user] email], [[Profile sharedProfile] apiKey]]];
+    [request setRequestMethod:@"POST"];
+    [request appendPostData:[postJSON dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setDelegate:self];
+    [request setTag:kRequestAddPostTag];
+    [request setUserInfo:[NSDictionary dictionaryWithObject:a_placePost forKey:kPostKey]];
+    [request startAsynchronous];
 }
 
 - (void)addPost:(Post *)a_post
@@ -346,7 +380,7 @@ static NSString * const kInviteKey = @"inviteKey";
 - (void)imageDownloaded:(NSNotification *)a_notification
 {
     ImagePost * imagePost = [a_notification object];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kImagePostDidDownloadNotification object:imagePost];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kImagePostDownloadDidSucceedNotification object:imagePost];
     [m_imagePosts addObject:imagePost];
     
     //@todo(jdiprete): check if all the image posts have been downloaded
@@ -372,13 +406,13 @@ static NSString * const kInviteKey = @"inviteKey";
         {
             NSDictionary * posts = [[decoder objectWithData:m_downloadPostsBuffer] objectForKey:@"objects"];
             m_downloadPostsBuffer = nil;
-            
-            NSLog(@"Posts: %@", posts);
+
             if(posts)
             {
                 //@todo(jdiprete): don't delete all the posts every time, just update the existing ones
+                NSArray * tempPostsArray = [NSArray arrayWithArray:m_posts];
                 [m_posts removeAllObjects];
-                [m_imagePosts removeAllObjects];
+                //[m_imagePosts removeAllObjects];
                 
                 for(NSDictionary * post in posts)
                 {
@@ -386,19 +420,81 @@ static NSString * const kInviteKey = @"inviteKey";
                     if([post objectForKey:@"body"] != nil)
                     {
                         TextPost * textPost = [[TextPost alloc] initWithDictionary:post];
-                        [m_posts addObject:textPost];
+                        BOOL postExists = NO;
+                        for(Post * post in tempPostsArray)
+                        {
+                            if([post id] == [textPost id])
+                            {
+                                //@todo(jdiprete): Should we always update the icon?
+                                if(![[post user] icon])
+                                {
+                                    [[post user] downloadIcon];
+                                }
+                                [m_posts addObject:post];
+                                postExists = YES;
+                                break;
+                            }
+                        }
+                        if(!postExists)
+                        {
+                            [[textPost user] downloadIcon];
+                            [m_posts addObject:textPost];
+                        }
                     }
                     else if([post objectForKey:@"image"] != nil)
                     {
                         ImagePost * imagePost = [[ImagePost alloc] initWithDictionary:post];
-                        [imagePost downloadImage];
-                        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:kImagePostDidDownloadNotification object:imagePost];
-                        [m_posts addObject:imagePost];
+                        BOOL postExists = NO;
+                        for(Post * post in tempPostsArray)
+                        {
+                            if([post id] == [imagePost id])
+                            {
+                                //@todo(jdiprete): Should we always update the icon?
+                                [[imagePost user] setIcon:[[post user] icon]];
+                                [imagePost setImage:[(ImagePost *)post image]];
+                                if(![[imagePost user] icon])
+                                {
+                                    [[imagePost user] downloadIcon];
+                                }
+                                if(![imagePost image])
+                                {
+                                    [imagePost downloadImage];
+                                }
+                                [m_posts addObject:imagePost];
+                                postExists = YES;
+                                break;
+                            }
+                        }
+                        if(!postExists)
+                        {
+                            [[imagePost user] downloadIcon];
+                            [imagePost downloadImage];
+                            [m_posts addObject:imagePost];
+                        }
                     }
                     else
                     {
                         PlacePost * placePost = [[PlacePost alloc] initWithDictionary:post];
-                        [m_posts addObject:placePost];
+                        BOOL postExists = NO;
+                        for(Post * post in tempPostsArray)
+                        {
+                            if([post id] == [placePost id])
+                            {
+                                //@todo(jdiprete): Should we always update the icon?
+                                if(![[post user] icon])
+                                {
+                                    [[post user] downloadIcon];
+                                }
+                                [m_posts addObject:post];
+                                postExists = YES;
+                                break;
+                            }
+                        }
+                        if(!postExists)
+                        {
+                            [[placePost user] downloadIcon];
+                            [m_posts addObject:placePost];
+                        }
                     }
                     
                 }
@@ -407,6 +503,11 @@ static NSString * const kInviteKey = @"inviteKey";
                     NSDate * first = [(Post *)a time];
                     NSDate * second = [(Post *)b time];
                     return [second compare:first];
+                }]];
+                m_imagePosts = [NSMutableArray arrayWithArray:[m_imagePosts sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+                    NSDate * first = [(Post *)a time];
+                    NSDate * second = [(Post *)b time];
+                    return [first compare:second];
                 }]];
             }
             //todo(jdiprete):add a fail case also
@@ -432,21 +533,24 @@ static NSString * const kInviteKey = @"inviteKey";
                 for(NSDictionary * post in posts)
                 {
                     NSLog(@"REQUEST URL: %@", [[request url] absoluteString]);
-                    NSLog(@"POST: %@", post);
-                    NSLog(@"TAG: %d", [request tag]);
                     ImagePost * imagePost = [[ImagePost alloc] initWithDictionary:post];
                     if(![m_posts containsObject:imagePost])
                     {
                         [imagePost downloadImage];
                         [m_posts addObject:imagePost];
                     }
-                    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:kImagePostDidDownloadNotification object:imagePost];
+                    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:kImagePostDownloadDidSucceedNotification object:imagePost];
                 }
                 //sort the array by time - is this necessary? Maybe just read from the array backwards...
                 m_posts = [NSMutableArray arrayWithArray:[m_posts sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
                     NSDate * first = [(Post *)a time];
                     NSDate * second = [(Post *)b time];
                     return [second compare:first];
+                }]];
+                m_imagePosts = [NSMutableArray arrayWithArray:[m_imagePosts sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+                    NSDate * first = [(Post *)a time];
+                    NSDate * second = [(Post *)b time];
+                    return [first compare:second];
                 }]];
             }
             else
@@ -520,7 +624,6 @@ static NSString * const kInviteKey = @"inviteKey";
         {
             Post * post = [[request userInfo] objectForKey:kPostKey];
             NSDictionary * postDictionary = [decoder objectWithData:m_downloadAddPostBuffer];
-            NSLog(@"ADDED POST!");
             m_downloadAddPostBuffer = nil;
             if(postDictionary)
             {

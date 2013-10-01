@@ -7,4 +7,5 @@ dependencies: \
   /Users/jdiprete/nox/ios/nox/nox/Models/ImagePost.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Post.h \
   /Users/jdiprete/nox/ios/nox/nox/Models/Profile.h \
-  /Users/jdiprete/nox/ios/nox/nox/Views/UIPlaceHolderTextView.h
+  /Users/jdiprete/nox/ios/nox/nox/Views/UIPlaceHolderTextView.h \
+  /Users/jdiprete/nox/ios/nox/nox/Util/Util.h

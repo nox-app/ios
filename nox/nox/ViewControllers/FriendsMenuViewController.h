@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class Event;
-@class MFSideMenu;
 @class User;
 
 @interface FriendsMenuViewController : UIViewController <UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
@@ -27,8 +26,6 @@
     Event * m_event;
     User * m_currentInvitationUser;
 }
-
-@property (nonatomic, assign) MFSideMenu * sideMenu;
 
 - (void)setEvent:(Event *)a_event;
 

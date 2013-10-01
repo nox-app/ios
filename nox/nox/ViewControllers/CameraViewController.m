@@ -13,6 +13,7 @@
 #import "ImagePost.h"
 #import "Profile.h"
 #import "UIPlaceHolderTextView.h"
+#import "Util.h"
 
 @interface CameraViewController ()
 
@@ -75,7 +76,9 @@ static const float kKeyboardOffset = 120.0;
     m_currentImagePost = [m_imagePostArray objectAtIndex:a_index];
     
     [m_pictureImageView setImage:[m_currentImagePost image]];
-    [m_pictureDetailView setFrame:CGRectMake(0, 40, m_pictureDetailView.frame.size.width, m_pictureDetailView.frame.size.height)];
+    [m_pictureDetailView setFrame:self.view.frame];
+    [m_photoView removeFromSuperview];
+    [m_pictureDetailView addSubview:m_photoView];
     [self.view addSubview:m_pictureDetailView];
 }
 
@@ -87,101 +90,14 @@ static const float kKeyboardOffset = 120.0;
 - (void)switchToCamera
 {
     m_currentImagePost = nil;
+    [m_photoView removeFromSuperview];
     [m_pictureDetailView removeFromSuperview];
+    [self.view addSubview:m_photoView];
 }
 
 #pragma mark - Photo View Methods
 
-//scale these down to save memory cause shit is crashing...
-- (UIImage *)resizeImage:(UIImage *)a_image toSize:(CGSize)a_size
-{
-    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, a_size.width, a_size.height));
-    CGRect transposedRect = CGRectMake(0, 0, newRect.size.height, newRect.size.width);
-    CGImageRef imageRef = a_image.CGImage;
-    
-    // Build a context that's the same dimensions as the new size
-    CGContextRef bitmap = CGBitmapContextCreate(NULL,
-                                                newRect.size.width,
-                                                newRect.size.height,
-                                                CGImageGetBitsPerComponent(imageRef),
-                                                0,
-                                                CGImageGetColorSpace(imageRef),
-                                                CGImageGetBitmapInfo(imageRef));
-    
-    BOOL transpose;
-    switch(a_image.imageOrientation)
-    {
-        case UIImageOrientationLeft:
-        case UIImageOrientationLeftMirrored:
-        case UIImageOrientationRight:
-        case UIImageOrientationRightMirrored:
-            transpose = YES;
-            break;
-            
-        default:
-            transpose = NO;
-    }
-    
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    
-    switch (a_image.imageOrientation) {
-        case UIImageOrientationDown:           // EXIF = 3
-        case UIImageOrientationDownMirrored:   // EXIF = 4
-            transform = CGAffineTransformTranslate(transform, a_size.width, a_size.height);
-            transform = CGAffineTransformRotate(transform, M_PI);
-            break;
-            
-        case UIImageOrientationLeft:           // EXIF = 6
-        case UIImageOrientationLeftMirrored:   // EXIF = 5
-            transform = CGAffineTransformTranslate(transform, a_size.width, 0);
-            transform = CGAffineTransformRotate(transform, M_PI_2);
-            break;
-            
-        case UIImageOrientationRight:          // EXIF = 8
-        case UIImageOrientationRightMirrored:  // EXIF = 7
-            transform = CGAffineTransformTranslate(transform, 0, a_size.height);
-            transform = CGAffineTransformRotate(transform, -M_PI_2);
-            break;
-        default:
-            break;
-    }
-    
-    switch (a_image.imageOrientation) {
-        case UIImageOrientationUpMirrored:     // EXIF = 2
-        case UIImageOrientationDownMirrored:   // EXIF = 4
-            transform = CGAffineTransformTranslate(transform, a_size.width, 0);
-            transform = CGAffineTransformScale(transform, -1, 1);
-            break;
-            
-        case UIImageOrientationLeftMirrored:   // EXIF = 5
-        case UIImageOrientationRightMirrored:  // EXIF = 7
-            transform = CGAffineTransformTranslate(transform, a_size.height, 0);
-            transform = CGAffineTransformScale(transform, -1, 1);
-            break;
-        default:
-            break;
-    }
-    
-    // Rotate and/or flip the image if required by its orientation
-    CGContextConcatCTM(bitmap, transform);
-    
-    // Set the quality level to use when rescaling
-    CGContextSetInterpolationQuality(bitmap, kCGInterpolationHigh);
-    
-    // Draw into the context; this scales the image
-    CGContextDrawImage(bitmap, transpose ? transposedRect : newRect, imageRef);
-    
-    // Get the resized image from the context and a UIImage
-    CGImageRef newImageRef = CGBitmapContextCreateImage(bitmap);
-    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
-    
-    // Clean up
-    CGContextRelease(bitmap);
-    CGImageRelease(newImageRef);
-    
-    return newImage;
 
-}
 
 - (void)addPhotoToView:(UIImage *)a_picture
 {
@@ -203,7 +119,7 @@ static const float kKeyboardOffset = 120.0;
     
     //resize picture to save memory
     float deviceScale = [[UIScreen mainScreen] scale];
-    a_picture = [self resizeImage:a_picture toSize:CGSizeMake(pictureDimension * deviceScale, pictureDimension * deviceScale)];
+    a_picture = [Util resizeImage:a_picture toSize:CGSizeMake(pictureDimension * deviceScale, pictureDimension * deviceScale)];
     
     [photoImageView setImage:a_picture];
 
@@ -429,13 +345,13 @@ static const float kKeyboardOffset = 120.0;
     {
         float pictureScale = picture.size.height/[UIScreen mainScreen].bounds.size.width;
         //@todo(jdiprete): don't hardcode these numbers, grab them from the overlay
-        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 310 * pictureScale, 310 * pictureScale);
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, kImageDimension * pictureScale, kImageDimension * pictureScale);
     }
     //portrait
     else
     {
         float pictureScale = picture.size.width/[UIScreen mainScreen].bounds.size.width;
-        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, 310 * pictureScale, 310 * pictureScale);
+        cropRect = CGRectMake(60 * pictureScale, 10 * pictureScale, kImageDimension * pictureScale, kImageDimension * pictureScale);
     }
     CGImageRef pictureRef = CGImageCreateWithImageInRect([picture CGImage], cropRect);
     picture = [UIImage imageWithCGImage:pictureRef scale:picture.scale orientation:picture.imageOrientation];
@@ -443,7 +359,7 @@ static const float kKeyboardOffset = 120.0;
     //scale this down to save memory
     //@todo(jdiprete): If we want to give the option of saving to camera roll, do that before scaling the images down
     float deviceResolution = [[UIScreen mainScreen] scale];
-    picture = [self resizeImage:picture toSize:CGSizeMake(310 * deviceResolution, 310 * deviceResolution)];
+    picture = [Util resizeImage:picture toSize:CGSizeMake(kImageDimension * deviceResolution, kImageDimension * deviceResolution)];
     
     [self addPhotoToView:picture];
 }

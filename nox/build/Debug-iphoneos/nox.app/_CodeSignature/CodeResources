@@ -38,59 +38,59 @@
 		</data>
 		<key>AddFriendsViewController.nib/objects.nib</key>
 		<data>
-		oxkFiZblxdABwaL6rJ0JIiBCCCw=
+		rctWcV9/YXBuTdBwhUz1USIlSdw=
 		</data>
 		<key>AddFriendsViewController.nib/runtime.nib</key>
 		<data>
-		wfN4cUdDxGEewOQUNOf2odmGT9U=
+		UdEBNsyqb4EZY8kkfPupQ3zjDLo=
 		</data>
 		<key>CameraOverlayView.nib/objects.nib</key>
 		<data>
-		A8lmCS9Kk9MGt9xFOZ+a/UN8ryE=
+		Ml9keSWLSyxbcTOxPyzE7oDrIHY=
 		</data>
 		<key>CameraOverlayView.nib/runtime.nib</key>
 		<data>
-		40XGr2aa2UQseHObmwCA9z3za7g=
+		0JYfvUNw2wQY9Wvce3ioqHfZXco=
 		</data>
 		<key>CameraViewController.nib/objects.nib</key>
 		<data>
-		c3qiHKZg/1PHXFILRg/fWT/nuEA=
+		zjYcIKhuL9qYpZmlw63uf9jef+s=
 		</data>
 		<key>CameraViewController.nib/runtime.nib</key>
 		<data>
-		4f7pB7hy+4pwFmvmwkvQXCqchEY=
+		1spf4WVAc1/QHNKgAKZx3xIm0dQ=
 		</data>
 		<key>CheckInViewController.nib/objects.nib</key>
 		<data>
-		JpMX/MXBaG1taizM95Q85AHTAWI=
+		kKmaV449/LRvyEzIQ4BuHA19nv4=
 		</data>
 		<key>CheckInViewController.nib/runtime.nib</key>
 		<data>
-		Bgc/4g1SINyMENmFRd8pCd5W+Ys=
+		30yUgopayDc4cNbWPqHzikn0NAY=
 		</data>
 		<key>CommentTableViewCell.nib/objects.nib</key>
 		<data>
-		5ieu9+0jBAPO1ZtQo/iXrPQ5brA=
+		3XnuO99gjoYvANXAUXrj2GXhwv0=
 		</data>
 		<key>CommentTableViewCell.nib/runtime.nib</key>
 		<data>
-		Ke5LxhXxCFNyZEEk3DwZOQFuKLU=
+		Ic77HVEAJyf6U32J47WcB1Qa5nQ=
 		</data>
 		<key>CommentViewController.nib/objects.nib</key>
 		<data>
-		kRf5OfJMjT3MwMR09hfglXHbHRQ=
+		M32u/zT2Xh3CUWP2zKMWvLj3wIo=
 		</data>
 		<key>CommentViewController.nib/runtime.nib</key>
 		<data>
-		xzB7plF+LvOJ8xTVaCrhy7TkXrU=
+		Ui75784O+Np9JU6AOLOVqiH7Gbw=
 		</data>
 		<key>CommentsView.nib/objects.nib</key>
 		<data>
-		RSsWv8Rm/6Ycs7b+h4qipPpOBII=
+		LBQJd05kyz8RKLXRm8WVXAXJEEg=
 		</data>
 		<key>CommentsView.nib/runtime.nib</key>
 		<data>
-		M/rIj/cUwiA/ninvpVKh+CuTGJ8=
+		v0pmskohQZjj0coNIc/ljknuYCU=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
@@ -108,117 +108,125 @@
 		<data>
 		f+chbalD/cg0G6RzsOPbpHUYQAg=
 		</data>
+		<key>EditProfileViewController.nib/objects.nib</key>
+		<data>
+		XTbQ1/qu7rso5owiIwZUzg7RbX0=
+		</data>
+		<key>EditProfileViewController.nib/runtime.nib</key>
+		<data>
+		bmEb63Id843Cj8edWab0f68ddv0=
+		</data>
 		<key>EventDetailsTableViewCell.nib/objects.nib</key>
 		<data>
-		c1CfPRHHGV9sOcnmi+HtdT+j9vc=
+		SyllW5SLKF3RokAsmFM6PE8qh34=
 		</data>
 		<key>EventDetailsTableViewCell.nib/runtime.nib</key>
 		<data>
-		cdgPtzpcMDFVX1N418f4bxPUBpE=
+		2420ggtb99ilElEZmeha1z9r7LQ=
 		</data>
 		<key>EventMemberTableViewCell.nib/objects.nib</key>
 		<data>
-		u5Y18OoYGP5VDAo9cMV1PpiN4r0=
+		d52b9bDVBTq8idJnPQPWpTZhkIQ=
 		</data>
 		<key>EventMemberTableViewCell.nib/runtime.nib</key>
 		<data>
-		gc7TpAjC7x/KqYzyrx3gk/4LzQQ=
+		7CXZy+TiedjlhBse8h0KPMBvnbA=
 		</data>
 		<key>EventSettingsViewController.nib/objects.nib</key>
 		<data>
-		Kifvvky7+pn1CVcF9kTyrIhNnoU=
+		xWTP48fR0gkOEtiUsoGvgS79ftM=
 		</data>
 		<key>EventSettingsViewController.nib/runtime.nib</key>
 		<data>
-		dSnirssOYbTChVhMwAwXn16w9rA=
+		geN6poiq1By6+M4IlY/NjXESMkY=
 		</data>
 		<key>EventTableViewCell.nib/objects.nib</key>
 		<data>
-		lqrw8LN2HHANuK9zdCzlbzu2tHI=
+		Sas62mdwcNkkvgh8Micm3ueUB1s=
 		</data>
 		<key>EventTableViewCell.nib/runtime.nib</key>
 		<data>
-		e0fxy6tN+jlTR8at3Z5OoZa6Yfc=
+		jvBt5W3HewlvFM84IFsMZYrgF2E=
 		</data>
 		<key>EventViewController.nib/objects.nib</key>
 		<data>
-		99dj+QPeqtIr3xk6xRVVsx+S52Y=
+		2S7nvbfTqDgfvwcao5PfNSxZQ7k=
 		</data>
 		<key>EventViewController.nib/runtime.nib</key>
 		<data>
-		lsgaLzmqA53tNOunrYh+g/7qWDQ=
+		TTsWxfJbGX9/WOEoViNPjftf1ZY=
 		</data>
 		<key>EventsViewController.nib/objects.nib</key>
 		<data>
-		1fxFV3oz3jgJ2B0Ieg9OoJE9TWE=
+		Q2Gm1RGTOH2HDuKsMpOgeLVJw/o=
 		</data>
 		<key>EventsViewController.nib/runtime.nib</key>
 		<data>
-		YJly6KIkbK6creWMpGe5fpIpW38=
+		G7A44dY/LGRoyQ28KOo+zd4Kl2E=
 		</data>
 		<key>FirstCommentView.nib/objects.nib</key>
 		<data>
-		8sDbT1GI9VV3pjgRTYnJYCRCn8E=
+		Ut5gkcsHBMoH2tpMz12yZKkcKCc=
 		</data>
 		<key>FirstCommentView.nib/runtime.nib</key>
 		<data>
-		pGICI0UFnUDeYcAgN0aYKnz0gmA=
+		YM7wPNGXoffHYwEDtdEKMK5rZG0=
 		</data>
 		<key>FriendsMenuViewController.nib/objects.nib</key>
 		<data>
-		VuNqpHMzPZpHjdCGeUO7RkjuLVg=
+		808DbJhZ8ukSpezGmL2DAELpjfM=
 		</data>
 		<key>FriendsMenuViewController.nib/runtime.nib</key>
 		<data>
-		m8GlY1XTsfB8gSVDyN7sle6xm68=
+		UrUzwnTV0sHOrczel9o9VZaSH/g=
 		</data>
 		<key>FriendsViewController.nib/objects.nib</key>
 		<data>
-		RyimgR3e41L41edqdwuajjWziKM=
+		SRpPPvRiCQvCXNjxjQmNpUMoWKc=
 		</data>
 		<key>FriendsViewController.nib/runtime.nib</key>
 		<data>
-		NbJxTDMTF9TH8VxTpRnHfiEtnTg=
+		kdmPCrBZtwzEJXiHa2PbnoD4Jg4=
 		</data>
 		<key>ImagePostTableViewCell.nib/objects.nib</key>
 		<data>
-		JHSFlKeU31tvPcY/FMEej/Byvag=
+		xF6uCU36LKvWmaKpOANXob21l5M=
 		</data>
 		<key>ImagePostTableViewCell.nib/runtime.nib</key>
 		<data>
-		toyQtixxDkt8Cgwe3xigdfKX7pw=
+		qcssqXhbA1LS6s3GoYqUW08t7aY=
 		</data>
 		<key>InviteContactTableViewCell.nib/objects.nib</key>
 		<data>
-		QiMhSdNrWQaRcUEXfBQwNXRnxeo=
+		Kow98aYXGXueBEJLit9ffi5xDyk=
 		</data>
 		<key>InviteContactTableViewCell.nib/runtime.nib</key>
 		<data>
-		g2mBg8g2q2zTnp6u5HdMkgHG+XA=
+		pZIwEw70HifEyreJD11eqp7ixo0=
 		</data>
 		<key>InviteUserTableViewCell.nib/objects.nib</key>
 		<data>
-		3CgWjbEK4bN1pWin8vDyePhE2BA=
+		N7rCtUGvU3wRCsBwvIwmCMjXf6E=
 		</data>
 		<key>InviteUserTableViewCell.nib/runtime.nib</key>
 		<data>
-		dl5bEpHT+DbEILHgHq1TCxC1KdU=
+		KXZpgThfyMr0uqCXLBEHkqKLcGk=
 		</data>
 		<key>LoginViewController.nib/objects.nib</key>
 		<data>
-		oNlOpRH/lOskumad53CrCmO8Cn8=
+		wUThReUH3m2hydnWNBfzgKKpmi0=
 		</data>
 		<key>LoginViewController.nib/runtime.nib</key>
 		<data>
-		AVPT8bkbvM6+CtyR1ubsHYzl//M=
+		C3RI/sPaHEEZ1gQ4Gyg1BR8jbyE=
 		</data>
 		<key>PictureNameTableViewCell.nib/objects.nib</key>
 		<data>
-		mhDUS50lKhBvBKjLQjkt7ITAVWs=
+		pm7X3aWCbemueXf56es9o8r5v1Q=
 		</data>
 		<key>PictureNameTableViewCell.nib/runtime.nib</key>
 		<data>
-		WaOUkKwCsjOnSEztIGJ1n9Lk7yg=
+		07SPkOjNKns1BH3oboN7SxD7aNM=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -226,51 +234,67 @@
 		</data>
 		<key>PlacePostTableViewCell.nib/objects.nib</key>
 		<data>
-		lSlf8EvtH6aYxJvPOKWi6uRWQWM=
+		JlaEhJaBXLRi2M3PcuoTNL6DUKE=
 		</data>
 		<key>PlacePostTableViewCell.nib/runtime.nib</key>
 		<data>
-		Z7Zs94Ka2FmJYvn/fN3IypTwRCs=
+		kI5sW8YCfo/jFKLZTj9q0Vea/sA=
+		</data>
+		<key>ProfileCameraOverlayView.nib/objects.nib</key>
+		<data>
+		tifIdzZOYVYNFwLN31ilwG3SwBA=
+		</data>
+		<key>ProfileCameraOverlayView.nib/runtime.nib</key>
+		<data>
+		YTEtfGILClDWUIUTuFkI6+mkCLk=
 		</data>
 		<key>SettingsViewController.nib/objects.nib</key>
 		<data>
-		FVq4Vkgi/6CHM/gApf2h6Yh4slo=
+		2rA3e/GzPAYgk0xE2a3UjiXkI68=
 		</data>
 		<key>SettingsViewController.nib/runtime.nib</key>
 		<data>
-		eEMSdn8Ls76b8L8G9pxQjHq8z9k=
+		6oW1Gf/XKjhJDFYKb8oWO4PAXA0=
 		</data>
 		<key>SignUpViewController.nib/objects.nib</key>
 		<data>
-		LNbBH6lu+bmg3fRvn6Qi/aGls5Y=
+		AgPeIXR8rpS24IT5AJgovpT7OD4=
 		</data>
 		<key>SignUpViewController.nib/runtime.nib</key>
 		<data>
-		QsMi3inTTxHeZ4kPHaSsWECpNz8=
+		kmd9OfY3aaxMeW+m6gc1yEAOHdc=
 		</data>
 		<key>SplashScreenViewController.nib/objects.nib</key>
 		<data>
-		YZtuTxFgy+EuhSdGtrD6JGzEvk0=
+		5hJfqODPPLzjOhgVbDlv3IUe3As=
 		</data>
 		<key>SplashScreenViewController.nib/runtime.nib</key>
 		<data>
-		jQpTrEncLzfODVm3+Tl+dTuUbwc=
+		EmzsKIsxO+wOkZafa4gsUidIrkE=
 		</data>
 		<key>TextPostTableViewCell.nib/objects.nib</key>
 		<data>
-		a2TnX6BBUQEgj5lIMAwS0gtS3gE=
+		BMvwOoIIRK2Bka9RRqOR0myOUqg=
 		</data>
 		<key>TextPostTableViewCell.nib/runtime.nib</key>
 		<data>
-		PHNCqcePoU6WZY4E29OqgIn80vY=
+		24OvYlQRbyiPey2ApzoVRLrBcIY=
 		</data>
 		<key>TextViewCell.nib/objects.nib</key>
 		<data>
-		+0nC5+r2+/2avcx8koHgfEGLL6c=
+		nzhmfci6Gfjs9S1cs98ND3ajjBg=
 		</data>
 		<key>TextViewCell.nib/runtime.nib</key>
 		<data>
-		bGmCfgxrvLHUAhIIXY6cqhV8Fd0=
+		YpKtsS6wdb3aoH7BtJXEt5pGgOM=
+		</data>
+		<key>VenueTableViewCell.nib/objects.nib</key>
+		<data>
+		/irFjY78+IgV0jMugFH1iHA21aI=
+		</data>
+		<key>VenueTableViewCell.nib/runtime.nib</key>
+		<data>
+		cGBcRhpMksfqX+3+ZLs1eCBvqjg=
 		</data>
 		<key>bart.jpg</key>
 		<data>
@@ -300,9 +324,21 @@
 		<data>
 		mgFScfdtoC8AQzvihMGxgaCTDpI=
 		</data>
+		<key>creatorIcon.png</key>
+		<data>
+		6Vw3QmEJ85UzFhIZbVpMWttZELM=
+		</data>
 		<key>darkbutton.png</key>
 		<data>
 		Ea273uhaM1YxtPyS54ln76rFCxg=
+		</data>
+		<key>default.jpg</key>
+		<data>
+		jIIHSE9omo7zDfXlI5O4f+DXZWE=
+		</data>
+		<key>defaultvenue.png</key>
+		<data>
+		WFFnwf+OcKOICZLsiRsHb5Wzdbs=
 		</data>
 		<key>downarrrow.png</key>
 		<data>
@@ -310,7 +346,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Bzon+ePGcOvXNKhbecmYWPeSXgk=
+		gROs2Pusy2mQKBjB/wWVYLQfPpE=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
@@ -398,7 +434,7 @@
 		</data>
 		<key>thumbsdownred.png</key>
 		<data>
-		IDg0YaXUyeY6pEDC7KCccr4ZbkE=
+		Lv3IiRH+Kl2g62ZdLJyXe7sD7DM=
 		</data>
 		<key>thumbsup.png</key>
 		<data>
@@ -406,7 +442,7 @@
 		</data>
 		<key>thumbsupblue.png</key>
 		<data>
-		wVAQljjalrsAw6J4wAcK+NgXGfo=
+		9vfGMhPGSp+uBqAik3rcFMQ5o/4=
 		</data>
 		<key>viewIcon.png</key>
 		<data>

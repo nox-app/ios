@@ -18,6 +18,7 @@ typedef enum LoginField
 @interface LoginViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, ASIHTTPRequestDelegate>
 {
     IBOutlet UITableView * m_tableView;
+    IBOutlet UIActivityIndicatorView * m_activityIndicator;
     
     NSArray * m_loginPlaceholderArray;
     UITextField * m_currentFirstResponder;

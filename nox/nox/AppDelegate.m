@@ -13,7 +13,7 @@
 #import "FriendsMenuViewController.h"
 #import "KeychainItemWrapper.h"
 #import "LoginViewController.h"
-#import "MFSideMenu.h"
+#import "MFSideMenuContainerViewController.h"
 #import "Profile.h"
 #import "SplashScreenViewController.h"
 #import "User.h"
@@ -31,10 +31,9 @@
     
     FriendsMenuViewController * friendsMenuViewController = [[FriendsMenuViewController alloc] init];
     
-    MFSideMenu * sideMenu = [MFSideMenu menuWithNavigationController:self.navigationController leftSideMenuController:nil rightSideMenuController:friendsMenuViewController];
-    [friendsMenuViewController setSideMenu:sideMenu];
+    MFSideMenuContainerViewController * container = [MFSideMenuContainerViewController containerWithCenterViewController:self.navigationController leftMenuViewController:nil rightMenuViewController:friendsMenuViewController];
     
-    [self.window setRootViewController:self.navigationController];
+    [self.window setRootViewController:container];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

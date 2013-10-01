@@ -45,8 +45,6 @@
 		330E24EB17813AB100AA1913 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E24EA17813AB100AA1913 /* Security.framework */; };
 		330E24EF17813EFB00AA1913 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */; };
 		330E24F1178155ED00AA1913 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 330E24F0178155ED00AA1913 /* 19-gear.png */; };
-		330E24F61781622700AA1913 /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F31781622700AA1913 /* MFSideMenu.m */; };
-		330E24F71781622700AA1913 /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */; };
 		331F05C917F18B8900FADE96 /* InviteUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 331F05C817F18B8900FADE96 /* InviteUserTableViewCell.m */; };
 		331F05CB17F18BA400FADE96 /* InviteUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331F05CA17F18BA400FADE96 /* InviteUserTableViewCell.xib */; };
 		331F05CE17F18FE500FADE96 /* InviteContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 331F05CD17F18FE500FADE96 /* InviteContactTableViewCell.m */; };
@@ -57,6 +55,19 @@
 		3352206317F567C5003D264A /* EventMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3352206217F567C5003D264A /* EventMemberTableViewCell.m */; };
 		3352206617F568F3003D264A /* memberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3352206417F568F3003D264A /* memberIcon.png */; };
 		3352206717F568F3003D264A /* viewIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3352206517F568F3003D264A /* viewIcon.png */; };
+		335220E117F8F9BD003D264A /* creatorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 335220E017F8F9BD003D264A /* creatorIcon.png */; };
+		335220E317F908BE003D264A /* ProfileCameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335220E217F908BE003D264A /* ProfileCameraOverlayView.xib */; };
+		335220E617F90A3A003D264A /* ProfileCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335220E517F90A3A003D264A /* ProfileCameraViewController.m */; };
+		335220EC17F9231B003D264A /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335220EA17F9231B003D264A /* EditProfileViewController.m */; };
+		335220ED17F9231B003D264A /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335220EB17F9231B003D264A /* EditProfileViewController.xib */; };
+		335220EF17FAB167003D264A /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 335220EE17FAB167003D264A /* default.jpg */; };
+		335220F217FAB1CE003D264A /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 335220F117FAB1CE003D264A /* PostTableViewCell.m */; };
+		335220FB17FAC10F003D264A /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335220F617FAC10F003D264A /* MFSideMenuContainerViewController.m */; };
+		335220FC17FAC10F003D264A /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 335220F817FAC10F003D264A /* MFSideMenuShadow.m */; };
+		335220FD17FAC10F003D264A /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 335220FA17FAC10F003D264A /* UIViewController+MFSideMenuAdditions.m */; };
+		3352210017FACC67003D264A /* VenueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 335220FF17FACC67003D264A /* VenueTableViewCell.m */; };
+		3352210217FACCB0003D264A /* VenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3352210117FACCB0003D264A /* VenueTableViewCell.xib */; };
+		3352210417FAD1F4003D264A /* defaultvenue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3352210317FAD1F4003D264A /* defaultvenue.png */; };
 		338392B617E547CC002A333A /* EventDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 338392B517E547CC002A333A /* EventDetailsTableViewCell.m */; };
 		3388DC6017E68D2D008271B0 /* 187-pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 3388DC5F17E68D22008271B0 /* 187-pencil.png */; };
 		3388DC6717E69322008271B0 /* EventSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388DC6517E69322008271B0 /* EventSettingsViewController.m */; };
@@ -222,10 +233,6 @@
 		330E24ED17813EFB00AA1913 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = Util/KeychainItemWrapper.h; sourceTree = "<group>"; };
 		330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = Util/KeychainItemWrapper.m; sourceTree = "<group>"; };
 		330E24F0178155ED00AA1913 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear.png"; path = "Resources/19-gear.png"; sourceTree = "<group>"; };
-		330E24F21781622700AA1913 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFSideMenu.h; path = Util/MFSideMenu.h; sourceTree = "<group>"; };
-		330E24F31781622700AA1913 /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFSideMenu.m; path = Util/MFSideMenu.m; sourceTree = "<group>"; };
-		330E24F41781622700AA1913 /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+MFSideMenu.h"; path = "Util/UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
-		330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+MFSideMenu.m"; path = "Util/UINavigationController+MFSideMenu.m"; sourceTree = "<group>"; };
 		3314288D17E821D900F746D1 /* SettingViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingViewControllerDelegate.h; path = Delegates/SettingViewControllerDelegate.h; sourceTree = "<group>"; };
 		331F05C717F18B8900FADE96 /* InviteUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InviteUserTableViewCell.h; path = Views/InviteUserTableViewCell.h; sourceTree = "<group>"; };
 		331F05C817F18B8900FADE96 /* InviteUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InviteUserTableViewCell.m; path = Views/InviteUserTableViewCell.m; sourceTree = "<group>"; };
@@ -241,6 +248,28 @@
 		3352206217F567C5003D264A /* EventMemberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventMemberTableViewCell.m; path = Views/EventMemberTableViewCell.m; sourceTree = "<group>"; };
 		3352206417F568F3003D264A /* memberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = memberIcon.png; path = Resources/memberIcon.png; sourceTree = "<group>"; };
 		3352206517F568F3003D264A /* viewIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewIcon.png; path = Resources/viewIcon.png; sourceTree = "<group>"; };
+		335220E017F8F9BD003D264A /* creatorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = creatorIcon.png; path = Resources/creatorIcon.png; sourceTree = "<group>"; };
+		335220E217F908BE003D264A /* ProfileCameraOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCameraOverlayView.xib; sourceTree = "<group>"; };
+		335220E417F90A3A003D264A /* ProfileCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileCameraViewController.h; path = ViewControllers/ProfileCameraViewController.h; sourceTree = "<group>"; };
+		335220E517F90A3A003D264A /* ProfileCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileCameraViewController.m; path = ViewControllers/ProfileCameraViewController.m; sourceTree = "<group>"; };
+		335220E817F910E1003D264A /* ProfileCameraViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProfileCameraViewControllerDelegate.h; path = Delegates/ProfileCameraViewControllerDelegate.h; sourceTree = "<group>"; };
+		335220E917F9231B003D264A /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileViewController.h; path = ViewControllers/EditProfileViewController.h; sourceTree = "<group>"; };
+		335220EA17F9231B003D264A /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileViewController.m; path = ViewControllers/EditProfileViewController.m; sourceTree = "<group>"; };
+		335220EB17F9231B003D264A /* EditProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditProfileViewController.xib; path = ViewControllers/EditProfileViewController.xib; sourceTree = "<group>"; };
+		335220EE17FAB167003D264A /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default.jpg; path = Resources/default.jpg; sourceTree = "<group>"; };
+		335220F017FAB1CE003D264A /* PostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostTableViewCell.h; path = Views/PostTableViewCell.h; sourceTree = "<group>"; };
+		335220F117FAB1CE003D264A /* PostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostTableViewCell.m; path = Views/PostTableViewCell.m; sourceTree = "<group>"; };
+		335220F417FAC10F003D264A /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		335220F517FAC10F003D264A /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		335220F617FAC10F003D264A /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		335220F717FAC10F003D264A /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		335220F817FAC10F003D264A /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		335220F917FAC10F003D264A /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		335220FA17FAC10F003D264A /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		335220FE17FACC67003D264A /* VenueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueTableViewCell.h; path = Views/VenueTableViewCell.h; sourceTree = "<group>"; };
+		335220FF17FACC67003D264A /* VenueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueTableViewCell.m; path = Views/VenueTableViewCell.m; sourceTree = "<group>"; };
+		3352210117FACCB0003D264A /* VenueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueTableViewCell.xib; sourceTree = "<group>"; };
+		3352210317FAD1F4003D264A /* defaultvenue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = defaultvenue.png; path = Resources/defaultvenue.png; sourceTree = "<group>"; };
 		338392B217D720BE002A333A /* CommentsViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommentsViewDelegate.h; path = Delegates/CommentsViewDelegate.h; sourceTree = "<group>"; };
 		338392B417E547CC002A333A /* EventDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDetailsTableViewCell.h; path = Views/EventDetailsTableViewCell.h; sourceTree = "<group>"; };
 		338392B517E547CC002A333A /* EventDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventDetailsTableViewCell.m; path = Views/EventDetailsTableViewCell.m; sourceTree = "<group>"; };
@@ -487,30 +516,34 @@
 		330E247B177FC80100AA1913 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				330E2492177FCB3A00AA1913 /* LoginViewController.h */,
-				330E2493177FCB3A00AA1913 /* LoginViewController.m */,
-				330E2497177FCB5300AA1913 /* SignUpViewController.h */,
-				330E2498177FCB5300AA1913 /* SignUpViewController.m */,
+				330E24B6177FCC1400AA1913 /* AddFriendsViewController.h */,
+				330E24B7177FCC1400AA1913 /* AddFriendsViewController.m */,
+				33E0F0241794BA4A003CE1E5 /* CameraViewController.h */,
+				33E0F0251794BA4A003CE1E5 /* CameraViewController.m */,
+				33E0EFFC1787FCA5003CE1E5 /* CheckInViewController.h */,
+				33E0EFFD1787FCA5003CE1E5 /* CheckInViewController.m */,
+				33E0F01C1788F1A0003CE1E5 /* CommentViewController.h */,
+				33E0F01D1788F1A0003CE1E5 /* CommentViewController.m */,
+				335220E917F9231B003D264A /* EditProfileViewController.h */,
+				335220EA17F9231B003D264A /* EditProfileViewController.m */,
+				3388DC6417E69322008271B0 /* EventSettingsViewController.h */,
+				3388DC6517E69322008271B0 /* EventSettingsViewController.m */,
 				330E249C177FCB7400AA1913 /* EventsViewController.h */,
 				330E249D177FCB7400AA1913 /* EventsViewController.m */,
 				330E24A1177FCB8500AA1913 /* EventViewController.h */,
 				330E24A2177FCB8500AA1913 /* EventViewController.m */,
-				330E24AB177FCBBA00AA1913 /* SettingsViewController.h */,
-				330E24AC177FCBBA00AA1913 /* SettingsViewController.m */,
-				330E24B1177FCBFE00AA1913 /* FriendsViewController.h */,
-				330E24B2177FCBFE00AA1913 /* FriendsViewController.m */,
-				330E24B6177FCC1400AA1913 /* AddFriendsViewController.h */,
-				330E24B7177FCC1400AA1913 /* AddFriendsViewController.m */,
-				33E0EFFC1787FCA5003CE1E5 /* CheckInViewController.h */,
-				33E0EFFD1787FCA5003CE1E5 /* CheckInViewController.m */,
 				33E0F012178809BC003CE1E5 /* FriendsMenuViewController.h */,
 				33E0F013178809BC003CE1E5 /* FriendsMenuViewController.m */,
-				33E0F01C1788F1A0003CE1E5 /* CommentViewController.h */,
-				33E0F01D1788F1A0003CE1E5 /* CommentViewController.m */,
-				33E0F0241794BA4A003CE1E5 /* CameraViewController.h */,
-				33E0F0251794BA4A003CE1E5 /* CameraViewController.m */,
-				3388DC6417E69322008271B0 /* EventSettingsViewController.h */,
-				3388DC6517E69322008271B0 /* EventSettingsViewController.m */,
+				330E24B1177FCBFE00AA1913 /* FriendsViewController.h */,
+				330E24B2177FCBFE00AA1913 /* FriendsViewController.m */,
+				330E2492177FCB3A00AA1913 /* LoginViewController.h */,
+				330E2493177FCB3A00AA1913 /* LoginViewController.m */,
+				335220E417F90A3A003D264A /* ProfileCameraViewController.h */,
+				335220E517F90A3A003D264A /* ProfileCameraViewController.m */,
+				330E24AB177FCBBA00AA1913 /* SettingsViewController.h */,
+				330E24AC177FCBBA00AA1913 /* SettingsViewController.m */,
+				330E2497177FCB5300AA1913 /* SignUpViewController.h */,
+				330E2498177FCB5300AA1913 /* SignUpViewController.m */,
 				3396B7D117E9639C00D80C24 /* SplashScreenViewController.h */,
 				3396B7D217E9639C00D80C24 /* SplashScreenViewController.m */,
 			);
@@ -520,32 +553,32 @@
 		330E247C177FC83300AA1913 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				330E247D177FC96D00AA1913 /* User.h */,
-				330E247E177FC96D00AA1913 /* User.m */,
-				330E2480177FC99800AA1913 /* Event.h */,
-				330E2481177FC99800AA1913 /* Event.m */,
-				330E2483177FC9BB00AA1913 /* Post.h */,
-				330E2484177FC9BB00AA1913 /* Post.m */,
 				330E2486177FCA0500AA1913 /* Comment.h */,
 				330E2487177FCA0500AA1913 /* Comment.m */,
-				330E2489177FCA6A00AA1913 /* ImagePost.h */,
-				330E248A177FCA6A00AA1913 /* ImagePost.m */,
-				330E248C177FCA8D00AA1913 /* TextPost.h */,
-				330E248D177FCA8D00AA1913 /* TextPost.m */,
-				330E248F177FCB0A00AA1913 /* PlacePost.h */,
-				330E2490177FCB0A00AA1913 /* PlacePost.m */,
-				330E24E217801B0700AA1913 /* Profile.h */,
-				330E24E317801B0700AA1913 /* Profile.m */,
-				33E0F0001787FF34003CE1E5 /* Venue.h */,
-				33E0F0011787FF34003CE1E5 /* Venue.m */,
-				33E0F0021787FF89003CE1E5 /* Location.h */,
-				33E0F0031787FF89003CE1E5 /* Location.m */,
 				33F25A0C17BEEFAB00AB6682 /* CommentTableViewDelegate.h */,
 				33F25A0D17BEEFAB00AB6682 /* CommentTableViewDelegate.m */,
 				33F25A6217D066E000AB6682 /* Contact.h */,
 				33F25A6317D066E000AB6682 /* Contact.m */,
+				330E2480177FC99800AA1913 /* Event.h */,
+				330E2481177FC99800AA1913 /* Event.m */,
+				330E2489177FCA6A00AA1913 /* ImagePost.h */,
+				330E248A177FCA6A00AA1913 /* ImagePost.m */,
 				3352205617F51776003D264A /* Invite.h */,
 				3352205717F51776003D264A /* Invite.m */,
+				33E0F0021787FF89003CE1E5 /* Location.h */,
+				33E0F0031787FF89003CE1E5 /* Location.m */,
+				330E248F177FCB0A00AA1913 /* PlacePost.h */,
+				330E2490177FCB0A00AA1913 /* PlacePost.m */,
+				330E2483177FC9BB00AA1913 /* Post.h */,
+				330E2484177FC9BB00AA1913 /* Post.m */,
+				330E24E217801B0700AA1913 /* Profile.h */,
+				330E24E317801B0700AA1913 /* Profile.m */,
+				330E248C177FCA8D00AA1913 /* TextPost.h */,
+				330E248D177FCA8D00AA1913 /* TextPost.m */,
+				330E247D177FC96D00AA1913 /* User.h */,
+				330E247E177FC96D00AA1913 /* User.m */,
+				33E0F0001787FF34003CE1E5 /* Venue.h */,
+				33E0F0011787FF34003CE1E5 /* Venue.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -553,33 +586,36 @@
 		330E24B0177FCBC700AA1913 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				330E24BB177FCC5600AA1913 /* AddFriendsViewController.xib */,
 				3396B7D617E963FA00D80C24 /* CameraOverlayView.xib */,
+				33E0F0271794BA99003CE1E5 /* CameraViewController.xib */,
+				33E0EFFF1787FCC5003CE1E5 /* CheckInViewController.xib */,
 				3396B7D717E963FA00D80C24 /* CommentsView.xib */,
+				330A938817B4A720002B9436 /* CommentTableViewCell.xib */,
+				33E0F01F1788F1DF003CE1E5 /* CommentViewController.xib */,
+				335220EB17F9231B003D264A /* EditProfileViewController.xib */,
 				3396B7D817E963FA00D80C24 /* EventDetailsTableViewCell.xib */,
+				3352205F17F5676C003D264A /* EventMemberTableViewCell.xib */,
+				3388DC6917E69363008271B0 /* EventSettingsViewController.xib */,
+				330E24BD177FCC5600AA1913 /* EventsViewController.xib */,
+				339B5F001797B9F1007DD626 /* EventTableViewCell.xib */,
+				330E24BE177FCC5600AA1913 /* EventViewController.xib */,
 				3396B7D917E963FA00D80C24 /* FirstCommentView.xib */,
+				33E0F015178809D9003CE1E5 /* FriendsMenuViewController.xib */,
+				330E24BF177FCC5600AA1913 /* FriendsViewController.xib */,
+				339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */,
+				331F05CF17F1900500FADE96 /* InviteContactTableViewCell.xib */,
+				331F05CA17F18BA400FADE96 /* InviteUserTableViewCell.xib */,
+				330E24C0177FCC5600AA1913 /* LoginViewController.xib */,
 				3396B7DA17E963FA00D80C24 /* PictureNameTableViewCell.xib */,
 				3396B7DB17E963FA00D80C24 /* PlacePostTableViewCell.xib */,
-				3396B7DC17E963FA00D80C24 /* SplashScreenViewController.xib */,
-				3396B7DD17E963FA00D80C24 /* TextViewCell.xib */,
-				3388DC6917E69363008271B0 /* EventSettingsViewController.xib */,
-				330A938817B4A720002B9436 /* CommentTableViewCell.xib */,
-				33E0F0271794BA99003CE1E5 /* CameraViewController.xib */,
-				33E0F01F1788F1DF003CE1E5 /* CommentViewController.xib */,
-				33E0F015178809D9003CE1E5 /* FriendsMenuViewController.xib */,
-				33E0EFFF1787FCC5003CE1E5 /* CheckInViewController.xib */,
-				330E24BB177FCC5600AA1913 /* AddFriendsViewController.xib */,
-				330E24BD177FCC5600AA1913 /* EventsViewController.xib */,
-				330E24BE177FCC5600AA1913 /* EventViewController.xib */,
-				330E24BF177FCC5600AA1913 /* FriendsViewController.xib */,
-				330E24C0177FCC5600AA1913 /* LoginViewController.xib */,
+				335220E217F908BE003D264A /* ProfileCameraOverlayView.xib */,
 				330E24C1177FCC5600AA1913 /* SettingsViewController.xib */,
 				330E24C2177FCC5600AA1913 /* SignUpViewController.xib */,
-				339B5F001797B9F1007DD626 /* EventTableViewCell.xib */,
+				3396B7DC17E963FA00D80C24 /* SplashScreenViewController.xib */,
 				339B5F011797BA0B007DD626 /* TextPostTableViewCell.xib */,
-				339B5F021797BA1D007DD626 /* ImagePostTableViewCell.xib */,
-				331F05CA17F18BA400FADE96 /* InviteUserTableViewCell.xib */,
-				331F05CF17F1900500FADE96 /* InviteContactTableViewCell.xib */,
-				3352205F17F5676C003D264A /* EventMemberTableViewCell.xib */,
+				3396B7DD17E963FA00D80C24 /* TextViewCell.xib */,
+				3352210117FACCB0003D264A /* VenueTableViewCell.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -587,47 +623,50 @@
 		330E24CB177FD52D00AA1913 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3352206417F568F3003D264A /* memberIcon.png */,
-				3352206517F568F3003D264A /* viewIcon.png */,
-				331F05D117F1905100FADE96 /* envelope.png */,
-				3396B7FF17F178EA00D80C24 /* purplebutton.png */,
-				3396B7F417F01F5700D80C24 /* closebutton.png */,
-				3396B7F017F017CD00D80C24 /* darkbutton.png */,
-				3396B7F117F017CD00D80C24 /* lightbutton.png */,
-				3396B7EE17F00C3200D80C24 /* gradient.png */,
-				3396B7E817EA5BC400D80C24 /* thumbsdownred.png */,
-				3396B7E917EA5BC400D80C24 /* thumbsupblue.png */,
-				3396B7E617E9651400D80C24 /* splashscreen.png */,
-				3388DC7617E7C61C008271B0 /* cameraTextButton.png */,
+				339B5F1B179A06DD007DD626 /* 02-redo.png */,
+				33E0EFF41787F8F2003CE1E5 /* 07-map-marker.png */,
+				33E0EFF51787F8F2003CE1E5 /* 08-chat.png */,
+				3388DC5F17E68D22008271B0 /* 187-pencil.png */,
+				330E24F0178155ED00AA1913 /* 19-gear.png */,
+				33E0EFE917817586003CE1E5 /* 53-house.png */,
+				33E0EFF61787F8F2003CE1E5 /* 70-tv.png */,
+				33E0EFF71787F8F2003CE1E5 /* 86-camera.png */,
+				33F25A0A17BB094300AB6682 /* bart.jpg */,
+				339B5F1717990F61007DD626 /* blackbutton.png */,
+				339B5F23179CC9A6007DD626 /* bluecirclebutton.png */,
+				339B5EF61797A7BE007DD626 /* camera.png */,
 				3388DC7417E7AEAA008271B0 /* cameraButton.png */,
+				3388DC7617E7C61C008271B0 /* cameraTextButton.png */,
+				3396B7F417F01F5700D80C24 /* closebutton.png */,
+				335220E017F8F9BD003D264A /* creatorIcon.png */,
+				3396B7F017F017CD00D80C24 /* darkbutton.png */,
+				335220EE17FAB167003D264A /* default.jpg */,
+				3352210317FAD1F4003D264A /* defaultvenue.png */,
+				339B5F34179E7329007DD626 /* downarrrow.png */,
+				331F05D117F1905100FADE96 /* envelope.png */,
 				3388DC7217E7ABE6008271B0 /* flashAutoButton.png */,
 				3388DC6C17E7A62F008271B0 /* flashOffButton.png */,
 				3388DC6D17E7A62F008271B0 /* flashOnButton.png */,
-				3388DC6E17E7A62F008271B0 /* rotateCameraButton.png */,
-				3388DC5F17E68D22008271B0 /* 187-pencil.png */,
-				33F25A5617C36A6C00AB6682 /* mysteryphoto.png */,
-				33F25A0A17BB094300AB6682 /* bart.jpg */,
-				339B5F34179E7329007DD626 /* downarrrow.png */,
-				339B5F30179E70FD007DD626 /* thumbsdown.png */,
-				339B5F31179E70FD007DD626 /* thumbsup.png */,
-				339B5F23179CC9A6007DD626 /* bluecirclebutton.png */,
-				339B5F21179A45C6007DD626 /* xbutton.png */,
-				339B5F1B179A06DD007DD626 /* 02-redo.png */,
-				339B5F19179A0601007DD626 /* whitebutton.png */,
-				339B5F1717990F61007DD626 /* blackbutton.png */,
+				3396B7EE17F00C3200D80C24 /* gradient.png */,
+				33E0EFE717817218003CE1E5 /* greybutton.png */,
 				339B5F0C1797C26B007DD626 /* homer.jpg */,
-				339B5EF61797A7BE007DD626 /* camera.png */,
-				33E0EFF41787F8F2003CE1E5 /* 07-map-marker.png */,
-				33E0EFF51787F8F2003CE1E5 /* 08-chat.png */,
-				33E0EFF61787F8F2003CE1E5 /* 70-tv.png */,
-				33E0EFF71787F8F2003CE1E5 /* 86-camera.png */,
+				3396B7F117F017CD00D80C24 /* lightbutton.png */,
+				330E24CD177FD53D00AA1913 /* logo.png */,
+				3352206417F568F3003D264A /* memberIcon.png */,
 				33E0EFF017817A3E003CE1E5 /* menu-icon.png */,
 				33E0EFF117817A3E003CE1E5 /* menu-icon@2x.png */,
-				33E0EFE917817586003CE1E5 /* 53-house.png */,
-				33E0EFE717817218003CE1E5 /* greybutton.png */,
-				330E24F0178155ED00AA1913 /* 19-gear.png */,
-				330E24CD177FD53D00AA1913 /* logo.png */,
+				33F25A5617C36A6C00AB6682 /* mysteryphoto.png */,
+				3396B7FF17F178EA00D80C24 /* purplebutton.png */,
+				3388DC6E17E7A62F008271B0 /* rotateCameraButton.png */,
 				330E24CE177FD53D00AA1913 /* splash1136.png */,
+				3396B7E617E9651400D80C24 /* splashscreen.png */,
+				339B5F30179E70FD007DD626 /* thumbsdown.png */,
+				3396B7E817EA5BC400D80C24 /* thumbsdownred.png */,
+				339B5F31179E70FD007DD626 /* thumbsup.png */,
+				3396B7E917EA5BC400D80C24 /* thumbsupblue.png */,
+				3352206517F568F3003D264A /* viewIcon.png */,
+				339B5F19179A0601007DD626 /* whitebutton.png */,
+				339B5F21179A45C6007DD626 /* xbutton.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -635,31 +674,43 @@
 		330E24EC17813ECB00AA1913 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				3396B7FC17F0C7E000D80C24 /* Switchy.h */,
-				3396B7FD17F0C7E000D80C24 /* Switchy.m */,
-				339B5FAF17A24803007DD626 /* Reachability.h */,
-				339B5FB017A24803007DD626 /* Reachability.m */,
+				335220F317FAC10F003D264A /* MFSideMenu */,
 				339B5F4517A24417007DD626 /* ASIHTTPRequest */,
-				330E24F21781622700AA1913 /* MFSideMenu.h */,
-				330E24F31781622700AA1913 /* MFSideMenu.m */,
-				330E24F41781622700AA1913 /* UINavigationController+MFSideMenu.h */,
-				330E24F51781622700AA1913 /* UINavigationController+MFSideMenu.m */,
-				330E24ED17813EFB00AA1913 /* KeychainItemWrapper.h */,
-				330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */,
-				33E0F00B178801A4003CE1E5 /* JSONKit.h */,
-				33E0F00C178801A4003CE1E5 /* JSONKit.m */,
 				33E0F02A1794D14A003CE1E5 /* Constants.h */,
 				33E0F02B1794D14A003CE1E5 /* Constants.m */,
-				339B5F4217A23A81007DD626 /* NSDictionary+Util.h */,
-				339B5F4317A23A81007DD626 /* NSDictionary+Util.m */,
-				33F25A5D17C6FA5400AB6682 /* Util.h */,
-				33F25A5E17C6FA5400AB6682 /* Util.m */,
 				3396B7F617F0387F00D80C24 /* CRNavigationBar.h */,
 				3396B7F717F0387F00D80C24 /* CRNavigationBar.m */,
 				3396B7F917F038EB00D80C24 /* CRNavigationController.h */,
 				3396B7FA17F038EB00D80C24 /* CRNavigationController.m */,
+				33E0F00B178801A4003CE1E5 /* JSONKit.h */,
+				33E0F00C178801A4003CE1E5 /* JSONKit.m */,
+				330E24ED17813EFB00AA1913 /* KeychainItemWrapper.h */,
+				330E24EE17813EFB00AA1913 /* KeychainItemWrapper.m */,
+				339B5F4217A23A81007DD626 /* NSDictionary+Util.h */,
+				339B5F4317A23A81007DD626 /* NSDictionary+Util.m */,
+				339B5FAF17A24803007DD626 /* Reachability.h */,
+				339B5FB017A24803007DD626 /* Reachability.m */,
+				3396B7FC17F0C7E000D80C24 /* Switchy.h */,
+				3396B7FD17F0C7E000D80C24 /* Switchy.m */,
+				33F25A5D17C6FA5400AB6682 /* Util.h */,
+				33F25A5E17C6FA5400AB6682 /* Util.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		335220F317FAC10F003D264A /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				335220F417FAC10F003D264A /* MFSideMenu.h */,
+				335220F517FAC10F003D264A /* MFSideMenuContainerViewController.h */,
+				335220F617FAC10F003D264A /* MFSideMenuContainerViewController.m */,
+				335220F717FAC10F003D264A /* MFSideMenuShadow.h */,
+				335220F817FAC10F003D264A /* MFSideMenuShadow.m */,
+				335220F917FAC10F003D264A /* UIViewController+MFSideMenuAdditions.h */,
+				335220FA17FAC10F003D264A /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			name = MFSideMenu;
+			path = Util/MFSideMenu;
 			sourceTree = "<group>";
 		};
 		338392B017D7200C002A333A /* Delegates */ = {
@@ -667,6 +718,7 @@
 			children = (
 				338392B217D720BE002A333A /* CommentsViewDelegate.h */,
 				3388DC6B17E69D64008271B0 /* EventSettingsViewControllerDelegate.h */,
+				335220E817F910E1003D264A /* ProfileCameraViewControllerDelegate.h */,
 				3314288D17E821D900F746D1 /* SettingViewControllerDelegate.h */,
 			);
 			name = Delegates;
@@ -675,40 +727,44 @@
 		339B5EE917974560007DD626 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				339B5EEF17975ADF007DD626 /* UIPlaceHolderTextView.h */,
-				339B5EF017975ADF007DD626 /* UIPlaceHolderTextView.m */,
 				339B5EF31797A198007DD626 /* CameraOverlayView.h */,
 				339B5EF41797A198007DD626 /* CameraOverlayView.m */,
-				339B5EF81797B965007DD626 /* ImagePostTableViewCell.h */,
-				339B5EF91797B965007DD626 /* ImagePostTableViewCell.m */,
-				339B5EFA1797B97D007DD626 /* TextPostTableViewCell.h */,
-				339B5EFB1797B97D007DD626 /* TextPostTableViewCell.m */,
-				339B5EFC1797B991007DD626 /* PlacePostTableViewCell.h */,
-				339B5EFD1797B991007DD626 /* PlacePostTableViewCell.m */,
-				339B5EFE1797B9BD007DD626 /* EventTableViewCell.h */,
-				339B5EFF1797B9BD007DD626 /* EventTableViewCell.m */,
-				339B5F111797D770007DD626 /* RoundedView.h */,
-				339B5F121797D770007DD626 /* RoundedView.m */,
 				339B5F141798BDB4007DD626 /* CellScrollView.h */,
 				339B5F151798BDB4007DD626 /* CellScrollView.m */,
 				339B5F3C179E7CD6007DD626 /* CommentsView.h */,
 				339B5F3D179E7CD6007DD626 /* CommentsView.m */,
 				330A938A17B4A753002B9436 /* CommentTableViewCell.h */,
 				330A938B17B4A753002B9436 /* CommentTableViewCell.m */,
-				33F25A4A17C3268C00AB6682 /* TextFieldCell.h */,
-				33F25A4B17C3268C00AB6682 /* TextFieldCell.m */,
-				33F25A5017C3355A00AB6682 /* PictureNameTableViewCell.h */,
-				33F25A5117C3355A00AB6682 /* PictureNameTableViewCell.m */,
-				33F25A5817C6CC2200AB6682 /* FirstCommentView.h */,
-				33F25A5917C6CC2200AB6682 /* FirstCommentView.m */,
 				338392B417E547CC002A333A /* EventDetailsTableViewCell.h */,
 				338392B517E547CC002A333A /* EventDetailsTableViewCell.m */,
-				331F05C717F18B8900FADE96 /* InviteUserTableViewCell.h */,
-				331F05C817F18B8900FADE96 /* InviteUserTableViewCell.m */,
-				331F05CC17F18FE500FADE96 /* InviteContactTableViewCell.h */,
-				331F05CD17F18FE500FADE96 /* InviteContactTableViewCell.m */,
 				3352206117F567C5003D264A /* EventMemberTableViewCell.h */,
 				3352206217F567C5003D264A /* EventMemberTableViewCell.m */,
+				339B5EFE1797B9BD007DD626 /* EventTableViewCell.h */,
+				339B5EFF1797B9BD007DD626 /* EventTableViewCell.m */,
+				33F25A5817C6CC2200AB6682 /* FirstCommentView.h */,
+				33F25A5917C6CC2200AB6682 /* FirstCommentView.m */,
+				339B5EF81797B965007DD626 /* ImagePostTableViewCell.h */,
+				339B5EF91797B965007DD626 /* ImagePostTableViewCell.m */,
+				331F05CC17F18FE500FADE96 /* InviteContactTableViewCell.h */,
+				331F05CD17F18FE500FADE96 /* InviteContactTableViewCell.m */,
+				331F05C717F18B8900FADE96 /* InviteUserTableViewCell.h */,
+				331F05C817F18B8900FADE96 /* InviteUserTableViewCell.m */,
+				33F25A5017C3355A00AB6682 /* PictureNameTableViewCell.h */,
+				33F25A5117C3355A00AB6682 /* PictureNameTableViewCell.m */,
+				339B5EFC1797B991007DD626 /* PlacePostTableViewCell.h */,
+				339B5EFD1797B991007DD626 /* PlacePostTableViewCell.m */,
+				335220F017FAB1CE003D264A /* PostTableViewCell.h */,
+				335220F117FAB1CE003D264A /* PostTableViewCell.m */,
+				339B5F111797D770007DD626 /* RoundedView.h */,
+				339B5F121797D770007DD626 /* RoundedView.m */,
+				33F25A4A17C3268C00AB6682 /* TextFieldCell.h */,
+				33F25A4B17C3268C00AB6682 /* TextFieldCell.m */,
+				339B5EFA1797B97D007DD626 /* TextPostTableViewCell.h */,
+				339B5EFB1797B97D007DD626 /* TextPostTableViewCell.m */,
+				339B5EEF17975ADF007DD626 /* UIPlaceHolderTextView.h */,
+				339B5EF017975ADF007DD626 /* UIPlaceHolderTextView.m */,
+				335220FE17FACC67003D264A /* VenueTableViewCell.h */,
+				335220FF17FACC67003D264A /* VenueTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -814,6 +870,7 @@
 				3396B7E017E963FA00D80C24 /* EventDetailsTableViewCell.xib in Resources */,
 				33F25A0B17BB09D100AB6682 /* bart.jpg in Resources */,
 				330A938917B4A737002B9436 /* CommentTableViewCell.xib in Resources */,
+				335220ED17F9231B003D264A /* EditProfileViewController.xib in Resources */,
 				3396B80017F178EA00D80C24 /* purplebutton.png in Resources */,
 				339B5F35179E7334007DD626 /* downarrrow.png in Resources */,
 				339B5F32179E7111007DD626 /* thumbsdown.png in Resources */,
@@ -844,23 +901,27 @@
 				33E0F01617880A9E003CE1E5 /* FriendsMenuViewController.xib in Resources */,
 				33E0F010178806D9003CE1E5 /* FriendsViewController.xib in Resources */,
 				3396B7E417E963FA00D80C24 /* SplashScreenViewController.xib in Resources */,
+				3352210217FACCB0003D264A /* VenueTableViewCell.xib in Resources */,
 				3396B7EB17EA5BC400D80C24 /* thumbsupblue.png in Resources */,
 				33E0F00E17880604003CE1E5 /* CheckInViewController.xib in Resources */,
 				33E0EFF81787F8FF003CE1E5 /* 07-map-marker.png in Resources */,
 				3396B7E717E9651400D80C24 /* splashscreen.png in Resources */,
 				33E0EFF91787F8FF003CE1E5 /* 08-chat.png in Resources */,
+				335220EF17FAB167003D264A /* default.jpg in Resources */,
 				33E0EFFA1787F8FF003CE1E5 /* 70-tv.png in Resources */,
 				33E0EFFB1787F8FF003CE1E5 /* 86-camera.png in Resources */,
 				33E0EFF217817A50003CE1E5 /* menu-icon.png in Resources */,
 				33E0EFF317817A50003CE1E5 /* menu-icon@2x.png in Resources */,
 				3352206617F568F3003D264A /* memberIcon.png in Resources */,
 				33E0EFEA17817688003CE1E5 /* 53-house.png in Resources */,
+				3352210417FAD1F4003D264A /* defaultvenue.png in Resources */,
 				33E0EFE8178172E4003CE1E5 /* greybutton.png in Resources */,
 				330E2469177FB0C900AA1913 /* InfoPlist.strings in Resources */,
 				330E2471177FB0C900AA1913 /* Default.png in Resources */,
 				330E2473177FB0C900AA1913 /* Default@2x.png in Resources */,
 				3396B7E117E963FA00D80C24 /* FirstCommentView.xib in Resources */,
 				330E2475177FB0C900AA1913 /* Default-568h@2x.png in Resources */,
+				335220E317F908BE003D264A /* ProfileCameraOverlayView.xib in Resources */,
 				330E24C3177FCC5600AA1913 /* AddFriendsViewController.xib in Resources */,
 				330E24C5177FCC5600AA1913 /* EventsViewController.xib in Resources */,
 				330E24C6177FCC5600AA1913 /* EventViewController.xib in Resources */,
@@ -871,6 +932,7 @@
 				330E24CA177FCC5600AA1913 /* SignUpViewController.xib in Resources */,
 				3352206017F5676C003D264A /* EventMemberTableViewCell.xib in Resources */,
 				330E24D0177FD53D00AA1913 /* logo.png in Resources */,
+				335220E117F8F9BD003D264A /* creatorIcon.png in Resources */,
 				330E24D1177FD53D00AA1913 /* splash1136.png in Resources */,
 				330E24D3177FD55300AA1913 /* Default-Portrait@2x~ipad.png in Resources */,
 				3396B7DE17E963FA00D80C24 /* CameraOverlayView.xib in Resources */,
@@ -891,9 +953,11 @@
 				33F25A4C17C3268C00AB6682 /* TextFieldCell.m in Sources */,
 				339B5F9A17A244A2007DD626 /* ASIDataDecompressor.m in Sources */,
 				339B5F9B17A244A2007DD626 /* ASIDownloadCache.m in Sources */,
+				335220FD17FAC10F003D264A /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				3388DC6717E69322008271B0 /* EventSettingsViewController.m in Sources */,
 				339B5F9C17A244A2007DD626 /* ASIFormDataRequest.m in Sources */,
 				33F25A6417D066E000AB6682 /* Contact.m in Sources */,
+				335220EC17F9231B003D264A /* EditProfileViewController.m in Sources */,
 				339B5F9D17A244A2007DD626 /* ASIHTTPRequest.m in Sources */,
 				339B5F9E17A244A2007DD626 /* ASIInputStream.m in Sources */,
 				339B5F9F17A244A2007DD626 /* ASINetworkQueue.m in Sources */,
@@ -907,6 +971,7 @@
 				339B5F091797BBFB007DD626 /* TextPostTableViewCell.m in Sources */,
 				33F25A5F17C6FA5400AB6682 /* Util.m in Sources */,
 				339B5F0A1797BBFB007DD626 /* PlacePostTableViewCell.m in Sources */,
+				335220FB17FAC10F003D264A /* MFSideMenuContainerViewController.m in Sources */,
 				339B5F0B1797BBFB007DD626 /* EventTableViewCell.m in Sources */,
 				339B5EF51797A1FC007DD626 /* CameraOverlayView.m in Sources */,
 				339B5EF117975B3E007DD626 /* UIPlaceHolderTextView.m in Sources */,
@@ -919,6 +984,7 @@
 				33E0F01717880AA8003CE1E5 /* FriendsMenuViewController.m in Sources */,
 				33E0F00D178801EE003CE1E5 /* JSONKit.m in Sources */,
 				33E0F00917880167003CE1E5 /* Venue.m in Sources */,
+				335220FC17FAC10F003D264A /* MFSideMenuShadow.m in Sources */,
 				33E0F00A17880167003CE1E5 /* Location.m in Sources */,
 				33F25A5A17C6CC2200AB6682 /* FirstCommentView.m in Sources */,
 				33E0F00817880156003CE1E5 /* CheckInViewController.m in Sources */,
@@ -928,6 +994,7 @@
 				330E2482177FC99800AA1913 /* Event.m in Sources */,
 				330E2485177FC9BB00AA1913 /* Post.m in Sources */,
 				330E2488177FCA0500AA1913 /* Comment.m in Sources */,
+				3352210017FACC67003D264A /* VenueTableViewCell.m in Sources */,
 				330E248B177FCA6A00AA1913 /* ImagePost.m in Sources */,
 				330E248E177FCA8D00AA1913 /* TextPost.m in Sources */,
 				330E2491177FCB0A00AA1913 /* PlacePost.m in Sources */,
@@ -938,18 +1005,18 @@
 				330A938C17B4A753002B9436 /* CommentTableViewCell.m in Sources */,
 				330E249A177FCB5300AA1913 /* SignUpViewController.m in Sources */,
 				3396B7D417E9639C00D80C24 /* SplashScreenViewController.m in Sources */,
+				335220E617F90A3A003D264A /* ProfileCameraViewController.m in Sources */,
 				330E249F177FCB7400AA1913 /* EventsViewController.m in Sources */,
 				3396B7FE17F0C7E000D80C24 /* Switchy.m in Sources */,
 				330E24A4177FCB8500AA1913 /* EventViewController.m in Sources */,
 				330E24AE177FCBBA00AA1913 /* SettingsViewController.m in Sources */,
+				335220F217FAB1CE003D264A /* PostTableViewCell.m in Sources */,
 				33F25A5217C3355A00AB6682 /* PictureNameTableViewCell.m in Sources */,
 				330E24B4177FCBFE00AA1913 /* FriendsViewController.m in Sources */,
 				330E24B9177FCC1400AA1913 /* AddFriendsViewController.m in Sources */,
 				330E24E417801B0700AA1913 /* Profile.m in Sources */,
 				330E24EF17813EFB00AA1913 /* KeychainItemWrapper.m in Sources */,
-				330E24F61781622700AA1913 /* MFSideMenu.m in Sources */,
 				3352206317F567C5003D264A /* EventMemberTableViewCell.m in Sources */,
-				330E24F71781622700AA1913 /* UINavigationController+MFSideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

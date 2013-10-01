@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ProfileCameraViewControllerDelegate.h"
+
 @class User;
 
 typedef enum SignUpField
@@ -19,13 +21,15 @@ typedef enum SignUpField
     kSignUpPasswordField
 } SignUpField;
 
-@interface SignUpViewController : UIViewController<UIActionSheetDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface SignUpViewController : UIViewController<UIActionSheetDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, ProfileCameraViewControllerDelegate>
 {
     IBOutlet UITableView * m_tableView;
     NSArray * m_placeHolderTextArray;
     NSArray * m_namePlaceHolderArray;
     UITextField * m_currentFirstResponder;
     UITableView * m_nameTableView;
+    
+    UIImage * m_profilePicture;
     
     User * m_user;
 }

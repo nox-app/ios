@@ -30,15 +30,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bart.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="53a-k6-Hyw">
-                        <rect key="frame" x="10" y="116" width="38" height="38"/>
+                        <rect key="frame" x="10" y="104" width="50" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8pw-2w-qgP">
-                        <rect key="frame" x="54" y="128" width="26" height="26"/>
+                        <rect key="frame" x="66" y="118" width="36" height="36"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Isl-gK-ZQI">
-                        <rect key="frame" x="86" y="128" width="26" height="26"/>
+                        <rect key="frame" x="108" y="118" width="36" height="36"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UT-y3-RUv">
@@ -55,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </activityIndicatorView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUy-BV-IYB">
-                        <rect key="frame" x="118" y="137" width="42" height="21"/>
+                        <rect key="frame" x="150" y="137" width="42" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,7 +68,11 @@
             <connections>
                 <outlet property="activityIndicator" destination="BB6-K2-1Vj" id="ULO-rh-BK7"/>
                 <outlet property="borderBackgroundView" destination="h5z-OX-i1e" id="j2B-xf-fdM"/>
+                <outlet property="creatorImageView" destination="53a-k6-Hyw" id="ARd-Fi-47s"/>
+                <outlet property="ellipsisLabel" destination="IUy-BV-IYB" id="vPy-cp-WrY"/>
                 <outlet property="eventTitleLabel" destination="0UT-y3-RUv" id="a28-OI-w2b"/>
+                <outlet property="memberOneImageView" destination="8pw-2w-qgP" id="8eA-Az-dNZ"/>
+                <outlet property="memberTwoImageView" destination="Isl-gK-ZQI" id="kBM-l5-ut7"/>
                 <outlet property="scrollView" destination="gtH-PQ-wZ3" id="PgH-iU-gcG"/>
                 <outlet property="timeLabel" destination="g6d-S2-ogY" id="WGL-eW-3KW"/>
             </connections>
